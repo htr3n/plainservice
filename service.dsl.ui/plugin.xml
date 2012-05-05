@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+    <extension
+            point="org.eclipse.ui.editors">
+        <editor
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+            contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
+            default="true"
+            extensions="service"
+            id="at.ac.univie.cs.swa.soa.ServiceDsl"
+            name="ServiceDsl Editor">
+        </editor>
+    </extension>
+    <extension
+        point="org.eclipse.ui.handlers">
+        <handler
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+            commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
+            <activeWhen>
+                <reference
+                    definitionId="at.ac.univie.cs.swa.soa.ServiceDsl.Editor.opened">
+                </reference>
+            </activeWhen>
+        </handler>
+        <handler
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+            commandId="at.ac.univie.cs.swa.soa.ServiceDsl.validate">
+         <activeWhen>
+            <reference
+                    definitionId="at.ac.univie.cs.swa.soa.ServiceDsl.Editor.opened">
+            </reference>
+         </activeWhen>
+      </handler>
+    </extension>
+    <extension point="org.eclipse.core.expressions.definitions">
+        <definition id="at.ac.univie.cs.swa.soa.ServiceDsl.Editor.opened">
+            <and>
+                <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
+                <with variable="activeEditor">
+                    <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
+                        value="at.ac.univie.cs.swa.soa.ServiceDsl" 
+                        forcePluginActivation="true"/>
+                </with>        
+            </and>
+        </definition>
+    </extension>
+    <extension
+            point="org.eclipse.ui.preferencePages">
+        <page
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="at.ac.univie.cs.swa.soa.ServiceDsl"
+            name="ServiceDsl">
+            <keywordReference id="at.ac.univie.cs.swa.soa.ui.keyword_ServiceDsl"/>
+        </page>
+        <page
+            category="at.ac.univie.cs.swa.soa.ServiceDsl"
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            id="at.ac.univie.cs.swa.soa.ServiceDsl.coloring"
+            name="Syntax Coloring">
+            <keywordReference id="at.ac.univie.cs.swa.soa.ui.keyword_ServiceDsl"/>
+        </page>
+        <page
+            category="at.ac.univie.cs.swa.soa.ServiceDsl"
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+            id="at.ac.univie.cs.swa.soa.ServiceDsl.templates"
+            name="Templates">
+            <keywordReference id="at.ac.univie.cs.swa.soa.ui.keyword_ServiceDsl"/>
+        </page>
+    </extension>
+    <extension
+            point="org.eclipse.ui.propertyPages">
+        <page
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="at.ac.univie.cs.swa.soa.ServiceDsl"
+            name="ServiceDsl">
+            <keywordReference id="at.ac.univie.cs.swa.soa.ui.keyword_ServiceDsl"/>
+            <enabledWhen>
+	            <adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+	        <filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
+        </page>
+    </extension>
+    <extension
+        point="org.eclipse.ui.keywords">
+        <keyword
+            id="at.ac.univie.cs.swa.soa.ui.keyword_ServiceDsl"
+            label="ServiceDsl"/>
+    </extension>
+    <extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Trigger expensive validation"
+            id="at.ac.univie.cs.swa.soa.ServiceDsl.validate"
+            name="Validate">
+      </command>
+    </extension>
+    <extension point="org.eclipse.ui.menus">
+        <menuContribution
+            locationURI="popup:#TextEditorContext?after=group.edit">
+             <command
+                 commandId="at.ac.univie.cs.swa.soa.ServiceDsl.validate"
+                 style="push"
+                 tooltip="Trigger expensive validation">
+            <visibleWhen checkEnabled="false">
+                <reference
+                    definitionId="at.ac.univie.cs.swa.soa.ServiceDsl.Editor.opened">
+                </reference>
+            </visibleWhen>
+         </command>  
+         </menuContribution>
+    </extension>
+    <extension point="org.eclipse.ui.menus">
+		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
+			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
+				<visibleWhen checkEnabled="false">
+                	<reference definitionId="at.ac.univie.cs.swa.soa.ServiceDsl.Editor.opened">
+                	</reference>
+            	</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.handlers">
+	    <handler
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+            commandId="org.eclipse.xtext.ui.editor.FindReferences">
+            <activeWhen>
+                <reference
+                    definitionId="at.ac.univie.cs.swa.soa.ServiceDsl.Editor.opened">
+                </reference>
+            </activeWhen>
+        </handler>
+    </extension>   
+
+<!-- adding resource factories -->
+
+	<extension
+		point="org.eclipse.emf.ecore.extension_parser">
+		<parser
+			class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			type="service">
+		</parser>
+	</extension>
+	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
+        <resourceServiceProvider
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+            uriExtension="service">
+        </resourceServiceProvider>
+    </extension>
+
+
+
+   <extension
+         point="org.eclipse.xtext.builder.participant">
+      <participant
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant">
+      </participant>
+   </extension>
+   <extension
+            point="org.eclipse.ui.preferencePages">
+        <page
+            category="at.ac.univie.cs.swa.soa.ServiceDsl"
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="at.ac.univie.cs.swa.soa.ServiceDsl.compiler.preferencePage"
+            name="Compiler">
+            <keywordReference id="at.ac.univie.cs.swa.soa.ui.keyword_ServiceDsl"/>
+        </page>
+    </extension>
+    <extension
+            point="org.eclipse.ui.propertyPages">
+        <page
+            category="at.ac.univie.cs.swa.soa.ServiceDsl"
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="at.ac.univie.cs.swa.soa.ServiceDsl.compiler.propertyPage"
+            name="Compiler">
+            <keywordReference id="at.ac.univie.cs.swa.soa.ui.keyword_ServiceDsl"/>
+            <enabledWhen>
+	            <adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+	        <filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
+        </page>
+    </extension>
+
+	<!-- Quick Outline -->
+	<extension
+		point="org.eclipse.ui.handlers">
+		<handler 
+			class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
+			<activeWhen>
+				<reference
+					definitionId="at.ac.univie.cs.swa.soa.ServiceDsl.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+	</extension>
+	<extension
+		point="org.eclipse.ui.commands">
+		<command
+			description="Open the quick outline."
+			id="org.eclipse.xtext.ui.editor.outline.QuickOutline"
+			name="Quick Outline">
+		</command>
+	</extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution
+			locationURI="popup:#TextEditorContext?after=group.open">
+			<command commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline"
+				style="push"
+				tooltip="Open Quick Outline">
+				<visibleWhen checkEnabled="false">
+					<reference definitionId="at.ac.univie.cs.swa.soa.ServiceDsl.Editor.opened"/>
+				</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+   <!-- quickfix marker resolution generator -->
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
+      </markerResolutionGenerator>
+   </extension>
+   	<!-- Rename Refactoring -->
+	<extension point="org.eclipse.ui.handlers">
+		<handler 
+			class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.IRenameElementHandler"
+			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
+			<activeWhen>
+				<reference
+					definitionId="at.ac.univie.cs.swa.soa.ServiceDsl.Editor.opened">
+				</reference>
+			</activeWhen>
+		</handler>
+	</extension>
+    <extension point="org.eclipse.ui.menus">
+         <menuContribution
+            locationURI="popup:#TextEditorContext?after=group.edit">
+         <command commandId="org.eclipse.xtext.ui.refactoring.RenameElement"
+               style="push">
+            <visibleWhen checkEnabled="false">
+               <reference
+                     definitionId="at.ac.univie.cs.swa.soa.ServiceDsl.Editor.opened">
+               </reference>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension point="org.eclipse.ui.preferencePages">
+	    <page
+	        category="at.ac.univie.cs.swa.soa.ServiceDsl"
+	        class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+	        id="at.ac.univie.cs.swa.soa.ServiceDsl.refactoring"
+	        name="Refactoring">
+	        <keywordReference id="at.ac.univie.cs.swa.soa.ui.keyword_ServiceDsl"/>
+	    </page>
+	</extension>
+
+  <extension point="org.eclipse.compare.contentViewers">
+    <viewer id="at.ac.univie.cs.swa.soa.ServiceDsl.compare.contentViewers"
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+            extensions="service">
+    </viewer>
+  </extension>
+  <extension point="org.eclipse.compare.contentMergeViewers">
+    <viewer id="at.ac.univie.cs.swa.soa.ServiceDsl.compare.contentMergeViewers"
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+            extensions="service" label="ServiceDsl Compare">
+     </viewer>
+  </extension>
+  <extension point="org.eclipse.ui.editors.documentProviders">
+    <provider id="at.ac.univie.cs.swa.soa.ServiceDsl.editors.documentProviders"
+            class="at.ac.univie.cs.swa.soa.ui.ServiceDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+            extensions="service">
+    </provider>
+  </extension>
+
+</plugin>
