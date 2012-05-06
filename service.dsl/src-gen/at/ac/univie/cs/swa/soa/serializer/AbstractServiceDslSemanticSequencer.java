@@ -178,7 +178,7 @@ public class AbstractServiceDslSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (type=DATATYPE | ref=[ComplexElement|FQN]) multiplicity='?'?)
+	 *     (name=ID (type=DATATYPE | ref=[ComplexElement|FQN]) multiplicity=MULTIPLICITY?)
 	 */
 	protected void sequence_SimpleElement(EObject context, SimpleElement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -18,6 +18,11 @@
       <genEnumLiterals ecoreEnumLiteral="ServiceDsl.ecore#//DATATYPE/binary"/>
       <genEnumLiterals ecoreEnumLiteral="ServiceDsl.ecore#//DATATYPE/boolean"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ServiceDsl.ecore#//MULTIPLICITY">
+      <genEnumLiterals ecoreEnumLiteral="ServiceDsl.ecore#//MULTIPLICITY/OPTIONAL"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceDsl.ecore#//MULTIPLICITY/PLUS"/>
+      <genEnumLiterals ecoreEnumLiteral="ServiceDsl.ecore#//MULTIPLICITY/STAR"/>
+    </genEnums>
     <genClasses ecoreClass="ServiceDsl.ecore#//ServiceDSL">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ServiceDsl.ecore#//ServiceDSL/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ServiceDsl.ecore#//ServiceDSL/imports"/>

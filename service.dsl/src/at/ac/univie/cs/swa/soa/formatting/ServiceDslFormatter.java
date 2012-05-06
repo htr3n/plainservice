@@ -3,25 +3,54 @@
  */
 package at.ac.univie.cs.swa.soa.formatting;
 
+import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
+import org.eclipse.xtext.util.Pair;
+
+import at.ac.univie.cs.swa.soa.services.ServiceDslGrammarAccess;
 
 /**
  * This class contains custom formatting description.
  * 
  * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#formatting
- * on how and when to use it 
+ * on how and when to use it
  * 
  * Also see {@link org.eclipse.xtext.xtext.XtextFormattingTokenSerializer} as an example
  */
-public class ServiceDslFormatter extends AbstractDeclarativeFormatter {
-	
+public class ServiceDslFormatter extends AbstractDeclarativeFormatter
+{
+
 	@Override
-	protected void configureFormatting(FormattingConfig c) {
-// It's usually a good idea to activate the following three statements.
-// They will add and preserve newlines around comments
-//		c.setLinewrap(0, 1, 2).before(getGrammarAccess().getSL_COMMENTRule());
-//		c.setLinewrap(0, 1, 2).before(getGrammarAccess().getML_COMMENTRule());
-//		c.setLinewrap(0, 1, 1).after(getGrammarAccess().getML_COMMENTRule());
+	protected void configureFormatting(FormattingConfig c)
+	{
+		ServiceDslGrammarAccess f = (ServiceDslGrammarAccess) getGrammarAccess();
+		c.setAutoLinewrap(200);
+		for (Pair<Keyword, Keyword> pair : f.findKeywordPairs("{", "}"))
+		{
+			c.setIndentation(pair.getFirst(), pair.getSecond());
+		}
+		c.setLinewrap(2).after(f.getServiceDSLAccess().getNameAssignment_2());
+		c.setLinewrap().before(f.getImportAccess().getImportKeyword_0());
+
+		// Web Service
+		c.setLinewrap(1, 1, 2).before(f.getWebServiceAccess().getWebServiceKeyword_1());
+		c.setLinewrap().after(f.getWebServiceAccess().getLeftCurlyBracketKeyword_3());
+		c.setLinewrap().around(f.getWebServiceAccess().getRightCurlyBracketKeyword_5());
+		c.setLinewrap(1, 1, 2).before(f.getWebServiceAccess().getOperationKeyword_4_0());
+		c.setLinewrap(1, 1, 2).before(f.getOperationAccess().getInputKeyword_3_0());
+		c.setLinewrap(1, 1, 2).before(f.getOperationAccess().getOutputKeyword_4_0());
+		c.setLinewrap().after(f.getOperationAccess().getLeftCurlyBracketKeyword_2());
+		c.setLinewrap().around(f.getOperationAccess().getRightCurlyBracketKeyword_5());
+
+		// Node
+		c.setLinewrap(1, 1, 2).before(f.getNodeAccess().getNodeKeyword_1());
+		c.setNoSpace().before(f.getNodeAccess().getCommaKeyword_9_0());
+
+		// ComplexElement
+		c.setLinewrap(1, 1, 2).before(f.getComplexElementAccess().getComplexDataKeyword_1());
+		c.setLinewrap().after(f.getComplexElementAccess().getLeftCurlyBracketKeyword_3());
+		c.setLinewrap().around(f.getComplexElementAccess().getRightCurlyBracketKeyword_5());
+		c.setLinewrap().before(f.getSimpleElementAccess().getNameAssignment_1());
 	}
 }

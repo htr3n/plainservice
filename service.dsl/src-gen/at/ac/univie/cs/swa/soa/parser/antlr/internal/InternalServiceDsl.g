@@ -810,31 +810,24 @@ ruleSimpleElement returns [EObject current=null]
 	    }
 
 )
-))((
+))(
 (
-		lv_multiplicity_5_0=	'?' 
-    {
-        newLeafNode(lv_multiplicity_5_0, grammarAccess.getSimpleElementAccess().getMultiplicityQuestionMarkKeyword_4_0_0());
-    }
- 
-	    {
+		{ 
+	        newCompositeNode(grammarAccess.getSimpleElementAccess().getMultiplicityMULTIPLICITYEnumRuleCall_4_0()); 
+	    }
+		lv_multiplicity_5_0=ruleMULTIPLICITY		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getSimpleElementRule());
+	            $current = createModelElementForParent(grammarAccess.getSimpleElementRule());
 	        }
-       		setWithLastConsumed($current, "multiplicity", lv_multiplicity_5_0, "?");
+       		set(
+       			$current, 
+       			"multiplicity",
+        		lv_multiplicity_5_0, 
+        		"MULTIPLICITY");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)
-    |	otherlv_6='+' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getSimpleElementAccess().getPlusSignKeyword_4_1());
-    }
-
-    |	otherlv_7='*' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getSimpleElementAccess().getAsteriskKeyword_4_2());
-    }
 )?)
 ;
 
@@ -1014,6 +1007,31 @@ ruleDATATYPE returns [Enumerator current=null]
 	{
         $current = grammarAccess.getDATATYPEAccess().getBooleanEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_7, grammarAccess.getDATATYPEAccess().getBooleanEnumLiteralDeclaration_7()); 
+    }
+));
+
+
+
+// Rule MULTIPLICITY
+ruleMULTIPLICITY returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='?' 
+	{
+        $current = grammarAccess.getMULTIPLICITYAccess().getOPTIONALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getMULTIPLICITYAccess().getOPTIONALEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='+' 
+	{
+        $current = grammarAccess.getMULTIPLICITYAccess().getPLUSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getMULTIPLICITYAccess().getPLUSEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='*' 
+	{
+        $current = grammarAccess.getMULTIPLICITYAccess().getSTAREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getMULTIPLICITYAccess().getSTAREnumLiteralDeclaration_2()); 
     }
 ));
 

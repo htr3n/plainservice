@@ -41,8 +41,8 @@ public class ServiceDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getServiceAccess().getAlternatives(), "rule__Service__Alternatives");
 					put(grammarAccess.getDataElementAccess().getAlternatives(), "rule__DataElement__Alternatives");
 					put(grammarAccess.getSimpleElementAccess().getAlternatives_3(), "rule__SimpleElement__Alternatives_3");
-					put(grammarAccess.getSimpleElementAccess().getAlternatives_4(), "rule__SimpleElement__Alternatives_4");
 					put(grammarAccess.getDATATYPEAccess().getAlternatives(), "rule__DATATYPE__Alternatives");
+					put(grammarAccess.getMULTIPLICITYAccess().getAlternatives(), "rule__MULTIPLICITY__Alternatives");
 					put(grammarAccess.getServiceDSLAccess().getGroup(), "rule__ServiceDSL__Group__0");
 					put(grammarAccess.getWebServiceAccess().getGroup(), "rule__WebService__Group__0");
 					put(grammarAccess.getWebServiceAccess().getGroup_4(), "rule__WebService__Group_4__0");
@@ -80,7 +80,7 @@ public class ServiceDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSimpleElementAccess().getNameAssignment_1(), "rule__SimpleElement__NameAssignment_1");
 					put(grammarAccess.getSimpleElementAccess().getTypeAssignment_3_0(), "rule__SimpleElement__TypeAssignment_3_0");
 					put(grammarAccess.getSimpleElementAccess().getRefAssignment_3_1(), "rule__SimpleElement__RefAssignment_3_1");
-					put(grammarAccess.getSimpleElementAccess().getMultiplicityAssignment_4_0(), "rule__SimpleElement__MultiplicityAssignment_4_0");
+					put(grammarAccess.getSimpleElementAccess().getMultiplicityAssignment_4(), "rule__SimpleElement__MultiplicityAssignment_4");
 					put(grammarAccess.getImportAccess().getImportedNamespaceAssignment_1(), "rule__Import__ImportedNamespaceAssignment_1");
 				}
 			};

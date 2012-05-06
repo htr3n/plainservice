@@ -22,19 +22,19 @@ public class AllType {
 	protected boolean e1;
 	@XmlElement
 	@XmlSchemaType(name = "date")
-	protected String e2;
-	@XmlElement
+	protected java.util.List<javax.xml.datatype.XMLGregorianCalendar> e2;
+	@XmlElement(required=true)
 	@XmlSchemaType(name = "datetime")
-	protected javax.xml.datatype.XMLGregorianCalendar e3;
+	protected java.util.List<javax.xml.datatype.XMLGregorianCalendar> e3;
 	@XmlElement
 	protected float e4;
 	@XmlElement
-	protected String e5;
+	protected int e5;
 	@XmlElement
 	protected String e6;
 	@XmlElement
 	@XmlSchemaType(name = "time")
-	protected String e7;
+	protected javax.xml.datatype.XMLGregorianCalendar e7;
 
 	public byte[] getE0(){
 		return e0;
@@ -48,16 +48,16 @@ public class AllType {
 	public void setE1(boolean e1){
 		this.e1 = e1;
 	};
-	public String getE2(){
+	public java.util.List<javax.xml.datatype.XMLGregorianCalendar> getE2(){
 		return e2;
 	};
-	public void setE2(String e2){
+	public void setE2(java.util.List<javax.xml.datatype.XMLGregorianCalendar> e2){
 		this.e2 = e2;
 	};
-	public javax.xml.datatype.XMLGregorianCalendar getE3(){
+	public java.util.List<javax.xml.datatype.XMLGregorianCalendar> getE3(){
 		return e3;
 	};
-	public void setE3(javax.xml.datatype.XMLGregorianCalendar e3){
+	public void setE3(java.util.List<javax.xml.datatype.XMLGregorianCalendar> e3){
 		this.e3 = e3;
 	};
 	public float getE4(){
@@ -66,10 +66,10 @@ public class AllType {
 	public void setE4(float e4){
 		this.e4 = e4;
 	};
-	public String getE5(){
+	public int getE5(){
 		return e5;
 	};
-	public void setE5(String e5){
+	public void setE5(int e5){
 		this.e5 = e5;
 	};
 	public String getE6(){
@@ -78,10 +78,10 @@ public class AllType {
 	public void setE6(String e6){
 		this.e6 = e6;
 	};
-	public String getE7(){
+	public javax.xml.datatype.XMLGregorianCalendar getE7(){
 		return e7;
 	};
-	public void setE7(String e7){
+	public void setE7(javax.xml.datatype.XMLGregorianCalendar e7){
 		this.e7 = e7;
 	};
     

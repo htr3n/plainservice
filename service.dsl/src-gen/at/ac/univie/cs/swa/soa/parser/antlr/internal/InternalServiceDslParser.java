@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalServiceDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'module'", "'Web service'", "'{'", "'operation'", "'}'", "'input'", "':'", "'output'", "'REST service'", "'Node'", "'uri'", "'='", "'hosts'", "','", "'complex-data'", "'?'", "'+'", "'*'", "'.'", "'.*'", "'import'", "'string'", "'integer'", "'float'", "'date'", "'time'", "'datetime'", "'binary'", "'boolean'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'module'", "'Web service'", "'{'", "'operation'", "'}'", "'input'", "':'", "'output'", "'REST service'", "'Node'", "'uri'", "'='", "'hosts'", "','", "'complex-data'", "'.'", "'.*'", "'import'", "'string'", "'integer'", "'float'", "'date'", "'time'", "'datetime'", "'binary'", "'boolean'", "'?'", "'+'", "'*'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -214,7 +214,7 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==31) ) {
+                if ( (LA1_0==28) ) {
                     alt1=1;
                 }
 
@@ -1726,26 +1726,25 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleElement"
-    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:747:1: ruleSimpleElement returns [EObject current=null] : ( () ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_type_3_0= ruleDATATYPE ) ) | ( ( ruleFQN ) ) ) ( ( (lv_multiplicity_5_0= '?' ) ) | otherlv_6= '+' | otherlv_7= '*' )? ) ;
+    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:747:1: ruleSimpleElement returns [EObject current=null] : ( () ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_type_3_0= ruleDATATYPE ) ) | ( ( ruleFQN ) ) ) ( (lv_multiplicity_5_0= ruleMULTIPLICITY ) )? ) ;
     public final EObject ruleSimpleElement() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_1_0=null;
         Token otherlv_2=null;
-        Token lv_multiplicity_5_0=null;
-        Token otherlv_6=null;
-        Token otherlv_7=null;
         Enumerator lv_type_3_0 = null;
+
+        Enumerator lv_multiplicity_5_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:750:28: ( ( () ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_type_3_0= ruleDATATYPE ) ) | ( ( ruleFQN ) ) ) ( ( (lv_multiplicity_5_0= '?' ) ) | otherlv_6= '+' | otherlv_7= '*' )? ) )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:751:1: ( () ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_type_3_0= ruleDATATYPE ) ) | ( ( ruleFQN ) ) ) ( ( (lv_multiplicity_5_0= '?' ) ) | otherlv_6= '+' | otherlv_7= '*' )? )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:750:28: ( ( () ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_type_3_0= ruleDATATYPE ) ) | ( ( ruleFQN ) ) ) ( (lv_multiplicity_5_0= ruleMULTIPLICITY ) )? ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:751:1: ( () ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_type_3_0= ruleDATATYPE ) ) | ( ( ruleFQN ) ) ) ( (lv_multiplicity_5_0= ruleMULTIPLICITY ) )? )
             {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:751:1: ( () ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_type_3_0= ruleDATATYPE ) ) | ( ( ruleFQN ) ) ) ( ( (lv_multiplicity_5_0= '?' ) ) | otherlv_6= '+' | otherlv_7= '*' )? )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:751:2: () ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_type_3_0= ruleDATATYPE ) ) | ( ( ruleFQN ) ) ) ( ( (lv_multiplicity_5_0= '?' ) ) | otherlv_6= '+' | otherlv_7= '*' )?
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:751:1: ( () ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_type_3_0= ruleDATATYPE ) ) | ( ( ruleFQN ) ) ) ( (lv_multiplicity_5_0= ruleMULTIPLICITY ) )? )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:751:2: () ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( ( (lv_type_3_0= ruleDATATYPE ) ) | ( ( ruleFQN ) ) ) ( (lv_multiplicity_5_0= ruleMULTIPLICITY ) )?
             {
             // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:751:2: ()
             // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:752:5: 
@@ -1792,7 +1791,7 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( ((LA10_0>=32 && LA10_0<=39)) ) {
+            if ( ((LA10_0>=29 && LA10_0<=36)) ) {
                 alt10=1;
             }
             else if ( (LA10_0==RULE_ID) ) {
@@ -1879,72 +1878,42 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:813:3: ( ( (lv_multiplicity_5_0= '?' ) ) | otherlv_6= '+' | otherlv_7= '*' )?
-            int alt11=4;
-            switch ( input.LA(1) ) {
-                case 26:
-                    {
-                    alt11=1;
-                    }
-                    break;
-                case 27:
-                    {
-                    alt11=2;
-                    }
-                    break;
-                case 28:
-                    {
-                    alt11=3;
-                    }
-                    break;
-            }
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:813:3: ( (lv_multiplicity_5_0= ruleMULTIPLICITY ) )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
+            if ( ((LA11_0>=37 && LA11_0<=39)) ) {
+                alt11=1;
+            }
             switch (alt11) {
                 case 1 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:813:4: ( (lv_multiplicity_5_0= '?' ) )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:814:1: (lv_multiplicity_5_0= ruleMULTIPLICITY )
                     {
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:813:4: ( (lv_multiplicity_5_0= '?' ) )
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:814:1: (lv_multiplicity_5_0= '?' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:814:1: (lv_multiplicity_5_0= ruleMULTIPLICITY )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:815:3: lv_multiplicity_5_0= ruleMULTIPLICITY
                     {
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:814:1: (lv_multiplicity_5_0= '?' )
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:815:3: lv_multiplicity_5_0= '?'
-                    {
-                    lv_multiplicity_5_0=(Token)match(input,26,FOLLOW_26_in_ruleSimpleElement1674); 
+                     
+                    	        newCompositeNode(grammarAccess.getSimpleElementAccess().getMultiplicityMULTIPLICITYEnumRuleCall_4_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleMULTIPLICITY_in_ruleSimpleElement1676);
+                    lv_multiplicity_5_0=ruleMULTIPLICITY();
 
-                            newLeafNode(lv_multiplicity_5_0, grammarAccess.getSimpleElementAccess().getMultiplicityQuestionMarkKeyword_4_0_0());
-                        
+                    state._fsp--;
+
 
                     	        if (current==null) {
-                    	            current = createModelElement(grammarAccess.getSimpleElementRule());
+                    	            current = createModelElementForParent(grammarAccess.getSimpleElementRule());
                     	        }
-                           		setWithLastConsumed(current, "multiplicity", lv_multiplicity_5_0, "?");
+                           		set(
+                           			current, 
+                           			"multiplicity",
+                            		lv_multiplicity_5_0, 
+                            		"MULTIPLICITY");
+                    	        afterParserOrEnumRuleCall();
                     	    
 
                     }
 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:829:7: otherlv_6= '+'
-                    {
-                    otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleSimpleElement1705); 
-
-                        	newLeafNode(otherlv_6, grammarAccess.getSimpleElementAccess().getPlusSignKeyword_4_1());
-                        
-
-                    }
-                    break;
-                case 3 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:834:7: otherlv_7= '*'
-                    {
-                    otherlv_7=(Token)match(input,28,FOLLOW_28_in_ruleSimpleElement1723); 
-
-                        	newLeafNode(otherlv_7, grammarAccess.getSimpleElementAccess().getAsteriskKeyword_4_2());
-                        
 
                     }
                     break;
@@ -1972,7 +1941,7 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFQN"
-    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:846:1: entryRuleFQN returns [String current=null] : iv_ruleFQN= ruleFQN EOF ;
+    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:839:1: entryRuleFQN returns [String current=null] : iv_ruleFQN= ruleFQN EOF ;
     public final String entryRuleFQN() throws RecognitionException {
         String current = null;
 
@@ -1980,17 +1949,17 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:847:2: (iv_ruleFQN= ruleFQN EOF )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:848:2: iv_ruleFQN= ruleFQN EOF
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:840:2: (iv_ruleFQN= ruleFQN EOF )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:841:2: iv_ruleFQN= ruleFQN EOF
             {
              newCompositeNode(grammarAccess.getFQNRule()); 
-            pushFollow(FOLLOW_ruleFQN_in_entryRuleFQN1762);
+            pushFollow(FOLLOW_ruleFQN_in_entryRuleFQN1714);
             iv_ruleFQN=ruleFQN();
 
             state._fsp--;
 
              current =iv_ruleFQN.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFQN1773); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFQN1725); 
 
             }
 
@@ -2008,7 +1977,7 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFQN"
-    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:855:1: ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:848:1: ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleFQN() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2019,40 +1988,40 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:858:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:859:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:851:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:852:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:859:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:859:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:852:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:852:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFQN1813); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFQN1765); 
 
             		current.merge(this_ID_0);
                 
              
                 newLeafNode(this_ID_0, grammarAccess.getFQNAccess().getIDTerminalRuleCall_0()); 
                 
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:866:1: (kw= '.' this_ID_2= RULE_ID )*
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:859:1: (kw= '.' this_ID_2= RULE_ID )*
             loop12:
             do {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( (LA12_0==29) ) {
+                if ( (LA12_0==26) ) {
                     alt12=1;
                 }
 
 
                 switch (alt12) {
             	case 1 :
-            	    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:867:2: kw= '.' this_ID_2= RULE_ID
+            	    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:860:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,29,FOLLOW_29_in_ruleFQN1832); 
+            	    kw=(Token)match(input,26,FOLLOW_26_in_ruleFQN1784); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getFQNAccess().getFullStopKeyword_1_0()); 
             	        
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFQN1847); 
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFQN1799); 
 
             	    		current.merge(this_ID_2);
             	        
@@ -2089,7 +2058,7 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFqnWildcard"
-    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:887:1: entryRuleFqnWildcard returns [String current=null] : iv_ruleFqnWildcard= ruleFqnWildcard EOF ;
+    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:880:1: entryRuleFqnWildcard returns [String current=null] : iv_ruleFqnWildcard= ruleFqnWildcard EOF ;
     public final String entryRuleFqnWildcard() throws RecognitionException {
         String current = null;
 
@@ -2097,17 +2066,17 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:888:2: (iv_ruleFqnWildcard= ruleFqnWildcard EOF )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:889:2: iv_ruleFqnWildcard= ruleFqnWildcard EOF
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:881:2: (iv_ruleFqnWildcard= ruleFqnWildcard EOF )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:882:2: iv_ruleFqnWildcard= ruleFqnWildcard EOF
             {
              newCompositeNode(grammarAccess.getFqnWildcardRule()); 
-            pushFollow(FOLLOW_ruleFqnWildcard_in_entryRuleFqnWildcard1895);
+            pushFollow(FOLLOW_ruleFqnWildcard_in_entryRuleFqnWildcard1847);
             iv_ruleFqnWildcard=ruleFqnWildcard();
 
             state._fsp--;
 
              current =iv_ruleFqnWildcard.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFqnWildcard1906); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFqnWildcard1858); 
 
             }
 
@@ -2125,7 +2094,7 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFqnWildcard"
-    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:896:1: ruleFqnWildcard returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_FQN_0= ruleFQN (kw= '.*' )? ) ;
+    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:889:1: ruleFqnWildcard returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_FQN_0= ruleFQN (kw= '.*' )? ) ;
     public final AntlrDatatypeRuleToken ruleFqnWildcard() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2136,16 +2105,16 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:899:28: ( (this_FQN_0= ruleFQN (kw= '.*' )? ) )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:900:1: (this_FQN_0= ruleFQN (kw= '.*' )? )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:892:28: ( (this_FQN_0= ruleFQN (kw= '.*' )? ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:893:1: (this_FQN_0= ruleFQN (kw= '.*' )? )
             {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:900:1: (this_FQN_0= ruleFQN (kw= '.*' )? )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:901:5: this_FQN_0= ruleFQN (kw= '.*' )?
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:893:1: (this_FQN_0= ruleFQN (kw= '.*' )? )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:894:5: this_FQN_0= ruleFQN (kw= '.*' )?
             {
              
                     newCompositeNode(grammarAccess.getFqnWildcardAccess().getFQNParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleFQN_in_ruleFqnWildcard1953);
+            pushFollow(FOLLOW_ruleFQN_in_ruleFqnWildcard1905);
             this_FQN_0=ruleFQN();
 
             state._fsp--;
@@ -2156,18 +2125,18 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:911:1: (kw= '.*' )?
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:904:1: (kw= '.*' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==30) ) {
+            if ( (LA13_0==27) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:912:2: kw= '.*'
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:905:2: kw= '.*'
                     {
-                    kw=(Token)match(input,30,FOLLOW_30_in_ruleFqnWildcard1972); 
+                    kw=(Token)match(input,27,FOLLOW_27_in_ruleFqnWildcard1924); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFqnWildcardAccess().getFullStopAsteriskKeyword_1()); 
@@ -2199,7 +2168,7 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImport"
-    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:925:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
+    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:918:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
     public final EObject entryRuleImport() throws RecognitionException {
         EObject current = null;
 
@@ -2207,17 +2176,17 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:926:2: (iv_ruleImport= ruleImport EOF )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:927:2: iv_ruleImport= ruleImport EOF
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:919:2: (iv_ruleImport= ruleImport EOF )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:920:2: iv_ruleImport= ruleImport EOF
             {
              newCompositeNode(grammarAccess.getImportRule()); 
-            pushFollow(FOLLOW_ruleImport_in_entryRuleImport2014);
+            pushFollow(FOLLOW_ruleImport_in_entryRuleImport1966);
             iv_ruleImport=ruleImport();
 
             state._fsp--;
 
              current =iv_ruleImport; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImport2024); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImport1976); 
 
             }
 
@@ -2235,7 +2204,7 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImport"
-    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:934:1: ruleImport returns [EObject current=null] : (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleFqnWildcard ) ) ) ;
+    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:927:1: ruleImport returns [EObject current=null] : (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleFqnWildcard ) ) ) ;
     public final EObject ruleImport() throws RecognitionException {
         EObject current = null;
 
@@ -2246,26 +2215,26 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:937:28: ( (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleFqnWildcard ) ) ) )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:938:1: (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleFqnWildcard ) ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:930:28: ( (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleFqnWildcard ) ) ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:931:1: (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleFqnWildcard ) ) )
             {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:938:1: (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleFqnWildcard ) ) )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:938:3: otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleFqnWildcard ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:931:1: (otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleFqnWildcard ) ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:931:3: otherlv_0= 'import' ( (lv_importedNamespace_1_0= ruleFqnWildcard ) )
             {
-            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleImport2061); 
+            otherlv_0=(Token)match(input,28,FOLLOW_28_in_ruleImport2013); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getImportAccess().getImportKeyword_0());
                 
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:942:1: ( (lv_importedNamespace_1_0= ruleFqnWildcard ) )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:943:1: (lv_importedNamespace_1_0= ruleFqnWildcard )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:935:1: ( (lv_importedNamespace_1_0= ruleFqnWildcard ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:936:1: (lv_importedNamespace_1_0= ruleFqnWildcard )
             {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:943:1: (lv_importedNamespace_1_0= ruleFqnWildcard )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:944:3: lv_importedNamespace_1_0= ruleFqnWildcard
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:936:1: (lv_importedNamespace_1_0= ruleFqnWildcard )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:937:3: lv_importedNamespace_1_0= ruleFqnWildcard
             {
              
             	        newCompositeNode(grammarAccess.getImportAccess().getImportedNamespaceFqnWildcardParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleFqnWildcard_in_ruleImport2082);
+            pushFollow(FOLLOW_ruleFqnWildcard_in_ruleImport2034);
             lv_importedNamespace_1_0=ruleFqnWildcard();
 
             state._fsp--;
@@ -2308,7 +2277,7 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDATATYPE"
-    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:968:1: ruleDATATYPE returns [Enumerator current=null] : ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) ) ;
+    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:961:1: ruleDATATYPE returns [Enumerator current=null] : ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) ) ;
     public final Enumerator ruleDATATYPE() throws RecognitionException {
         Enumerator current = null;
 
@@ -2323,48 +2292,48 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:970:28: ( ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) ) )
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:971:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:963:28: ( ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:964:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) )
             {
-            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:971:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:964:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) )
             int alt14=8;
             switch ( input.LA(1) ) {
-            case 32:
+            case 29:
                 {
                 alt14=1;
                 }
                 break;
-            case 33:
+            case 30:
                 {
                 alt14=2;
                 }
                 break;
-            case 34:
+            case 31:
                 {
                 alt14=3;
                 }
                 break;
-            case 35:
+            case 32:
                 {
                 alt14=4;
                 }
                 break;
-            case 36:
+            case 33:
                 {
                 alt14=5;
                 }
                 break;
-            case 37:
+            case 34:
                 {
                 alt14=6;
                 }
                 break;
-            case 38:
+            case 35:
                 {
                 alt14=7;
                 }
                 break;
-            case 39:
+            case 36:
                 {
                 alt14=8;
                 }
@@ -2378,12 +2347,12 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
 
             switch (alt14) {
                 case 1 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:971:2: (enumLiteral_0= 'string' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:964:2: (enumLiteral_0= 'string' )
                     {
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:971:2: (enumLiteral_0= 'string' )
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:971:4: enumLiteral_0= 'string'
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:964:2: (enumLiteral_0= 'string' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:964:4: enumLiteral_0= 'string'
                     {
-                    enumLiteral_0=(Token)match(input,32,FOLLOW_32_in_ruleDATATYPE2132); 
+                    enumLiteral_0=(Token)match(input,29,FOLLOW_29_in_ruleDATATYPE2084); 
 
                             current = grammarAccess.getDATATYPEAccess().getStringEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getDATATYPEAccess().getStringEnumLiteralDeclaration_0()); 
@@ -2395,12 +2364,12 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:977:6: (enumLiteral_1= 'integer' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:970:6: (enumLiteral_1= 'integer' )
                     {
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:977:6: (enumLiteral_1= 'integer' )
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:977:8: enumLiteral_1= 'integer'
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:970:6: (enumLiteral_1= 'integer' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:970:8: enumLiteral_1= 'integer'
                     {
-                    enumLiteral_1=(Token)match(input,33,FOLLOW_33_in_ruleDATATYPE2149); 
+                    enumLiteral_1=(Token)match(input,30,FOLLOW_30_in_ruleDATATYPE2101); 
 
                             current = grammarAccess.getDATATYPEAccess().getIntegerEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getDATATYPEAccess().getIntegerEnumLiteralDeclaration_1()); 
@@ -2412,12 +2381,12 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:983:6: (enumLiteral_2= 'float' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:976:6: (enumLiteral_2= 'float' )
                     {
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:983:6: (enumLiteral_2= 'float' )
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:983:8: enumLiteral_2= 'float'
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:976:6: (enumLiteral_2= 'float' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:976:8: enumLiteral_2= 'float'
                     {
-                    enumLiteral_2=(Token)match(input,34,FOLLOW_34_in_ruleDATATYPE2166); 
+                    enumLiteral_2=(Token)match(input,31,FOLLOW_31_in_ruleDATATYPE2118); 
 
                             current = grammarAccess.getDATATYPEAccess().getFloatEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getDATATYPEAccess().getFloatEnumLiteralDeclaration_2()); 
@@ -2429,12 +2398,12 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:989:6: (enumLiteral_3= 'date' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:982:6: (enumLiteral_3= 'date' )
                     {
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:989:6: (enumLiteral_3= 'date' )
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:989:8: enumLiteral_3= 'date'
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:982:6: (enumLiteral_3= 'date' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:982:8: enumLiteral_3= 'date'
                     {
-                    enumLiteral_3=(Token)match(input,35,FOLLOW_35_in_ruleDATATYPE2183); 
+                    enumLiteral_3=(Token)match(input,32,FOLLOW_32_in_ruleDATATYPE2135); 
 
                             current = grammarAccess.getDATATYPEAccess().getDateEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getDATATYPEAccess().getDateEnumLiteralDeclaration_3()); 
@@ -2446,12 +2415,12 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:995:6: (enumLiteral_4= 'time' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:988:6: (enumLiteral_4= 'time' )
                     {
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:995:6: (enumLiteral_4= 'time' )
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:995:8: enumLiteral_4= 'time'
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:988:6: (enumLiteral_4= 'time' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:988:8: enumLiteral_4= 'time'
                     {
-                    enumLiteral_4=(Token)match(input,36,FOLLOW_36_in_ruleDATATYPE2200); 
+                    enumLiteral_4=(Token)match(input,33,FOLLOW_33_in_ruleDATATYPE2152); 
 
                             current = grammarAccess.getDATATYPEAccess().getTimeEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getDATATYPEAccess().getTimeEnumLiteralDeclaration_4()); 
@@ -2463,12 +2432,12 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1001:6: (enumLiteral_5= 'datetime' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:994:6: (enumLiteral_5= 'datetime' )
                     {
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1001:6: (enumLiteral_5= 'datetime' )
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1001:8: enumLiteral_5= 'datetime'
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:994:6: (enumLiteral_5= 'datetime' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:994:8: enumLiteral_5= 'datetime'
                     {
-                    enumLiteral_5=(Token)match(input,37,FOLLOW_37_in_ruleDATATYPE2217); 
+                    enumLiteral_5=(Token)match(input,34,FOLLOW_34_in_ruleDATATYPE2169); 
 
                             current = grammarAccess.getDATATYPEAccess().getDatetimeEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getDATATYPEAccess().getDatetimeEnumLiteralDeclaration_5()); 
@@ -2480,12 +2449,12 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1007:6: (enumLiteral_6= 'binary' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1000:6: (enumLiteral_6= 'binary' )
                     {
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1007:6: (enumLiteral_6= 'binary' )
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1007:8: enumLiteral_6= 'binary'
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1000:6: (enumLiteral_6= 'binary' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1000:8: enumLiteral_6= 'binary'
                     {
-                    enumLiteral_6=(Token)match(input,38,FOLLOW_38_in_ruleDATATYPE2234); 
+                    enumLiteral_6=(Token)match(input,35,FOLLOW_35_in_ruleDATATYPE2186); 
 
                             current = grammarAccess.getDATATYPEAccess().getBinaryEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getDATATYPEAccess().getBinaryEnumLiteralDeclaration_6()); 
@@ -2497,12 +2466,12 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1013:6: (enumLiteral_7= 'boolean' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1006:6: (enumLiteral_7= 'boolean' )
                     {
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1013:6: (enumLiteral_7= 'boolean' )
-                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1013:8: enumLiteral_7= 'boolean'
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1006:6: (enumLiteral_7= 'boolean' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1006:8: enumLiteral_7= 'boolean'
                     {
-                    enumLiteral_7=(Token)match(input,39,FOLLOW_39_in_ruleDATATYPE2251); 
+                    enumLiteral_7=(Token)match(input,36,FOLLOW_36_in_ruleDATATYPE2203); 
 
                             current = grammarAccess.getDATATYPEAccess().getBooleanEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_7, grammarAccess.getDATATYPEAccess().getBooleanEnumLiteralDeclaration_7()); 
@@ -2532,6 +2501,117 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end "ruleDATATYPE"
 
+
+    // $ANTLR start "ruleMULTIPLICITY"
+    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1016:1: ruleMULTIPLICITY returns [Enumerator current=null] : ( (enumLiteral_0= '?' ) | (enumLiteral_1= '+' ) | (enumLiteral_2= '*' ) ) ;
+    public final Enumerator ruleMULTIPLICITY() throws RecognitionException {
+        Enumerator current = null;
+
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
+
+         enterRule(); 
+        try {
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1018:28: ( ( (enumLiteral_0= '?' ) | (enumLiteral_1= '+' ) | (enumLiteral_2= '*' ) ) )
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1019:1: ( (enumLiteral_0= '?' ) | (enumLiteral_1= '+' ) | (enumLiteral_2= '*' ) )
+            {
+            // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1019:1: ( (enumLiteral_0= '?' ) | (enumLiteral_1= '+' ) | (enumLiteral_2= '*' ) )
+            int alt15=3;
+            switch ( input.LA(1) ) {
+            case 37:
+                {
+                alt15=1;
+                }
+                break;
+            case 38:
+                {
+                alt15=2;
+                }
+                break;
+            case 39:
+                {
+                alt15=3;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 15, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt15) {
+                case 1 :
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1019:2: (enumLiteral_0= '?' )
+                    {
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1019:2: (enumLiteral_0= '?' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1019:4: enumLiteral_0= '?'
+                    {
+                    enumLiteral_0=(Token)match(input,37,FOLLOW_37_in_ruleMULTIPLICITY2248); 
+
+                            current = grammarAccess.getMULTIPLICITYAccess().getOPTIONALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_0, grammarAccess.getMULTIPLICITYAccess().getOPTIONALEnumLiteralDeclaration_0()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1025:6: (enumLiteral_1= '+' )
+                    {
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1025:6: (enumLiteral_1= '+' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1025:8: enumLiteral_1= '+'
+                    {
+                    enumLiteral_1=(Token)match(input,38,FOLLOW_38_in_ruleMULTIPLICITY2265); 
+
+                            current = grammarAccess.getMULTIPLICITYAccess().getPLUSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_1, grammarAccess.getMULTIPLICITYAccess().getPLUSEnumLiteralDeclaration_1()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1031:6: (enumLiteral_2= '*' )
+                    {
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1031:6: (enumLiteral_2= '*' )
+                    // ../service.dsl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalServiceDsl.g:1031:8: enumLiteral_2= '*'
+                    {
+                    enumLiteral_2=(Token)match(input,39,FOLLOW_39_in_ruleMULTIPLICITY2282); 
+
+                            current = grammarAccess.getMULTIPLICITYAccess().getSTAREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_2, grammarAccess.getMULTIPLICITYAccess().getSTAREnumLiteralDeclaration_2()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleMULTIPLICITY"
+
     // Delegated rules
 
 
@@ -2540,8 +2620,8 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleServiceDSL_in_entryRuleServiceDSL75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleServiceDSL85 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_11_in_ruleServiceDSL131 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleFQN_in_ruleServiceDSL152 = new BitSet(new long[]{0x0000000082181012L});
-    public static final BitSet FOLLOW_ruleImport_in_ruleServiceDSL173 = new BitSet(new long[]{0x0000000082181012L});
+    public static final BitSet FOLLOW_ruleFQN_in_ruleServiceDSL152 = new BitSet(new long[]{0x0000000012181012L});
+    public static final BitSet FOLLOW_ruleImport_in_ruleServiceDSL173 = new BitSet(new long[]{0x0000000012181012L});
     public static final BitSet FOLLOW_ruleService_in_ruleServiceDSL196 = new BitSet(new long[]{0x0000000002181012L});
     public static final BitSet FOLLOW_ruleDataElement_in_ruleServiceDSL223 = new BitSet(new long[]{0x0000000002181012L});
     public static final BitSet FOLLOW_ruleNode_in_ruleServiceDSL250 = new BitSet(new long[]{0x0000000002181012L});
@@ -2603,32 +2683,33 @@ public class InternalServiceDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleSimpleElement_in_entryRuleSimpleElement1525 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSimpleElement1535 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleSimpleElement1586 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleSimpleElement1603 = new BitSet(new long[]{0x000000FF00000010L});
-    public static final BitSet FOLLOW_ruleDATATYPE_in_ruleSimpleElement1625 = new BitSet(new long[]{0x000000001C000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_ruleSimpleElement1654 = new BitSet(new long[]{0x000000001C000002L});
-    public static final BitSet FOLLOW_26_in_ruleSimpleElement1674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleSimpleElement1705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleSimpleElement1723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_entryRuleFQN1762 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFQN1773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFQN1813 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_29_in_ruleFQN1832 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFQN1847 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_ruleFqnWildcard_in_entryRuleFqnWildcard1895 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFqnWildcard1906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_ruleFqnWildcard1953 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_ruleFqnWildcard1972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_entryRuleImport2014 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImport2024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleImport2061 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleFqnWildcard_in_ruleImport2082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleDATATYPE2132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleDATATYPE2149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleDATATYPE2166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleDATATYPE2183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleDATATYPE2200 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleDATATYPE2217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleDATATYPE2234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleDATATYPE2251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleSimpleElement1603 = new BitSet(new long[]{0x0000001FE0000010L});
+    public static final BitSet FOLLOW_ruleDATATYPE_in_ruleSimpleElement1625 = new BitSet(new long[]{0x000000E000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_ruleSimpleElement1654 = new BitSet(new long[]{0x000000E000000002L});
+    public static final BitSet FOLLOW_ruleMULTIPLICITY_in_ruleSimpleElement1676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_entryRuleFQN1714 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFQN1725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFQN1765 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_26_in_ruleFQN1784 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFQN1799 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_ruleFqnWildcard_in_entryRuleFqnWildcard1847 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFqnWildcard1858 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_ruleFqnWildcard1905 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_27_in_ruleFqnWildcard1924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_entryRuleImport1966 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImport1976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_ruleImport2013 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleFqnWildcard_in_ruleImport2034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleDATATYPE2084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleDATATYPE2101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleDATATYPE2118 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleDATATYPE2135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleDATATYPE2152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleDATATYPE2169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleDATATYPE2186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleDATATYPE2203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleMULTIPLICITY2248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleMULTIPLICITY2265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleMULTIPLICITY2282 = new BitSet(new long[]{0x0000000000000002L});
 
 }

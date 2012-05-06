@@ -7,6 +7,7 @@ package at.ac.univie.cs.swa.soa.serviceDsl.impl;
 
 import at.ac.univie.cs.swa.soa.serviceDsl.ComplexElement;
 import at.ac.univie.cs.swa.soa.serviceDsl.DATATYPE;
+import at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY;
 import at.ac.univie.cs.swa.soa.serviceDsl.ServiceDslPackage;
 import at.ac.univie.cs.swa.soa.serviceDsl.SimpleElement;
 
@@ -72,7 +73,7 @@ public class SimpleElementImpl extends DataElementImpl implements SimpleElement
    * @generated
    * @ordered
    */
-  protected static final String MULTIPLICITY_EDEFAULT = null;
+  protected static final MULTIPLICITY MULTIPLICITY_EDEFAULT = MULTIPLICITY.OPTIONAL;
 
   /**
    * The cached value of the '{@link #getMultiplicity() <em>Multiplicity</em>}' attribute.
@@ -82,7 +83,7 @@ public class SimpleElementImpl extends DataElementImpl implements SimpleElement
    * @generated
    * @ordered
    */
-  protected String multiplicity = MULTIPLICITY_EDEFAULT;
+  protected MULTIPLICITY multiplicity = MULTIPLICITY_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -176,7 +177,7 @@ public class SimpleElementImpl extends DataElementImpl implements SimpleElement
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getMultiplicity()
+  public MULTIPLICITY getMultiplicity()
   {
     return multiplicity;
   }
@@ -186,10 +187,10 @@ public class SimpleElementImpl extends DataElementImpl implements SimpleElement
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setMultiplicity(String newMultiplicity)
+  public void setMultiplicity(MULTIPLICITY newMultiplicity)
   {
-    String oldMultiplicity = multiplicity;
-    multiplicity = newMultiplicity;
+    MULTIPLICITY oldMultiplicity = multiplicity;
+    multiplicity = newMultiplicity == null ? MULTIPLICITY_EDEFAULT : newMultiplicity;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, ServiceDslPackage.SIMPLE_ELEMENT__MULTIPLICITY, oldMultiplicity, multiplicity));
   }
@@ -232,7 +233,7 @@ public class SimpleElementImpl extends DataElementImpl implements SimpleElement
         setRef((ComplexElement)newValue);
         return;
       case ServiceDslPackage.SIMPLE_ELEMENT__MULTIPLICITY:
-        setMultiplicity((String)newValue);
+        setMultiplicity((MULTIPLICITY)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -276,7 +277,7 @@ public class SimpleElementImpl extends DataElementImpl implements SimpleElement
       case ServiceDslPackage.SIMPLE_ELEMENT__REF:
         return ref != null;
       case ServiceDslPackage.SIMPLE_ELEMENT__MULTIPLICITY:
-        return MULTIPLICITY_EDEFAULT == null ? multiplicity != null : !MULTIPLICITY_EDEFAULT.equals(multiplicity);
+        return multiplicity != MULTIPLICITY_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }

@@ -452,17 +452,14 @@ public class ServiceDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRefAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
 		private final CrossReference cRefComplexElementCrossReference_3_1_0 = (CrossReference)cRefAssignment_3_1.eContents().get(0);
 		private final RuleCall cRefComplexElementFQNParserRuleCall_3_1_0_1 = (RuleCall)cRefComplexElementCrossReference_3_1_0.eContents().get(1);
-		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
-		private final Assignment cMultiplicityAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
-		private final Keyword cMultiplicityQuestionMarkKeyword_4_0_0 = (Keyword)cMultiplicityAssignment_4_0.eContents().get(0);
-		private final Keyword cPlusSignKeyword_4_1 = (Keyword)cAlternatives_4.eContents().get(1);
-		private final Keyword cAsteriskKeyword_4_2 = (Keyword)cAlternatives_4.eContents().get(2);
+		private final Assignment cMultiplicityAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cMultiplicityMULTIPLICITYEnumRuleCall_4_0 = (RuleCall)cMultiplicityAssignment_4.eContents().get(0);
 		
 		//SimpleElement:
-		//	{SimpleElement} name=ID ":" (type=DATATYPE | ref=[ComplexElement|FQN]) (multiplicity="?" | "+" | "*")?;
+		//	{SimpleElement} name=ID ":" (type=DATATYPE | ref=[ComplexElement|FQN]) multiplicity=MULTIPLICITY?;
 		public ParserRule getRule() { return rule; }
 
-		//{SimpleElement} name=ID ":" (type=DATATYPE | ref=[ComplexElement|FQN]) (multiplicity="?" | "+" | "*")?
+		//{SimpleElement} name=ID ":" (type=DATATYPE | ref=[ComplexElement|FQN]) multiplicity=MULTIPLICITY?
 		public Group getGroup() { return cGroup; }
 
 		//{SimpleElement}
@@ -495,20 +492,11 @@ public class ServiceDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FQN
 		public RuleCall getRefComplexElementFQNParserRuleCall_3_1_0_1() { return cRefComplexElementFQNParserRuleCall_3_1_0_1; }
 
-		//(multiplicity="?" | "+" | "*")?
-		public Alternatives getAlternatives_4() { return cAlternatives_4; }
+		//multiplicity=MULTIPLICITY?
+		public Assignment getMultiplicityAssignment_4() { return cMultiplicityAssignment_4; }
 
-		//multiplicity="?"
-		public Assignment getMultiplicityAssignment_4_0() { return cMultiplicityAssignment_4_0; }
-
-		//"?"
-		public Keyword getMultiplicityQuestionMarkKeyword_4_0_0() { return cMultiplicityQuestionMarkKeyword_4_0_0; }
-
-		//"+"
-		public Keyword getPlusSignKeyword_4_1() { return cPlusSignKeyword_4_1; }
-
-		//"*"
-		public Keyword getAsteriskKeyword_4_2() { return cAsteriskKeyword_4_2; }
+		//MULTIPLICITY
+		public RuleCall getMultiplicityMULTIPLICITYEnumRuleCall_4_0() { return cMultiplicityMULTIPLICITYEnumRuleCall_4_0; }
 	}
 
 	public class FQNElements extends AbstractParserRuleElementFinder {
@@ -659,6 +647,42 @@ public class ServiceDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"boolean"
 		public Keyword getBooleanBooleanKeyword_7_0() { return cBooleanBooleanKeyword_7_0; }
 	}
+
+	public class MULTIPLICITYElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "MULTIPLICITY");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cOPTIONALEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cOPTIONALQuestionMarkKeyword_0_0 = (Keyword)cOPTIONALEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cPLUSEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cPLUSPlusSignKeyword_1_0 = (Keyword)cPLUSEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cSTAREnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cSTARAsteriskKeyword_2_0 = (Keyword)cSTAREnumLiteralDeclaration_2.eContents().get(0);
+		
+		//enum MULTIPLICITY:
+		//	OPTIONAL="?" | PLUS="+" | STAR="*";
+		public EnumRule getRule() { return rule; }
+
+		//OPTIONAL="?" | PLUS="+" | STAR="*"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//OPTIONAL="?"
+		public EnumLiteralDeclaration getOPTIONALEnumLiteralDeclaration_0() { return cOPTIONALEnumLiteralDeclaration_0; }
+
+		//"?"
+		public Keyword getOPTIONALQuestionMarkKeyword_0_0() { return cOPTIONALQuestionMarkKeyword_0_0; }
+
+		//PLUS="+"
+		public EnumLiteralDeclaration getPLUSEnumLiteralDeclaration_1() { return cPLUSEnumLiteralDeclaration_1; }
+
+		//"+"
+		public Keyword getPLUSPlusSignKeyword_1_0() { return cPLUSPlusSignKeyword_1_0; }
+
+		//STAR="*"
+		public EnumLiteralDeclaration getSTAREnumLiteralDeclaration_2() { return cSTAREnumLiteralDeclaration_2; }
+
+		//"*"
+		public Keyword getSTARAsteriskKeyword_2_0() { return cSTARAsteriskKeyword_2_0; }
+	}
 	
 	private ServiceDSLElements pServiceDSL;
 	private ServiceElements pService;
@@ -670,6 +694,7 @@ public class ServiceDslGrammarAccess extends AbstractGrammarElementFinder {
 	private ComplexElementElements pComplexElement;
 	private SimpleElementElements pSimpleElement;
 	private DATATYPEElements unknownRuleDATATYPE;
+	private MULTIPLICITYElements unknownRuleMULTIPLICITY;
 	private FQNElements pFQN;
 	private FqnWildcardElements pFqnWildcard;
 	private ImportElements pImport;
@@ -777,7 +802,7 @@ public class ServiceDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SimpleElement:
-	//	{SimpleElement} name=ID ":" (type=DATATYPE | ref=[ComplexElement|FQN]) (multiplicity="?" | "+" | "*")?;
+	//	{SimpleElement} name=ID ":" (type=DATATYPE | ref=[ComplexElement|FQN]) multiplicity=MULTIPLICITY?;
 	public SimpleElementElements getSimpleElementAccess() {
 		return (pSimpleElement != null) ? pSimpleElement : (pSimpleElement = new SimpleElementElements());
 	}
@@ -794,6 +819,16 @@ public class ServiceDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getDATATYPERule() {
 		return getDATATYPEAccess().getRule();
+	}
+
+	//enum MULTIPLICITY:
+	//	OPTIONAL="?" | PLUS="+" | STAR="*";
+	public MULTIPLICITYElements getMULTIPLICITYAccess() {
+		return (unknownRuleMULTIPLICITY != null) ? unknownRuleMULTIPLICITY : (unknownRuleMULTIPLICITY = new MULTIPLICITYElements());
+	}
+	
+	public EnumRule getMULTIPLICITYRule() {
+		return getMULTIPLICITYAccess().getRule();
 	}
 
 	//FQN:

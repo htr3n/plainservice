@@ -54,10 +54,14 @@ ComplexElement:
 SimpleElement:
 	{SimpleElement}
 	name=ID ':' (type=DATATYPE | ref=[ComplexElement|FQN])
-	(multiplicity='?' | '+' | '*')?;
+	(multiplicity=MULTIPLICITY)?;
 
 enum DATATYPE:
 	string | integer | float | date | time | datetime | binary | boolean;
+
+enum MULTIPLICITY:
+	OPTIONAL='?' | PLUS='+' | STAR='*'
+	;
 
 FQN:
 	ID ("." ID)*;

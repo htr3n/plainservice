@@ -36,4 +36,3 @@ Export-Package: at.ac.univie.cs.swa.soa,
  at.ac.univie.cs.swa.soa.serviceDsl.util,
  at.ac.univie.cs.swa.soa.services,
  at.ac.univie.cs.swa.soa.validation
-

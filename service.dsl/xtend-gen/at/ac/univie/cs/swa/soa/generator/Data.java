@@ -3,6 +3,7 @@ package at.ac.univie.cs.swa.soa.generator;
 import at.ac.univie.cs.swa.soa.serviceDsl.ComplexElement;
 import at.ac.univie.cs.swa.soa.serviceDsl.DATATYPE;
 import at.ac.univie.cs.swa.soa.serviceDsl.DataElement;
+import at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY;
 import at.ac.univie.cs.swa.soa.serviceDsl.ServiceDSL;
 import at.ac.univie.cs.swa.soa.serviceDsl.SimpleElement;
 import java.io.File;
@@ -329,37 +330,72 @@ public class Data {
   }
   
   protected boolean isRequired(final SimpleElement e) {
-    String _multiplicity = e.getMultiplicity();
-    boolean _operator_equals = ObjectExtensions.operator_equals(_multiplicity, "+");
-    return _operator_equals;
+    boolean _operator_or = false;
+    MULTIPLICITY _multiplicity = e.getMultiplicity();
+    boolean _operator_equals = ObjectExtensions.operator_equals(_multiplicity, null);
+    if (_operator_equals) {
+      _operator_or = true;
+    } else {
+      MULTIPLICITY _multiplicity_1 = e.getMultiplicity();
+      boolean _operator_equals_1 = ObjectExtensions.operator_equals(_multiplicity_1, MULTIPLICITY.PLUS);
+      _operator_or = BooleanExtensions.operator_or(_operator_equals, _operator_equals_1);
+    }
+    return _operator_or;
   }
   
   protected String convertType(final SimpleElement e) {
-    ComplexElement _ref = e.getRef();
-    boolean _operator_notEquals = ObjectExtensions.operator_notEquals(_ref, null);
-    if (_operator_notEquals) {
-      {
-        ComplexElement _ref_1 = e.getRef();
-        EObject _eContainer = _ref_1.eContainer();
-        String _name = ((ServiceDSL) _eContainer).getName();
-        String outputQualifiedPath = _name;
-        String _operator_plus = StringExtensions.operator_plus(outputQualifiedPath, ".");
-        ComplexElement _ref_2 = e.getRef();
-        String _name_1 = _ref_2.getName();
-        String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, _name_1);
-        return _operator_plus_1;
-      }
-    } else {
-      DATATYPE _type = e.getType();
-      boolean _operator_notEquals_1 = ObjectExtensions.operator_notEquals(_type, null);
-      if (_operator_notEquals_1) {
-        DATATYPE _type_1 = e.getType();
-        String _javaType = this.toJavaType(_type_1);
-        return _javaType;
+      boolean _operator_or = false;
+      MULTIPLICITY _multiplicity = e.getMultiplicity();
+      boolean _operator_equals = ObjectExtensions.operator_equals(_multiplicity, MULTIPLICITY.PLUS);
+      if (_operator_equals) {
+        _operator_or = true;
       } else {
-        return "";
+        MULTIPLICITY _multiplicity_1 = e.getMultiplicity();
+        boolean _operator_equals_1 = ObjectExtensions.operator_equals(_multiplicity_1, MULTIPLICITY.STAR);
+        _operator_or = BooleanExtensions.operator_or(_operator_equals, _operator_equals_1);
       }
-    }
+      boolean isMany = _operator_or;
+      ComplexElement _ref = e.getRef();
+      boolean _operator_notEquals = ObjectExtensions.operator_notEquals(_ref, null);
+      if (_operator_notEquals) {
+        {
+          ComplexElement _ref_1 = e.getRef();
+          EObject _eContainer = _ref_1.eContainer();
+          String _name = ((ServiceDSL) _eContainer).getName();
+          String outputQualifiedPath = _name;
+          String _operator_plus = StringExtensions.operator_plus(outputQualifiedPath, ".");
+          ComplexElement _ref_2 = e.getRef();
+          String _name_1 = _ref_2.getName();
+          String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, _name_1);
+          String result = _operator_plus_1;
+          if (isMany) {
+            String _operator_plus_2 = StringExtensions.operator_plus("java.util.List<", result);
+            String _operator_plus_3 = StringExtensions.operator_plus(_operator_plus_2, ">");
+            return _operator_plus_3;
+          } else {
+            return result;
+          }
+        }
+      } else {
+        DATATYPE _type = e.getType();
+        boolean _operator_notEquals_1 = ObjectExtensions.operator_notEquals(_type, null);
+        if (_operator_notEquals_1) {
+          {
+            DATATYPE _type_1 = e.getType();
+            String _javaType = this.toJavaType(_type_1);
+            String result_1 = _javaType;
+            if (isMany) {
+              String _operator_plus_4 = StringExtensions.operator_plus("java.util.List<", result_1);
+              String _operator_plus_5 = StringExtensions.operator_plus(_operator_plus_4, ">");
+              return _operator_plus_5;
+            } else {
+              return result_1;
+            }
+          }
+        } else {
+          return null;
+        }
+      }
   }
   
   protected String toJavaType(final DATATYPE type) {
@@ -379,11 +415,17 @@ public class Data {
       if (!matched) {
         if (ObjectExtensions.operator_equals(type,DATATYPE.DATE)) {
           matched=true;
-          return "String";
+          return "javax.xml.datatype.XMLGregorianCalendar";
         }
       }
       if (!matched) {
         if (ObjectExtensions.operator_equals(type,DATATYPE.DATETIME)) {
+          matched=true;
+          return "javax.xml.datatype.XMLGregorianCalendar";
+        }
+      }
+      if (!matched) {
+        if (ObjectExtensions.operator_equals(type,DATATYPE.TIME)) {
           matched=true;
           return "javax.xml.datatype.XMLGregorianCalendar";
         }
@@ -397,17 +439,11 @@ public class Data {
       if (!matched) {
         if (ObjectExtensions.operator_equals(type,DATATYPE.INTEGER)) {
           matched=true;
-          return "String";
+          return "int";
         }
       }
       if (!matched) {
         if (ObjectExtensions.operator_equals(type,DATATYPE.STRING)) {
-          matched=true;
-          return "String";
-        }
-      }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(type,DATATYPE.TIME)) {
           matched=true;
           return "String";
         }

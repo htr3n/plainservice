@@ -45,7 +45,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SimpleElement" eSuperTypes="#//DataElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DATATYPE"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//ComplexElement"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" eType="#//MULTIPLICITY"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DATATYPE">
     <eLiterals name="string" literal="string"/>
@@ -56,6 +56,11 @@
     <eLiterals name="datetime" value="5" literal="datetime"/>
     <eLiterals name="binary" value="6" literal="binary"/>
     <eLiterals name="boolean" value="7" literal="boolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MULTIPLICITY">
+    <eLiterals name="OPTIONAL" literal="?"/>
+    <eLiterals name="PLUS" value="1" literal="+"/>
+    <eLiterals name="STAR" value="2" literal="*"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Import">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importedNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

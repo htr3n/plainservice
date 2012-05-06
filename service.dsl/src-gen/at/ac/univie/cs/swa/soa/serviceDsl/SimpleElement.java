@@ -83,6 +83,7 @@ public interface SimpleElement extends DataElement
 
   /**
    * Returns the value of the '<em><b>Multiplicity</b></em>' attribute.
+   * The literals are from the enumeration {@link at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Multiplicity</em>' attribute isn't clear,
@@ -90,21 +91,23 @@ public interface SimpleElement extends DataElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Multiplicity</em>' attribute.
-   * @see #setMultiplicity(String)
+   * @see at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY
+   * @see #setMultiplicity(MULTIPLICITY)
    * @see at.ac.univie.cs.swa.soa.serviceDsl.ServiceDslPackage#getSimpleElement_Multiplicity()
    * @model
    * @generated
    */
-  String getMultiplicity();
+  MULTIPLICITY getMultiplicity();
 
   /**
    * Sets the value of the '{@link at.ac.univie.cs.swa.soa.serviceDsl.SimpleElement#getMultiplicity <em>Multiplicity</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Multiplicity</em>' attribute.
+   * @see at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY
    * @see #getMultiplicity()
    * @generated
    */
-  void setMultiplicity(String value);
+  void setMultiplicity(MULTIPLICITY value);
 
 } // SimpleElement

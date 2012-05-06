@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalServiceDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'+'", "'*'", "'string'", "'integer'", "'float'", "'date'", "'time'", "'datetime'", "'binary'", "'boolean'", "'module'", "'Web service'", "'{'", "'}'", "'operation'", "'input'", "':'", "'output'", "'REST service'", "'Node'", "'uri'", "'='", "'hosts'", "','", "'complex-data'", "'.'", "'.*'", "'import'", "'?'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'string'", "'integer'", "'float'", "'date'", "'time'", "'datetime'", "'binary'", "'boolean'", "'?'", "'+'", "'*'", "'module'", "'Web service'", "'{'", "'}'", "'operation'", "'input'", "':'", "'output'", "'REST service'", "'Node'", "'uri'", "'='", "'hosts'", "','", "'complex-data'", "'.'", "'.*'", "'import'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -1070,29 +1070,76 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleDATATYPE"
 
 
+    // $ANTLR start "ruleMULTIPLICITY"
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:416:1: ruleMULTIPLICITY : ( ( rule__MULTIPLICITY__Alternatives ) ) ;
+    public final void ruleMULTIPLICITY() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:420:1: ( ( ( rule__MULTIPLICITY__Alternatives ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:421:1: ( ( rule__MULTIPLICITY__Alternatives ) )
+            {
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:421:1: ( ( rule__MULTIPLICITY__Alternatives ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:422:1: ( rule__MULTIPLICITY__Alternatives )
+            {
+             before(grammarAccess.getMULTIPLICITYAccess().getAlternatives()); 
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:423:1: ( rule__MULTIPLICITY__Alternatives )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:423:2: rule__MULTIPLICITY__Alternatives
+            {
+            pushFollow(FOLLOW_rule__MULTIPLICITY__Alternatives_in_ruleMULTIPLICITY827);
+            rule__MULTIPLICITY__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getMULTIPLICITYAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleMULTIPLICITY"
+
+
     // $ANTLR start "rule__ServiceDSL__Alternatives_4"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:415:1: rule__ServiceDSL__Alternatives_4 : ( ( ( rule__ServiceDSL__ServicesAssignment_4_0 ) ) | ( ( rule__ServiceDSL__DataAssignment_4_1 ) ) | ( ( rule__ServiceDSL__NodesAssignment_4_2 ) ) );
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:434:1: rule__ServiceDSL__Alternatives_4 : ( ( ( rule__ServiceDSL__ServicesAssignment_4_0 ) ) | ( ( rule__ServiceDSL__DataAssignment_4_1 ) ) | ( ( rule__ServiceDSL__NodesAssignment_4_2 ) ) );
     public final void rule__ServiceDSL__Alternatives_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:419:1: ( ( ( rule__ServiceDSL__ServicesAssignment_4_0 ) ) | ( ( rule__ServiceDSL__DataAssignment_4_1 ) ) | ( ( rule__ServiceDSL__NodesAssignment_4_2 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:438:1: ( ( ( rule__ServiceDSL__ServicesAssignment_4_0 ) ) | ( ( rule__ServiceDSL__DataAssignment_4_1 ) ) | ( ( rule__ServiceDSL__NodesAssignment_4_2 ) ) )
             int alt1=3;
             switch ( input.LA(1) ) {
-            case 22:
-            case 29:
+            case 23:
+            case 30:
                 {
                 alt1=1;
                 }
                 break;
             case RULE_ID:
-            case 35:
+            case 36:
                 {
                 alt1=2;
                 }
                 break;
-            case 30:
+            case 31:
                 {
                 alt1=3;
                 }
@@ -1106,16 +1153,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
             switch (alt1) {
                 case 1 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:420:1: ( ( rule__ServiceDSL__ServicesAssignment_4_0 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:439:1: ( ( rule__ServiceDSL__ServicesAssignment_4_0 ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:420:1: ( ( rule__ServiceDSL__ServicesAssignment_4_0 ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:421:1: ( rule__ServiceDSL__ServicesAssignment_4_0 )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:439:1: ( ( rule__ServiceDSL__ServicesAssignment_4_0 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:440:1: ( rule__ServiceDSL__ServicesAssignment_4_0 )
                     {
                      before(grammarAccess.getServiceDSLAccess().getServicesAssignment_4_0()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:422:1: ( rule__ServiceDSL__ServicesAssignment_4_0 )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:422:2: rule__ServiceDSL__ServicesAssignment_4_0
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:441:1: ( rule__ServiceDSL__ServicesAssignment_4_0 )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:441:2: rule__ServiceDSL__ServicesAssignment_4_0
                     {
-                    pushFollow(FOLLOW_rule__ServiceDSL__ServicesAssignment_4_0_in_rule__ServiceDSL__Alternatives_4826);
+                    pushFollow(FOLLOW_rule__ServiceDSL__ServicesAssignment_4_0_in_rule__ServiceDSL__Alternatives_4862);
                     rule__ServiceDSL__ServicesAssignment_4_0();
 
                     state._fsp--;
@@ -1131,16 +1178,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:426:6: ( ( rule__ServiceDSL__DataAssignment_4_1 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:445:6: ( ( rule__ServiceDSL__DataAssignment_4_1 ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:426:6: ( ( rule__ServiceDSL__DataAssignment_4_1 ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:427:1: ( rule__ServiceDSL__DataAssignment_4_1 )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:445:6: ( ( rule__ServiceDSL__DataAssignment_4_1 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:446:1: ( rule__ServiceDSL__DataAssignment_4_1 )
                     {
                      before(grammarAccess.getServiceDSLAccess().getDataAssignment_4_1()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:428:1: ( rule__ServiceDSL__DataAssignment_4_1 )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:428:2: rule__ServiceDSL__DataAssignment_4_1
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:447:1: ( rule__ServiceDSL__DataAssignment_4_1 )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:447:2: rule__ServiceDSL__DataAssignment_4_1
                     {
-                    pushFollow(FOLLOW_rule__ServiceDSL__DataAssignment_4_1_in_rule__ServiceDSL__Alternatives_4844);
+                    pushFollow(FOLLOW_rule__ServiceDSL__DataAssignment_4_1_in_rule__ServiceDSL__Alternatives_4880);
                     rule__ServiceDSL__DataAssignment_4_1();
 
                     state._fsp--;
@@ -1156,16 +1203,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:432:6: ( ( rule__ServiceDSL__NodesAssignment_4_2 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:451:6: ( ( rule__ServiceDSL__NodesAssignment_4_2 ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:432:6: ( ( rule__ServiceDSL__NodesAssignment_4_2 ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:433:1: ( rule__ServiceDSL__NodesAssignment_4_2 )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:451:6: ( ( rule__ServiceDSL__NodesAssignment_4_2 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:452:1: ( rule__ServiceDSL__NodesAssignment_4_2 )
                     {
                      before(grammarAccess.getServiceDSLAccess().getNodesAssignment_4_2()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:434:1: ( rule__ServiceDSL__NodesAssignment_4_2 )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:434:2: rule__ServiceDSL__NodesAssignment_4_2
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:453:1: ( rule__ServiceDSL__NodesAssignment_4_2 )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:453:2: rule__ServiceDSL__NodesAssignment_4_2
                     {
-                    pushFollow(FOLLOW_rule__ServiceDSL__NodesAssignment_4_2_in_rule__ServiceDSL__Alternatives_4862);
+                    pushFollow(FOLLOW_rule__ServiceDSL__NodesAssignment_4_2_in_rule__ServiceDSL__Alternatives_4898);
                     rule__ServiceDSL__NodesAssignment_4_2();
 
                     state._fsp--;
@@ -1198,20 +1245,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Service__Alternatives"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:443:1: rule__Service__Alternatives : ( ( ruleWebService ) | ( ruleRESTService ) );
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:462:1: rule__Service__Alternatives : ( ( ruleWebService ) | ( ruleRESTService ) );
     public final void rule__Service__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:447:1: ( ( ruleWebService ) | ( ruleRESTService ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:466:1: ( ( ruleWebService ) | ( ruleRESTService ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==22) ) {
+            if ( (LA2_0==23) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==29) ) {
+            else if ( (LA2_0==30) ) {
                 alt2=2;
             }
             else {
@@ -1222,13 +1269,13 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
             }
             switch (alt2) {
                 case 1 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:448:1: ( ruleWebService )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:467:1: ( ruleWebService )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:448:1: ( ruleWebService )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:449:1: ruleWebService
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:467:1: ( ruleWebService )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:468:1: ruleWebService
                     {
                      before(grammarAccess.getServiceAccess().getWebServiceParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleWebService_in_rule__Service__Alternatives895);
+                    pushFollow(FOLLOW_ruleWebService_in_rule__Service__Alternatives931);
                     ruleWebService();
 
                     state._fsp--;
@@ -1241,13 +1288,13 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:454:6: ( ruleRESTService )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:473:6: ( ruleRESTService )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:454:6: ( ruleRESTService )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:455:1: ruleRESTService
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:473:6: ( ruleRESTService )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:474:1: ruleRESTService
                     {
                      before(grammarAccess.getServiceAccess().getRESTServiceParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleRESTService_in_rule__Service__Alternatives912);
+                    pushFollow(FOLLOW_ruleRESTService_in_rule__Service__Alternatives948);
                     ruleRESTService();
 
                     state._fsp--;
@@ -1277,20 +1324,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DataElement__Alternatives"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:465:1: rule__DataElement__Alternatives : ( ( ruleSimpleElement ) | ( ruleComplexElement ) );
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:484:1: rule__DataElement__Alternatives : ( ( ruleSimpleElement ) | ( ruleComplexElement ) );
     public final void rule__DataElement__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:469:1: ( ( ruleSimpleElement ) | ( ruleComplexElement ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:488:1: ( ( ruleSimpleElement ) | ( ruleComplexElement ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
             if ( (LA3_0==RULE_ID) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==35) ) {
+            else if ( (LA3_0==36) ) {
                 alt3=2;
             }
             else {
@@ -1301,13 +1348,13 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
             }
             switch (alt3) {
                 case 1 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:470:1: ( ruleSimpleElement )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:489:1: ( ruleSimpleElement )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:470:1: ( ruleSimpleElement )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:471:1: ruleSimpleElement
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:489:1: ( ruleSimpleElement )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:490:1: ruleSimpleElement
                     {
                      before(grammarAccess.getDataElementAccess().getSimpleElementParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleSimpleElement_in_rule__DataElement__Alternatives944);
+                    pushFollow(FOLLOW_ruleSimpleElement_in_rule__DataElement__Alternatives980);
                     ruleSimpleElement();
 
                     state._fsp--;
@@ -1320,13 +1367,13 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:476:6: ( ruleComplexElement )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:495:6: ( ruleComplexElement )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:476:6: ( ruleComplexElement )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:477:1: ruleComplexElement
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:495:6: ( ruleComplexElement )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:496:1: ruleComplexElement
                     {
                      before(grammarAccess.getDataElementAccess().getComplexElementParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleComplexElement_in_rule__DataElement__Alternatives961);
+                    pushFollow(FOLLOW_ruleComplexElement_in_rule__DataElement__Alternatives997);
                     ruleComplexElement();
 
                     state._fsp--;
@@ -1356,17 +1403,17 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Alternatives_3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:487:1: rule__SimpleElement__Alternatives_3 : ( ( ( rule__SimpleElement__TypeAssignment_3_0 ) ) | ( ( rule__SimpleElement__RefAssignment_3_1 ) ) );
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:506:1: rule__SimpleElement__Alternatives_3 : ( ( ( rule__SimpleElement__TypeAssignment_3_0 ) ) | ( ( rule__SimpleElement__RefAssignment_3_1 ) ) );
     public final void rule__SimpleElement__Alternatives_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:491:1: ( ( ( rule__SimpleElement__TypeAssignment_3_0 ) ) | ( ( rule__SimpleElement__RefAssignment_3_1 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:510:1: ( ( ( rule__SimpleElement__TypeAssignment_3_0 ) ) | ( ( rule__SimpleElement__RefAssignment_3_1 ) ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( ((LA4_0>=13 && LA4_0<=20)) ) {
+            if ( ((LA4_0>=11 && LA4_0<=18)) ) {
                 alt4=1;
             }
             else if ( (LA4_0==RULE_ID) ) {
@@ -1380,16 +1427,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
             }
             switch (alt4) {
                 case 1 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:492:1: ( ( rule__SimpleElement__TypeAssignment_3_0 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:511:1: ( ( rule__SimpleElement__TypeAssignment_3_0 ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:492:1: ( ( rule__SimpleElement__TypeAssignment_3_0 ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:493:1: ( rule__SimpleElement__TypeAssignment_3_0 )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:511:1: ( ( rule__SimpleElement__TypeAssignment_3_0 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:512:1: ( rule__SimpleElement__TypeAssignment_3_0 )
                     {
                      before(grammarAccess.getSimpleElementAccess().getTypeAssignment_3_0()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:494:1: ( rule__SimpleElement__TypeAssignment_3_0 )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:494:2: rule__SimpleElement__TypeAssignment_3_0
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:513:1: ( rule__SimpleElement__TypeAssignment_3_0 )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:513:2: rule__SimpleElement__TypeAssignment_3_0
                     {
-                    pushFollow(FOLLOW_rule__SimpleElement__TypeAssignment_3_0_in_rule__SimpleElement__Alternatives_3993);
+                    pushFollow(FOLLOW_rule__SimpleElement__TypeAssignment_3_0_in_rule__SimpleElement__Alternatives_31029);
                     rule__SimpleElement__TypeAssignment_3_0();
 
                     state._fsp--;
@@ -1405,16 +1452,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:498:6: ( ( rule__SimpleElement__RefAssignment_3_1 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:517:6: ( ( rule__SimpleElement__RefAssignment_3_1 ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:498:6: ( ( rule__SimpleElement__RefAssignment_3_1 ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:499:1: ( rule__SimpleElement__RefAssignment_3_1 )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:517:6: ( ( rule__SimpleElement__RefAssignment_3_1 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:518:1: ( rule__SimpleElement__RefAssignment_3_1 )
                     {
                      before(grammarAccess.getSimpleElementAccess().getRefAssignment_3_1()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:500:1: ( rule__SimpleElement__RefAssignment_3_1 )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:500:2: rule__SimpleElement__RefAssignment_3_1
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:519:1: ( rule__SimpleElement__RefAssignment_3_1 )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:519:2: rule__SimpleElement__RefAssignment_3_1
                     {
-                    pushFollow(FOLLOW_rule__SimpleElement__RefAssignment_3_1_in_rule__SimpleElement__Alternatives_31011);
+                    pushFollow(FOLLOW_rule__SimpleElement__RefAssignment_3_1_in_rule__SimpleElement__Alternatives_31047);
                     rule__SimpleElement__RefAssignment_3_1();
 
                     state._fsp--;
@@ -1446,29 +1493,54 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__SimpleElement__Alternatives_3"
 
 
-    // $ANTLR start "rule__SimpleElement__Alternatives_4"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:509:1: rule__SimpleElement__Alternatives_4 : ( ( ( rule__SimpleElement__MultiplicityAssignment_4_0 ) ) | ( '+' ) | ( '*' ) );
-    public final void rule__SimpleElement__Alternatives_4() throws RecognitionException {
+    // $ANTLR start "rule__DATATYPE__Alternatives"
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:528:1: rule__DATATYPE__Alternatives : ( ( ( 'string' ) ) | ( ( 'integer' ) ) | ( ( 'float' ) ) | ( ( 'date' ) ) | ( ( 'time' ) ) | ( ( 'datetime' ) ) | ( ( 'binary' ) ) | ( ( 'boolean' ) ) );
+    public final void rule__DATATYPE__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:513:1: ( ( ( rule__SimpleElement__MultiplicityAssignment_4_0 ) ) | ( '+' ) | ( '*' ) )
-            int alt5=3;
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:532:1: ( ( ( 'string' ) ) | ( ( 'integer' ) ) | ( ( 'float' ) ) | ( ( 'date' ) ) | ( ( 'time' ) ) | ( ( 'datetime' ) ) | ( ( 'binary' ) ) | ( ( 'boolean' ) ) )
+            int alt5=8;
             switch ( input.LA(1) ) {
-            case 39:
+            case 11:
                 {
                 alt5=1;
                 }
                 break;
-            case 11:
+            case 12:
                 {
                 alt5=2;
                 }
                 break;
-            case 12:
+            case 13:
                 {
                 alt5=3;
+                }
+                break;
+            case 14:
+                {
+                alt5=4;
+                }
+                break;
+            case 15:
+                {
+                alt5=5;
+                }
+                break;
+            case 16:
+                {
+                alt5=6;
+                }
+                break;
+            case 17:
+                {
+                alt5=7;
+                }
+                break;
+            case 18:
+                {
+                alt5=8;
                 }
                 break;
             default:
@@ -1480,146 +1552,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
             switch (alt5) {
                 case 1 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:514:1: ( ( rule__SimpleElement__MultiplicityAssignment_4_0 ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:533:1: ( ( 'string' ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:514:1: ( ( rule__SimpleElement__MultiplicityAssignment_4_0 ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:515:1: ( rule__SimpleElement__MultiplicityAssignment_4_0 )
-                    {
-                     before(grammarAccess.getSimpleElementAccess().getMultiplicityAssignment_4_0()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:516:1: ( rule__SimpleElement__MultiplicityAssignment_4_0 )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:516:2: rule__SimpleElement__MultiplicityAssignment_4_0
-                    {
-                    pushFollow(FOLLOW_rule__SimpleElement__MultiplicityAssignment_4_0_in_rule__SimpleElement__Alternatives_41044);
-                    rule__SimpleElement__MultiplicityAssignment_4_0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSimpleElementAccess().getMultiplicityAssignment_4_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:520:6: ( '+' )
-                    {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:520:6: ( '+' )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:521:1: '+'
-                    {
-                     before(grammarAccess.getSimpleElementAccess().getPlusSignKeyword_4_1()); 
-                    match(input,11,FOLLOW_11_in_rule__SimpleElement__Alternatives_41063); 
-                     after(grammarAccess.getSimpleElementAccess().getPlusSignKeyword_4_1()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 3 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:528:6: ( '*' )
-                    {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:528:6: ( '*' )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:529:1: '*'
-                    {
-                     before(grammarAccess.getSimpleElementAccess().getAsteriskKeyword_4_2()); 
-                    match(input,12,FOLLOW_12_in_rule__SimpleElement__Alternatives_41083); 
-                     after(grammarAccess.getSimpleElementAccess().getAsteriskKeyword_4_2()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SimpleElement__Alternatives_4"
-
-
-    // $ANTLR start "rule__DATATYPE__Alternatives"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:541:1: rule__DATATYPE__Alternatives : ( ( ( 'string' ) ) | ( ( 'integer' ) ) | ( ( 'float' ) ) | ( ( 'date' ) ) | ( ( 'time' ) ) | ( ( 'datetime' ) ) | ( ( 'binary' ) ) | ( ( 'boolean' ) ) );
-    public final void rule__DATATYPE__Alternatives() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:545:1: ( ( ( 'string' ) ) | ( ( 'integer' ) ) | ( ( 'float' ) ) | ( ( 'date' ) ) | ( ( 'time' ) ) | ( ( 'datetime' ) ) | ( ( 'binary' ) ) | ( ( 'boolean' ) ) )
-            int alt6=8;
-            switch ( input.LA(1) ) {
-            case 13:
-                {
-                alt6=1;
-                }
-                break;
-            case 14:
-                {
-                alt6=2;
-                }
-                break;
-            case 15:
-                {
-                alt6=3;
-                }
-                break;
-            case 16:
-                {
-                alt6=4;
-                }
-                break;
-            case 17:
-                {
-                alt6=5;
-                }
-                break;
-            case 18:
-                {
-                alt6=6;
-                }
-                break;
-            case 19:
-                {
-                alt6=7;
-                }
-                break;
-            case 20:
-                {
-                alt6=8;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
-
-                throw nvae;
-            }
-
-            switch (alt6) {
-                case 1 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:546:1: ( ( 'string' ) )
-                    {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:546:1: ( ( 'string' ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:547:1: ( 'string' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:533:1: ( ( 'string' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:534:1: ( 'string' )
                     {
                      before(grammarAccess.getDATATYPEAccess().getStringEnumLiteralDeclaration_0()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:548:1: ( 'string' )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:548:3: 'string'
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:535:1: ( 'string' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:535:3: 'string'
                     {
-                    match(input,13,FOLLOW_13_in_rule__DATATYPE__Alternatives1118); 
+                    match(input,11,FOLLOW_11_in_rule__DATATYPE__Alternatives1081); 
 
                     }
 
@@ -1631,16 +1573,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:553:6: ( ( 'integer' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:540:6: ( ( 'integer' ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:553:6: ( ( 'integer' ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:554:1: ( 'integer' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:540:6: ( ( 'integer' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:541:1: ( 'integer' )
                     {
                      before(grammarAccess.getDATATYPEAccess().getIntegerEnumLiteralDeclaration_1()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:555:1: ( 'integer' )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:555:3: 'integer'
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:542:1: ( 'integer' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:542:3: 'integer'
                     {
-                    match(input,14,FOLLOW_14_in_rule__DATATYPE__Alternatives1139); 
+                    match(input,12,FOLLOW_12_in_rule__DATATYPE__Alternatives1102); 
 
                     }
 
@@ -1652,16 +1594,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:560:6: ( ( 'float' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:547:6: ( ( 'float' ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:560:6: ( ( 'float' ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:561:1: ( 'float' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:547:6: ( ( 'float' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:548:1: ( 'float' )
                     {
                      before(grammarAccess.getDATATYPEAccess().getFloatEnumLiteralDeclaration_2()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:562:1: ( 'float' )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:562:3: 'float'
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:549:1: ( 'float' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:549:3: 'float'
                     {
-                    match(input,15,FOLLOW_15_in_rule__DATATYPE__Alternatives1160); 
+                    match(input,13,FOLLOW_13_in_rule__DATATYPE__Alternatives1123); 
 
                     }
 
@@ -1673,16 +1615,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:567:6: ( ( 'date' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:554:6: ( ( 'date' ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:567:6: ( ( 'date' ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:568:1: ( 'date' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:554:6: ( ( 'date' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:555:1: ( 'date' )
                     {
                      before(grammarAccess.getDATATYPEAccess().getDateEnumLiteralDeclaration_3()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:569:1: ( 'date' )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:569:3: 'date'
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:556:1: ( 'date' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:556:3: 'date'
                     {
-                    match(input,16,FOLLOW_16_in_rule__DATATYPE__Alternatives1181); 
+                    match(input,14,FOLLOW_14_in_rule__DATATYPE__Alternatives1144); 
 
                     }
 
@@ -1694,16 +1636,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:574:6: ( ( 'time' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:561:6: ( ( 'time' ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:574:6: ( ( 'time' ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:575:1: ( 'time' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:561:6: ( ( 'time' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:562:1: ( 'time' )
                     {
                      before(grammarAccess.getDATATYPEAccess().getTimeEnumLiteralDeclaration_4()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:576:1: ( 'time' )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:576:3: 'time'
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:563:1: ( 'time' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:563:3: 'time'
                     {
-                    match(input,17,FOLLOW_17_in_rule__DATATYPE__Alternatives1202); 
+                    match(input,15,FOLLOW_15_in_rule__DATATYPE__Alternatives1165); 
 
                     }
 
@@ -1715,16 +1657,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 6 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:581:6: ( ( 'datetime' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:568:6: ( ( 'datetime' ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:581:6: ( ( 'datetime' ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:582:1: ( 'datetime' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:568:6: ( ( 'datetime' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:569:1: ( 'datetime' )
                     {
                      before(grammarAccess.getDATATYPEAccess().getDatetimeEnumLiteralDeclaration_5()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:583:1: ( 'datetime' )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:583:3: 'datetime'
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:570:1: ( 'datetime' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:570:3: 'datetime'
                     {
-                    match(input,18,FOLLOW_18_in_rule__DATATYPE__Alternatives1223); 
+                    match(input,16,FOLLOW_16_in_rule__DATATYPE__Alternatives1186); 
 
                     }
 
@@ -1736,16 +1678,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 7 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:588:6: ( ( 'binary' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:575:6: ( ( 'binary' ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:588:6: ( ( 'binary' ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:589:1: ( 'binary' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:575:6: ( ( 'binary' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:576:1: ( 'binary' )
                     {
                      before(grammarAccess.getDATATYPEAccess().getBinaryEnumLiteralDeclaration_6()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:590:1: ( 'binary' )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:590:3: 'binary'
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:577:1: ( 'binary' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:577:3: 'binary'
                     {
-                    match(input,19,FOLLOW_19_in_rule__DATATYPE__Alternatives1244); 
+                    match(input,17,FOLLOW_17_in_rule__DATATYPE__Alternatives1207); 
 
                     }
 
@@ -1757,16 +1699,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 8 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:595:6: ( ( 'boolean' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:582:6: ( ( 'boolean' ) )
                     {
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:595:6: ( ( 'boolean' ) )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:596:1: ( 'boolean' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:582:6: ( ( 'boolean' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:583:1: ( 'boolean' )
                     {
                      before(grammarAccess.getDATATYPEAccess().getBooleanEnumLiteralDeclaration_7()); 
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:597:1: ( 'boolean' )
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:597:3: 'boolean'
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:584:1: ( 'boolean' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:584:3: 'boolean'
                     {
-                    match(input,20,FOLLOW_20_in_rule__DATATYPE__Alternatives1265); 
+                    match(input,18,FOLLOW_18_in_rule__DATATYPE__Alternatives1228); 
 
                     }
 
@@ -1794,22 +1736,135 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__DATATYPE__Alternatives"
 
 
+    // $ANTLR start "rule__MULTIPLICITY__Alternatives"
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:594:1: rule__MULTIPLICITY__Alternatives : ( ( ( '?' ) ) | ( ( '+' ) ) | ( ( '*' ) ) );
+    public final void rule__MULTIPLICITY__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:598:1: ( ( ( '?' ) ) | ( ( '+' ) ) | ( ( '*' ) ) )
+            int alt6=3;
+            switch ( input.LA(1) ) {
+            case 19:
+                {
+                alt6=1;
+                }
+                break;
+            case 20:
+                {
+                alt6=2;
+                }
+                break;
+            case 21:
+                {
+                alt6=3;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 6, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt6) {
+                case 1 :
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:599:1: ( ( '?' ) )
+                    {
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:599:1: ( ( '?' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:600:1: ( '?' )
+                    {
+                     before(grammarAccess.getMULTIPLICITYAccess().getOPTIONALEnumLiteralDeclaration_0()); 
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:601:1: ( '?' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:601:3: '?'
+                    {
+                    match(input,19,FOLLOW_19_in_rule__MULTIPLICITY__Alternatives1264); 
+
+                    }
+
+                     after(grammarAccess.getMULTIPLICITYAccess().getOPTIONALEnumLiteralDeclaration_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:606:6: ( ( '+' ) )
+                    {
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:606:6: ( ( '+' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:607:1: ( '+' )
+                    {
+                     before(grammarAccess.getMULTIPLICITYAccess().getPLUSEnumLiteralDeclaration_1()); 
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:608:1: ( '+' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:608:3: '+'
+                    {
+                    match(input,20,FOLLOW_20_in_rule__MULTIPLICITY__Alternatives1285); 
+
+                    }
+
+                     after(grammarAccess.getMULTIPLICITYAccess().getPLUSEnumLiteralDeclaration_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:613:6: ( ( '*' ) )
+                    {
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:613:6: ( ( '*' ) )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:614:1: ( '*' )
+                    {
+                     before(grammarAccess.getMULTIPLICITYAccess().getSTAREnumLiteralDeclaration_2()); 
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:615:1: ( '*' )
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:615:3: '*'
+                    {
+                    match(input,21,FOLLOW_21_in_rule__MULTIPLICITY__Alternatives1306); 
+
+                    }
+
+                     after(grammarAccess.getMULTIPLICITYAccess().getSTAREnumLiteralDeclaration_2()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__MULTIPLICITY__Alternatives"
+
+
     // $ANTLR start "rule__ServiceDSL__Group__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:609:1: rule__ServiceDSL__Group__0 : rule__ServiceDSL__Group__0__Impl rule__ServiceDSL__Group__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:627:1: rule__ServiceDSL__Group__0 : rule__ServiceDSL__Group__0__Impl rule__ServiceDSL__Group__1 ;
     public final void rule__ServiceDSL__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:613:1: ( rule__ServiceDSL__Group__0__Impl rule__ServiceDSL__Group__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:614:2: rule__ServiceDSL__Group__0__Impl rule__ServiceDSL__Group__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:631:1: ( rule__ServiceDSL__Group__0__Impl rule__ServiceDSL__Group__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:632:2: rule__ServiceDSL__Group__0__Impl rule__ServiceDSL__Group__1
             {
-            pushFollow(FOLLOW_rule__ServiceDSL__Group__0__Impl_in_rule__ServiceDSL__Group__01298);
+            pushFollow(FOLLOW_rule__ServiceDSL__Group__0__Impl_in_rule__ServiceDSL__Group__01339);
             rule__ServiceDSL__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ServiceDSL__Group__1_in_rule__ServiceDSL__Group__01301);
+            pushFollow(FOLLOW_rule__ServiceDSL__Group__1_in_rule__ServiceDSL__Group__01342);
             rule__ServiceDSL__Group__1();
 
             state._fsp--;
@@ -1833,21 +1888,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__Group__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:621:1: rule__ServiceDSL__Group__0__Impl : ( () ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:639:1: rule__ServiceDSL__Group__0__Impl : ( () ) ;
     public final void rule__ServiceDSL__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:625:1: ( ( () ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:626:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:643:1: ( ( () ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:644:1: ( () )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:626:1: ( () )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:627:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:644:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:645:1: ()
             {
              before(grammarAccess.getServiceDSLAccess().getServiceDSLAction_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:628:1: ()
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:630:1: 
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:646:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:648:1: 
             {
             }
 
@@ -1870,21 +1925,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__Group__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:640:1: rule__ServiceDSL__Group__1 : rule__ServiceDSL__Group__1__Impl rule__ServiceDSL__Group__2 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:658:1: rule__ServiceDSL__Group__1 : rule__ServiceDSL__Group__1__Impl rule__ServiceDSL__Group__2 ;
     public final void rule__ServiceDSL__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:644:1: ( rule__ServiceDSL__Group__1__Impl rule__ServiceDSL__Group__2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:645:2: rule__ServiceDSL__Group__1__Impl rule__ServiceDSL__Group__2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:662:1: ( rule__ServiceDSL__Group__1__Impl rule__ServiceDSL__Group__2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:663:2: rule__ServiceDSL__Group__1__Impl rule__ServiceDSL__Group__2
             {
-            pushFollow(FOLLOW_rule__ServiceDSL__Group__1__Impl_in_rule__ServiceDSL__Group__11359);
+            pushFollow(FOLLOW_rule__ServiceDSL__Group__1__Impl_in_rule__ServiceDSL__Group__11400);
             rule__ServiceDSL__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ServiceDSL__Group__2_in_rule__ServiceDSL__Group__11362);
+            pushFollow(FOLLOW_rule__ServiceDSL__Group__2_in_rule__ServiceDSL__Group__11403);
             rule__ServiceDSL__Group__2();
 
             state._fsp--;
@@ -1908,20 +1963,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__Group__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:652:1: rule__ServiceDSL__Group__1__Impl : ( 'module' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:670:1: rule__ServiceDSL__Group__1__Impl : ( 'module' ) ;
     public final void rule__ServiceDSL__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:656:1: ( ( 'module' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:657:1: ( 'module' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:674:1: ( ( 'module' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:675:1: ( 'module' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:657:1: ( 'module' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:658:1: 'module'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:675:1: ( 'module' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:676:1: 'module'
             {
              before(grammarAccess.getServiceDSLAccess().getModuleKeyword_1()); 
-            match(input,21,FOLLOW_21_in_rule__ServiceDSL__Group__1__Impl1390); 
+            match(input,22,FOLLOW_22_in_rule__ServiceDSL__Group__1__Impl1431); 
              after(grammarAccess.getServiceDSLAccess().getModuleKeyword_1()); 
 
             }
@@ -1945,21 +2000,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__Group__2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:671:1: rule__ServiceDSL__Group__2 : rule__ServiceDSL__Group__2__Impl rule__ServiceDSL__Group__3 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:689:1: rule__ServiceDSL__Group__2 : rule__ServiceDSL__Group__2__Impl rule__ServiceDSL__Group__3 ;
     public final void rule__ServiceDSL__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:675:1: ( rule__ServiceDSL__Group__2__Impl rule__ServiceDSL__Group__3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:676:2: rule__ServiceDSL__Group__2__Impl rule__ServiceDSL__Group__3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:693:1: ( rule__ServiceDSL__Group__2__Impl rule__ServiceDSL__Group__3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:694:2: rule__ServiceDSL__Group__2__Impl rule__ServiceDSL__Group__3
             {
-            pushFollow(FOLLOW_rule__ServiceDSL__Group__2__Impl_in_rule__ServiceDSL__Group__21421);
+            pushFollow(FOLLOW_rule__ServiceDSL__Group__2__Impl_in_rule__ServiceDSL__Group__21462);
             rule__ServiceDSL__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ServiceDSL__Group__3_in_rule__ServiceDSL__Group__21424);
+            pushFollow(FOLLOW_rule__ServiceDSL__Group__3_in_rule__ServiceDSL__Group__21465);
             rule__ServiceDSL__Group__3();
 
             state._fsp--;
@@ -1983,23 +2038,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__Group__2__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:683:1: rule__ServiceDSL__Group__2__Impl : ( ( rule__ServiceDSL__NameAssignment_2 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:701:1: rule__ServiceDSL__Group__2__Impl : ( ( rule__ServiceDSL__NameAssignment_2 ) ) ;
     public final void rule__ServiceDSL__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:687:1: ( ( ( rule__ServiceDSL__NameAssignment_2 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:688:1: ( ( rule__ServiceDSL__NameAssignment_2 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:705:1: ( ( ( rule__ServiceDSL__NameAssignment_2 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:706:1: ( ( rule__ServiceDSL__NameAssignment_2 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:688:1: ( ( rule__ServiceDSL__NameAssignment_2 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:689:1: ( rule__ServiceDSL__NameAssignment_2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:706:1: ( ( rule__ServiceDSL__NameAssignment_2 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:707:1: ( rule__ServiceDSL__NameAssignment_2 )
             {
              before(grammarAccess.getServiceDSLAccess().getNameAssignment_2()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:690:1: ( rule__ServiceDSL__NameAssignment_2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:690:2: rule__ServiceDSL__NameAssignment_2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:708:1: ( rule__ServiceDSL__NameAssignment_2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:708:2: rule__ServiceDSL__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__ServiceDSL__NameAssignment_2_in_rule__ServiceDSL__Group__2__Impl1451);
+            pushFollow(FOLLOW_rule__ServiceDSL__NameAssignment_2_in_rule__ServiceDSL__Group__2__Impl1492);
             rule__ServiceDSL__NameAssignment_2();
 
             state._fsp--;
@@ -2030,21 +2085,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__Group__3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:700:1: rule__ServiceDSL__Group__3 : rule__ServiceDSL__Group__3__Impl rule__ServiceDSL__Group__4 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:718:1: rule__ServiceDSL__Group__3 : rule__ServiceDSL__Group__3__Impl rule__ServiceDSL__Group__4 ;
     public final void rule__ServiceDSL__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:704:1: ( rule__ServiceDSL__Group__3__Impl rule__ServiceDSL__Group__4 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:705:2: rule__ServiceDSL__Group__3__Impl rule__ServiceDSL__Group__4
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:722:1: ( rule__ServiceDSL__Group__3__Impl rule__ServiceDSL__Group__4 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:723:2: rule__ServiceDSL__Group__3__Impl rule__ServiceDSL__Group__4
             {
-            pushFollow(FOLLOW_rule__ServiceDSL__Group__3__Impl_in_rule__ServiceDSL__Group__31481);
+            pushFollow(FOLLOW_rule__ServiceDSL__Group__3__Impl_in_rule__ServiceDSL__Group__31522);
             rule__ServiceDSL__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ServiceDSL__Group__4_in_rule__ServiceDSL__Group__31484);
+            pushFollow(FOLLOW_rule__ServiceDSL__Group__4_in_rule__ServiceDSL__Group__31525);
             rule__ServiceDSL__Group__4();
 
             state._fsp--;
@@ -2068,35 +2123,35 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__Group__3__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:712:1: rule__ServiceDSL__Group__3__Impl : ( ( rule__ServiceDSL__ImportsAssignment_3 )* ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:730:1: rule__ServiceDSL__Group__3__Impl : ( ( rule__ServiceDSL__ImportsAssignment_3 )* ) ;
     public final void rule__ServiceDSL__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:716:1: ( ( ( rule__ServiceDSL__ImportsAssignment_3 )* ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:717:1: ( ( rule__ServiceDSL__ImportsAssignment_3 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:734:1: ( ( ( rule__ServiceDSL__ImportsAssignment_3 )* ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:735:1: ( ( rule__ServiceDSL__ImportsAssignment_3 )* )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:717:1: ( ( rule__ServiceDSL__ImportsAssignment_3 )* )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:718:1: ( rule__ServiceDSL__ImportsAssignment_3 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:735:1: ( ( rule__ServiceDSL__ImportsAssignment_3 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:736:1: ( rule__ServiceDSL__ImportsAssignment_3 )*
             {
              before(grammarAccess.getServiceDSLAccess().getImportsAssignment_3()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:719:1: ( rule__ServiceDSL__ImportsAssignment_3 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:737:1: ( rule__ServiceDSL__ImportsAssignment_3 )*
             loop7:
             do {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==38) ) {
+                if ( (LA7_0==39) ) {
                     alt7=1;
                 }
 
 
                 switch (alt7) {
             	case 1 :
-            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:719:2: rule__ServiceDSL__ImportsAssignment_3
+            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:737:2: rule__ServiceDSL__ImportsAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__ServiceDSL__ImportsAssignment_3_in_rule__ServiceDSL__Group__3__Impl1511);
+            	    pushFollow(FOLLOW_rule__ServiceDSL__ImportsAssignment_3_in_rule__ServiceDSL__Group__3__Impl1552);
             	    rule__ServiceDSL__ImportsAssignment_3();
 
             	    state._fsp--;
@@ -2133,16 +2188,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__Group__4"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:729:1: rule__ServiceDSL__Group__4 : rule__ServiceDSL__Group__4__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:747:1: rule__ServiceDSL__Group__4 : rule__ServiceDSL__Group__4__Impl ;
     public final void rule__ServiceDSL__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:733:1: ( rule__ServiceDSL__Group__4__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:734:2: rule__ServiceDSL__Group__4__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:751:1: ( rule__ServiceDSL__Group__4__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:752:2: rule__ServiceDSL__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__ServiceDSL__Group__4__Impl_in_rule__ServiceDSL__Group__41542);
+            pushFollow(FOLLOW_rule__ServiceDSL__Group__4__Impl_in_rule__ServiceDSL__Group__41583);
             rule__ServiceDSL__Group__4__Impl();
 
             state._fsp--;
@@ -2166,35 +2221,35 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__Group__4__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:740:1: rule__ServiceDSL__Group__4__Impl : ( ( rule__ServiceDSL__Alternatives_4 )* ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:758:1: rule__ServiceDSL__Group__4__Impl : ( ( rule__ServiceDSL__Alternatives_4 )* ) ;
     public final void rule__ServiceDSL__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:744:1: ( ( ( rule__ServiceDSL__Alternatives_4 )* ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:745:1: ( ( rule__ServiceDSL__Alternatives_4 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:762:1: ( ( ( rule__ServiceDSL__Alternatives_4 )* ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:763:1: ( ( rule__ServiceDSL__Alternatives_4 )* )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:745:1: ( ( rule__ServiceDSL__Alternatives_4 )* )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:746:1: ( rule__ServiceDSL__Alternatives_4 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:763:1: ( ( rule__ServiceDSL__Alternatives_4 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:764:1: ( rule__ServiceDSL__Alternatives_4 )*
             {
              before(grammarAccess.getServiceDSLAccess().getAlternatives_4()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:747:1: ( rule__ServiceDSL__Alternatives_4 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:765:1: ( rule__ServiceDSL__Alternatives_4 )*
             loop8:
             do {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==RULE_ID||LA8_0==22||(LA8_0>=29 && LA8_0<=30)||LA8_0==35) ) {
+                if ( (LA8_0==RULE_ID||LA8_0==23||(LA8_0>=30 && LA8_0<=31)||LA8_0==36) ) {
                     alt8=1;
                 }
 
 
                 switch (alt8) {
             	case 1 :
-            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:747:2: rule__ServiceDSL__Alternatives_4
+            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:765:2: rule__ServiceDSL__Alternatives_4
             	    {
-            	    pushFollow(FOLLOW_rule__ServiceDSL__Alternatives_4_in_rule__ServiceDSL__Group__4__Impl1569);
+            	    pushFollow(FOLLOW_rule__ServiceDSL__Alternatives_4_in_rule__ServiceDSL__Group__4__Impl1610);
             	    rule__ServiceDSL__Alternatives_4();
 
             	    state._fsp--;
@@ -2231,21 +2286,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:767:1: rule__WebService__Group__0 : rule__WebService__Group__0__Impl rule__WebService__Group__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:785:1: rule__WebService__Group__0 : rule__WebService__Group__0__Impl rule__WebService__Group__1 ;
     public final void rule__WebService__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:771:1: ( rule__WebService__Group__0__Impl rule__WebService__Group__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:772:2: rule__WebService__Group__0__Impl rule__WebService__Group__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:789:1: ( rule__WebService__Group__0__Impl rule__WebService__Group__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:790:2: rule__WebService__Group__0__Impl rule__WebService__Group__1
             {
-            pushFollow(FOLLOW_rule__WebService__Group__0__Impl_in_rule__WebService__Group__01610);
+            pushFollow(FOLLOW_rule__WebService__Group__0__Impl_in_rule__WebService__Group__01651);
             rule__WebService__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WebService__Group__1_in_rule__WebService__Group__01613);
+            pushFollow(FOLLOW_rule__WebService__Group__1_in_rule__WebService__Group__01654);
             rule__WebService__Group__1();
 
             state._fsp--;
@@ -2269,21 +2324,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:779:1: rule__WebService__Group__0__Impl : ( () ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:797:1: rule__WebService__Group__0__Impl : ( () ) ;
     public final void rule__WebService__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:783:1: ( ( () ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:784:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:801:1: ( ( () ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:802:1: ( () )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:784:1: ( () )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:785:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:802:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:803:1: ()
             {
              before(grammarAccess.getWebServiceAccess().getWebServiceAction_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:786:1: ()
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:788:1: 
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:804:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:806:1: 
             {
             }
 
@@ -2306,21 +2361,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:798:1: rule__WebService__Group__1 : rule__WebService__Group__1__Impl rule__WebService__Group__2 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:816:1: rule__WebService__Group__1 : rule__WebService__Group__1__Impl rule__WebService__Group__2 ;
     public final void rule__WebService__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:802:1: ( rule__WebService__Group__1__Impl rule__WebService__Group__2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:803:2: rule__WebService__Group__1__Impl rule__WebService__Group__2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:820:1: ( rule__WebService__Group__1__Impl rule__WebService__Group__2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:821:2: rule__WebService__Group__1__Impl rule__WebService__Group__2
             {
-            pushFollow(FOLLOW_rule__WebService__Group__1__Impl_in_rule__WebService__Group__11671);
+            pushFollow(FOLLOW_rule__WebService__Group__1__Impl_in_rule__WebService__Group__11712);
             rule__WebService__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WebService__Group__2_in_rule__WebService__Group__11674);
+            pushFollow(FOLLOW_rule__WebService__Group__2_in_rule__WebService__Group__11715);
             rule__WebService__Group__2();
 
             state._fsp--;
@@ -2344,20 +2399,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:810:1: rule__WebService__Group__1__Impl : ( 'Web service' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:828:1: rule__WebService__Group__1__Impl : ( 'Web service' ) ;
     public final void rule__WebService__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:814:1: ( ( 'Web service' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:815:1: ( 'Web service' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:832:1: ( ( 'Web service' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:833:1: ( 'Web service' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:815:1: ( 'Web service' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:816:1: 'Web service'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:833:1: ( 'Web service' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:834:1: 'Web service'
             {
              before(grammarAccess.getWebServiceAccess().getWebServiceKeyword_1()); 
-            match(input,22,FOLLOW_22_in_rule__WebService__Group__1__Impl1702); 
+            match(input,23,FOLLOW_23_in_rule__WebService__Group__1__Impl1743); 
              after(grammarAccess.getWebServiceAccess().getWebServiceKeyword_1()); 
 
             }
@@ -2381,21 +2436,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:829:1: rule__WebService__Group__2 : rule__WebService__Group__2__Impl rule__WebService__Group__3 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:847:1: rule__WebService__Group__2 : rule__WebService__Group__2__Impl rule__WebService__Group__3 ;
     public final void rule__WebService__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:833:1: ( rule__WebService__Group__2__Impl rule__WebService__Group__3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:834:2: rule__WebService__Group__2__Impl rule__WebService__Group__3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:851:1: ( rule__WebService__Group__2__Impl rule__WebService__Group__3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:852:2: rule__WebService__Group__2__Impl rule__WebService__Group__3
             {
-            pushFollow(FOLLOW_rule__WebService__Group__2__Impl_in_rule__WebService__Group__21733);
+            pushFollow(FOLLOW_rule__WebService__Group__2__Impl_in_rule__WebService__Group__21774);
             rule__WebService__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WebService__Group__3_in_rule__WebService__Group__21736);
+            pushFollow(FOLLOW_rule__WebService__Group__3_in_rule__WebService__Group__21777);
             rule__WebService__Group__3();
 
             state._fsp--;
@@ -2419,23 +2474,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__2__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:841:1: rule__WebService__Group__2__Impl : ( ( rule__WebService__NameAssignment_2 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:859:1: rule__WebService__Group__2__Impl : ( ( rule__WebService__NameAssignment_2 ) ) ;
     public final void rule__WebService__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:845:1: ( ( ( rule__WebService__NameAssignment_2 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:846:1: ( ( rule__WebService__NameAssignment_2 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:863:1: ( ( ( rule__WebService__NameAssignment_2 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:864:1: ( ( rule__WebService__NameAssignment_2 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:846:1: ( ( rule__WebService__NameAssignment_2 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:847:1: ( rule__WebService__NameAssignment_2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:864:1: ( ( rule__WebService__NameAssignment_2 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:865:1: ( rule__WebService__NameAssignment_2 )
             {
              before(grammarAccess.getWebServiceAccess().getNameAssignment_2()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:848:1: ( rule__WebService__NameAssignment_2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:848:2: rule__WebService__NameAssignment_2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:866:1: ( rule__WebService__NameAssignment_2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:866:2: rule__WebService__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__WebService__NameAssignment_2_in_rule__WebService__Group__2__Impl1763);
+            pushFollow(FOLLOW_rule__WebService__NameAssignment_2_in_rule__WebService__Group__2__Impl1804);
             rule__WebService__NameAssignment_2();
 
             state._fsp--;
@@ -2466,21 +2521,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:858:1: rule__WebService__Group__3 : rule__WebService__Group__3__Impl rule__WebService__Group__4 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:876:1: rule__WebService__Group__3 : rule__WebService__Group__3__Impl rule__WebService__Group__4 ;
     public final void rule__WebService__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:862:1: ( rule__WebService__Group__3__Impl rule__WebService__Group__4 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:863:2: rule__WebService__Group__3__Impl rule__WebService__Group__4
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:880:1: ( rule__WebService__Group__3__Impl rule__WebService__Group__4 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:881:2: rule__WebService__Group__3__Impl rule__WebService__Group__4
             {
-            pushFollow(FOLLOW_rule__WebService__Group__3__Impl_in_rule__WebService__Group__31793);
+            pushFollow(FOLLOW_rule__WebService__Group__3__Impl_in_rule__WebService__Group__31834);
             rule__WebService__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WebService__Group__4_in_rule__WebService__Group__31796);
+            pushFollow(FOLLOW_rule__WebService__Group__4_in_rule__WebService__Group__31837);
             rule__WebService__Group__4();
 
             state._fsp--;
@@ -2504,20 +2559,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__3__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:870:1: rule__WebService__Group__3__Impl : ( '{' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:888:1: rule__WebService__Group__3__Impl : ( '{' ) ;
     public final void rule__WebService__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:874:1: ( ( '{' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:875:1: ( '{' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:892:1: ( ( '{' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:893:1: ( '{' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:875:1: ( '{' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:876:1: '{'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:893:1: ( '{' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:894:1: '{'
             {
              before(grammarAccess.getWebServiceAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,23,FOLLOW_23_in_rule__WebService__Group__3__Impl1824); 
+            match(input,24,FOLLOW_24_in_rule__WebService__Group__3__Impl1865); 
              after(grammarAccess.getWebServiceAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -2541,21 +2596,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__4"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:889:1: rule__WebService__Group__4 : rule__WebService__Group__4__Impl rule__WebService__Group__5 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:907:1: rule__WebService__Group__4 : rule__WebService__Group__4__Impl rule__WebService__Group__5 ;
     public final void rule__WebService__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:893:1: ( rule__WebService__Group__4__Impl rule__WebService__Group__5 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:894:2: rule__WebService__Group__4__Impl rule__WebService__Group__5
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:911:1: ( rule__WebService__Group__4__Impl rule__WebService__Group__5 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:912:2: rule__WebService__Group__4__Impl rule__WebService__Group__5
             {
-            pushFollow(FOLLOW_rule__WebService__Group__4__Impl_in_rule__WebService__Group__41855);
+            pushFollow(FOLLOW_rule__WebService__Group__4__Impl_in_rule__WebService__Group__41896);
             rule__WebService__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WebService__Group__5_in_rule__WebService__Group__41858);
+            pushFollow(FOLLOW_rule__WebService__Group__5_in_rule__WebService__Group__41899);
             rule__WebService__Group__5();
 
             state._fsp--;
@@ -2579,35 +2634,35 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__4__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:901:1: rule__WebService__Group__4__Impl : ( ( rule__WebService__Group_4__0 )* ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:919:1: rule__WebService__Group__4__Impl : ( ( rule__WebService__Group_4__0 )* ) ;
     public final void rule__WebService__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:905:1: ( ( ( rule__WebService__Group_4__0 )* ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:906:1: ( ( rule__WebService__Group_4__0 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:923:1: ( ( ( rule__WebService__Group_4__0 )* ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:924:1: ( ( rule__WebService__Group_4__0 )* )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:906:1: ( ( rule__WebService__Group_4__0 )* )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:907:1: ( rule__WebService__Group_4__0 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:924:1: ( ( rule__WebService__Group_4__0 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:925:1: ( rule__WebService__Group_4__0 )*
             {
              before(grammarAccess.getWebServiceAccess().getGroup_4()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:908:1: ( rule__WebService__Group_4__0 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:926:1: ( rule__WebService__Group_4__0 )*
             loop9:
             do {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( (LA9_0==25) ) {
+                if ( (LA9_0==26) ) {
                     alt9=1;
                 }
 
 
                 switch (alt9) {
             	case 1 :
-            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:908:2: rule__WebService__Group_4__0
+            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:926:2: rule__WebService__Group_4__0
             	    {
-            	    pushFollow(FOLLOW_rule__WebService__Group_4__0_in_rule__WebService__Group__4__Impl1885);
+            	    pushFollow(FOLLOW_rule__WebService__Group_4__0_in_rule__WebService__Group__4__Impl1926);
             	    rule__WebService__Group_4__0();
 
             	    state._fsp--;
@@ -2644,16 +2699,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__5"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:918:1: rule__WebService__Group__5 : rule__WebService__Group__5__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:936:1: rule__WebService__Group__5 : rule__WebService__Group__5__Impl ;
     public final void rule__WebService__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:922:1: ( rule__WebService__Group__5__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:923:2: rule__WebService__Group__5__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:940:1: ( rule__WebService__Group__5__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:941:2: rule__WebService__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__WebService__Group__5__Impl_in_rule__WebService__Group__51916);
+            pushFollow(FOLLOW_rule__WebService__Group__5__Impl_in_rule__WebService__Group__51957);
             rule__WebService__Group__5__Impl();
 
             state._fsp--;
@@ -2677,20 +2732,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group__5__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:929:1: rule__WebService__Group__5__Impl : ( '}' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:947:1: rule__WebService__Group__5__Impl : ( '}' ) ;
     public final void rule__WebService__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:933:1: ( ( '}' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:934:1: ( '}' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:951:1: ( ( '}' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:952:1: ( '}' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:934:1: ( '}' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:935:1: '}'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:952:1: ( '}' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:953:1: '}'
             {
              before(grammarAccess.getWebServiceAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,24,FOLLOW_24_in_rule__WebService__Group__5__Impl1944); 
+            match(input,25,FOLLOW_25_in_rule__WebService__Group__5__Impl1985); 
              after(grammarAccess.getWebServiceAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -2714,21 +2769,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group_4__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:960:1: rule__WebService__Group_4__0 : rule__WebService__Group_4__0__Impl rule__WebService__Group_4__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:978:1: rule__WebService__Group_4__0 : rule__WebService__Group_4__0__Impl rule__WebService__Group_4__1 ;
     public final void rule__WebService__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:964:1: ( rule__WebService__Group_4__0__Impl rule__WebService__Group_4__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:965:2: rule__WebService__Group_4__0__Impl rule__WebService__Group_4__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:982:1: ( rule__WebService__Group_4__0__Impl rule__WebService__Group_4__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:983:2: rule__WebService__Group_4__0__Impl rule__WebService__Group_4__1
             {
-            pushFollow(FOLLOW_rule__WebService__Group_4__0__Impl_in_rule__WebService__Group_4__01987);
+            pushFollow(FOLLOW_rule__WebService__Group_4__0__Impl_in_rule__WebService__Group_4__02028);
             rule__WebService__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WebService__Group_4__1_in_rule__WebService__Group_4__01990);
+            pushFollow(FOLLOW_rule__WebService__Group_4__1_in_rule__WebService__Group_4__02031);
             rule__WebService__Group_4__1();
 
             state._fsp--;
@@ -2752,20 +2807,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group_4__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:972:1: rule__WebService__Group_4__0__Impl : ( 'operation' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:990:1: rule__WebService__Group_4__0__Impl : ( 'operation' ) ;
     public final void rule__WebService__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:976:1: ( ( 'operation' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:977:1: ( 'operation' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:994:1: ( ( 'operation' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:995:1: ( 'operation' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:977:1: ( 'operation' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:978:1: 'operation'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:995:1: ( 'operation' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:996:1: 'operation'
             {
              before(grammarAccess.getWebServiceAccess().getOperationKeyword_4_0()); 
-            match(input,25,FOLLOW_25_in_rule__WebService__Group_4__0__Impl2018); 
+            match(input,26,FOLLOW_26_in_rule__WebService__Group_4__0__Impl2059); 
              after(grammarAccess.getWebServiceAccess().getOperationKeyword_4_0()); 
 
             }
@@ -2789,16 +2844,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group_4__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:991:1: rule__WebService__Group_4__1 : rule__WebService__Group_4__1__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1009:1: rule__WebService__Group_4__1 : rule__WebService__Group_4__1__Impl ;
     public final void rule__WebService__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:995:1: ( rule__WebService__Group_4__1__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:996:2: rule__WebService__Group_4__1__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1013:1: ( rule__WebService__Group_4__1__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1014:2: rule__WebService__Group_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__WebService__Group_4__1__Impl_in_rule__WebService__Group_4__12049);
+            pushFollow(FOLLOW_rule__WebService__Group_4__1__Impl_in_rule__WebService__Group_4__12090);
             rule__WebService__Group_4__1__Impl();
 
             state._fsp--;
@@ -2822,23 +2877,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__Group_4__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1002:1: rule__WebService__Group_4__1__Impl : ( ( rule__WebService__OperationsAssignment_4_1 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1020:1: rule__WebService__Group_4__1__Impl : ( ( rule__WebService__OperationsAssignment_4_1 ) ) ;
     public final void rule__WebService__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1006:1: ( ( ( rule__WebService__OperationsAssignment_4_1 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1007:1: ( ( rule__WebService__OperationsAssignment_4_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1024:1: ( ( ( rule__WebService__OperationsAssignment_4_1 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1025:1: ( ( rule__WebService__OperationsAssignment_4_1 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1007:1: ( ( rule__WebService__OperationsAssignment_4_1 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1008:1: ( rule__WebService__OperationsAssignment_4_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1025:1: ( ( rule__WebService__OperationsAssignment_4_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1026:1: ( rule__WebService__OperationsAssignment_4_1 )
             {
              before(grammarAccess.getWebServiceAccess().getOperationsAssignment_4_1()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1009:1: ( rule__WebService__OperationsAssignment_4_1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1009:2: rule__WebService__OperationsAssignment_4_1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1027:1: ( rule__WebService__OperationsAssignment_4_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1027:2: rule__WebService__OperationsAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__WebService__OperationsAssignment_4_1_in_rule__WebService__Group_4__1__Impl2076);
+            pushFollow(FOLLOW_rule__WebService__OperationsAssignment_4_1_in_rule__WebService__Group_4__1__Impl2117);
             rule__WebService__OperationsAssignment_4_1();
 
             state._fsp--;
@@ -2869,21 +2924,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1023:1: rule__Operation__Group__0 : rule__Operation__Group__0__Impl rule__Operation__Group__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1041:1: rule__Operation__Group__0 : rule__Operation__Group__0__Impl rule__Operation__Group__1 ;
     public final void rule__Operation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1027:1: ( rule__Operation__Group__0__Impl rule__Operation__Group__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1028:2: rule__Operation__Group__0__Impl rule__Operation__Group__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1045:1: ( rule__Operation__Group__0__Impl rule__Operation__Group__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1046:2: rule__Operation__Group__0__Impl rule__Operation__Group__1
             {
-            pushFollow(FOLLOW_rule__Operation__Group__0__Impl_in_rule__Operation__Group__02110);
+            pushFollow(FOLLOW_rule__Operation__Group__0__Impl_in_rule__Operation__Group__02151);
             rule__Operation__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__1_in_rule__Operation__Group__02113);
+            pushFollow(FOLLOW_rule__Operation__Group__1_in_rule__Operation__Group__02154);
             rule__Operation__Group__1();
 
             state._fsp--;
@@ -2907,21 +2962,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1035:1: rule__Operation__Group__0__Impl : ( () ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1053:1: rule__Operation__Group__0__Impl : ( () ) ;
     public final void rule__Operation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1039:1: ( ( () ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1040:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1057:1: ( ( () ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1058:1: ( () )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1040:1: ( () )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1041:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1058:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1059:1: ()
             {
              before(grammarAccess.getOperationAccess().getOperationAction_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1042:1: ()
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1044:1: 
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1060:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1062:1: 
             {
             }
 
@@ -2944,21 +2999,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1054:1: rule__Operation__Group__1 : rule__Operation__Group__1__Impl rule__Operation__Group__2 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1072:1: rule__Operation__Group__1 : rule__Operation__Group__1__Impl rule__Operation__Group__2 ;
     public final void rule__Operation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1058:1: ( rule__Operation__Group__1__Impl rule__Operation__Group__2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1059:2: rule__Operation__Group__1__Impl rule__Operation__Group__2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1076:1: ( rule__Operation__Group__1__Impl rule__Operation__Group__2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1077:2: rule__Operation__Group__1__Impl rule__Operation__Group__2
             {
-            pushFollow(FOLLOW_rule__Operation__Group__1__Impl_in_rule__Operation__Group__12171);
+            pushFollow(FOLLOW_rule__Operation__Group__1__Impl_in_rule__Operation__Group__12212);
             rule__Operation__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__2_in_rule__Operation__Group__12174);
+            pushFollow(FOLLOW_rule__Operation__Group__2_in_rule__Operation__Group__12215);
             rule__Operation__Group__2();
 
             state._fsp--;
@@ -2982,23 +3037,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1066:1: rule__Operation__Group__1__Impl : ( ( rule__Operation__NameAssignment_1 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1084:1: rule__Operation__Group__1__Impl : ( ( rule__Operation__NameAssignment_1 ) ) ;
     public final void rule__Operation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1070:1: ( ( ( rule__Operation__NameAssignment_1 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1071:1: ( ( rule__Operation__NameAssignment_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1088:1: ( ( ( rule__Operation__NameAssignment_1 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1089:1: ( ( rule__Operation__NameAssignment_1 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1071:1: ( ( rule__Operation__NameAssignment_1 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1072:1: ( rule__Operation__NameAssignment_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1089:1: ( ( rule__Operation__NameAssignment_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1090:1: ( rule__Operation__NameAssignment_1 )
             {
              before(grammarAccess.getOperationAccess().getNameAssignment_1()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1073:1: ( rule__Operation__NameAssignment_1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1073:2: rule__Operation__NameAssignment_1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1091:1: ( rule__Operation__NameAssignment_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1091:2: rule__Operation__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Operation__NameAssignment_1_in_rule__Operation__Group__1__Impl2201);
+            pushFollow(FOLLOW_rule__Operation__NameAssignment_1_in_rule__Operation__Group__1__Impl2242);
             rule__Operation__NameAssignment_1();
 
             state._fsp--;
@@ -3029,21 +3084,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1083:1: rule__Operation__Group__2 : rule__Operation__Group__2__Impl rule__Operation__Group__3 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1101:1: rule__Operation__Group__2 : rule__Operation__Group__2__Impl rule__Operation__Group__3 ;
     public final void rule__Operation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1087:1: ( rule__Operation__Group__2__Impl rule__Operation__Group__3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1088:2: rule__Operation__Group__2__Impl rule__Operation__Group__3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1105:1: ( rule__Operation__Group__2__Impl rule__Operation__Group__3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1106:2: rule__Operation__Group__2__Impl rule__Operation__Group__3
             {
-            pushFollow(FOLLOW_rule__Operation__Group__2__Impl_in_rule__Operation__Group__22231);
+            pushFollow(FOLLOW_rule__Operation__Group__2__Impl_in_rule__Operation__Group__22272);
             rule__Operation__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__3_in_rule__Operation__Group__22234);
+            pushFollow(FOLLOW_rule__Operation__Group__3_in_rule__Operation__Group__22275);
             rule__Operation__Group__3();
 
             state._fsp--;
@@ -3067,20 +3122,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__2__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1095:1: rule__Operation__Group__2__Impl : ( '{' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1113:1: rule__Operation__Group__2__Impl : ( '{' ) ;
     public final void rule__Operation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1099:1: ( ( '{' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1100:1: ( '{' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1117:1: ( ( '{' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1118:1: ( '{' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1100:1: ( '{' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1101:1: '{'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1118:1: ( '{' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1119:1: '{'
             {
              before(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,23,FOLLOW_23_in_rule__Operation__Group__2__Impl2262); 
+            match(input,24,FOLLOW_24_in_rule__Operation__Group__2__Impl2303); 
              after(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -3104,21 +3159,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1114:1: rule__Operation__Group__3 : rule__Operation__Group__3__Impl rule__Operation__Group__4 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1132:1: rule__Operation__Group__3 : rule__Operation__Group__3__Impl rule__Operation__Group__4 ;
     public final void rule__Operation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1118:1: ( rule__Operation__Group__3__Impl rule__Operation__Group__4 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1119:2: rule__Operation__Group__3__Impl rule__Operation__Group__4
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1136:1: ( rule__Operation__Group__3__Impl rule__Operation__Group__4 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1137:2: rule__Operation__Group__3__Impl rule__Operation__Group__4
             {
-            pushFollow(FOLLOW_rule__Operation__Group__3__Impl_in_rule__Operation__Group__32293);
+            pushFollow(FOLLOW_rule__Operation__Group__3__Impl_in_rule__Operation__Group__32334);
             rule__Operation__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__4_in_rule__Operation__Group__32296);
+            pushFollow(FOLLOW_rule__Operation__Group__4_in_rule__Operation__Group__32337);
             rule__Operation__Group__4();
 
             state._fsp--;
@@ -3142,31 +3197,31 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__3__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1126:1: rule__Operation__Group__3__Impl : ( ( rule__Operation__Group_3__0 )? ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1144:1: rule__Operation__Group__3__Impl : ( ( rule__Operation__Group_3__0 )? ) ;
     public final void rule__Operation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1130:1: ( ( ( rule__Operation__Group_3__0 )? ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1131:1: ( ( rule__Operation__Group_3__0 )? )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1148:1: ( ( ( rule__Operation__Group_3__0 )? ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1149:1: ( ( rule__Operation__Group_3__0 )? )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1131:1: ( ( rule__Operation__Group_3__0 )? )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1132:1: ( rule__Operation__Group_3__0 )?
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1149:1: ( ( rule__Operation__Group_3__0 )? )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1150:1: ( rule__Operation__Group_3__0 )?
             {
              before(grammarAccess.getOperationAccess().getGroup_3()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1133:1: ( rule__Operation__Group_3__0 )?
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1151:1: ( rule__Operation__Group_3__0 )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==26) ) {
+            if ( (LA10_0==27) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1133:2: rule__Operation__Group_3__0
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1151:2: rule__Operation__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Operation__Group_3__0_in_rule__Operation__Group__3__Impl2323);
+                    pushFollow(FOLLOW_rule__Operation__Group_3__0_in_rule__Operation__Group__3__Impl2364);
                     rule__Operation__Group_3__0();
 
                     state._fsp--;
@@ -3200,21 +3255,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__4"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1143:1: rule__Operation__Group__4 : rule__Operation__Group__4__Impl rule__Operation__Group__5 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1161:1: rule__Operation__Group__4 : rule__Operation__Group__4__Impl rule__Operation__Group__5 ;
     public final void rule__Operation__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1147:1: ( rule__Operation__Group__4__Impl rule__Operation__Group__5 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1148:2: rule__Operation__Group__4__Impl rule__Operation__Group__5
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1165:1: ( rule__Operation__Group__4__Impl rule__Operation__Group__5 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1166:2: rule__Operation__Group__4__Impl rule__Operation__Group__5
             {
-            pushFollow(FOLLOW_rule__Operation__Group__4__Impl_in_rule__Operation__Group__42354);
+            pushFollow(FOLLOW_rule__Operation__Group__4__Impl_in_rule__Operation__Group__42395);
             rule__Operation__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__5_in_rule__Operation__Group__42357);
+            pushFollow(FOLLOW_rule__Operation__Group__5_in_rule__Operation__Group__42398);
             rule__Operation__Group__5();
 
             state._fsp--;
@@ -3238,31 +3293,31 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__4__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1155:1: rule__Operation__Group__4__Impl : ( ( rule__Operation__Group_4__0 )? ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1173:1: rule__Operation__Group__4__Impl : ( ( rule__Operation__Group_4__0 )? ) ;
     public final void rule__Operation__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1159:1: ( ( ( rule__Operation__Group_4__0 )? ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1160:1: ( ( rule__Operation__Group_4__0 )? )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1177:1: ( ( ( rule__Operation__Group_4__0 )? ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1178:1: ( ( rule__Operation__Group_4__0 )? )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1160:1: ( ( rule__Operation__Group_4__0 )? )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1161:1: ( rule__Operation__Group_4__0 )?
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1178:1: ( ( rule__Operation__Group_4__0 )? )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1179:1: ( rule__Operation__Group_4__0 )?
             {
              before(grammarAccess.getOperationAccess().getGroup_4()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1162:1: ( rule__Operation__Group_4__0 )?
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1180:1: ( rule__Operation__Group_4__0 )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==28) ) {
+            if ( (LA11_0==29) ) {
                 alt11=1;
             }
             switch (alt11) {
                 case 1 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1162:2: rule__Operation__Group_4__0
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1180:2: rule__Operation__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__Operation__Group_4__0_in_rule__Operation__Group__4__Impl2384);
+                    pushFollow(FOLLOW_rule__Operation__Group_4__0_in_rule__Operation__Group__4__Impl2425);
                     rule__Operation__Group_4__0();
 
                     state._fsp--;
@@ -3296,16 +3351,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__5"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1172:1: rule__Operation__Group__5 : rule__Operation__Group__5__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1190:1: rule__Operation__Group__5 : rule__Operation__Group__5__Impl ;
     public final void rule__Operation__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1176:1: ( rule__Operation__Group__5__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1177:2: rule__Operation__Group__5__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1194:1: ( rule__Operation__Group__5__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1195:2: rule__Operation__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Operation__Group__5__Impl_in_rule__Operation__Group__52415);
+            pushFollow(FOLLOW_rule__Operation__Group__5__Impl_in_rule__Operation__Group__52456);
             rule__Operation__Group__5__Impl();
 
             state._fsp--;
@@ -3329,20 +3384,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group__5__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1183:1: rule__Operation__Group__5__Impl : ( '}' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1201:1: rule__Operation__Group__5__Impl : ( '}' ) ;
     public final void rule__Operation__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1187:1: ( ( '}' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1188:1: ( '}' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1205:1: ( ( '}' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1206:1: ( '}' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1188:1: ( '}' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1189:1: '}'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1206:1: ( '}' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1207:1: '}'
             {
              before(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,24,FOLLOW_24_in_rule__Operation__Group__5__Impl2443); 
+            match(input,25,FOLLOW_25_in_rule__Operation__Group__5__Impl2484); 
              after(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -3366,21 +3421,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_3__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1214:1: rule__Operation__Group_3__0 : rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1232:1: rule__Operation__Group_3__0 : rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1 ;
     public final void rule__Operation__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1218:1: ( rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1219:2: rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1236:1: ( rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1237:2: rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Operation__Group_3__0__Impl_in_rule__Operation__Group_3__02486);
+            pushFollow(FOLLOW_rule__Operation__Group_3__0__Impl_in_rule__Operation__Group_3__02527);
             rule__Operation__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_3__1_in_rule__Operation__Group_3__02489);
+            pushFollow(FOLLOW_rule__Operation__Group_3__1_in_rule__Operation__Group_3__02530);
             rule__Operation__Group_3__1();
 
             state._fsp--;
@@ -3404,20 +3459,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_3__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1226:1: rule__Operation__Group_3__0__Impl : ( 'input' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1244:1: rule__Operation__Group_3__0__Impl : ( 'input' ) ;
     public final void rule__Operation__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1230:1: ( ( 'input' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1231:1: ( 'input' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1248:1: ( ( 'input' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1249:1: ( 'input' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1231:1: ( 'input' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1232:1: 'input'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1249:1: ( 'input' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1250:1: 'input'
             {
              before(grammarAccess.getOperationAccess().getInputKeyword_3_0()); 
-            match(input,26,FOLLOW_26_in_rule__Operation__Group_3__0__Impl2517); 
+            match(input,27,FOLLOW_27_in_rule__Operation__Group_3__0__Impl2558); 
              after(grammarAccess.getOperationAccess().getInputKeyword_3_0()); 
 
             }
@@ -3441,21 +3496,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_3__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1245:1: rule__Operation__Group_3__1 : rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1263:1: rule__Operation__Group_3__1 : rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2 ;
     public final void rule__Operation__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1249:1: ( rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1250:2: rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1267:1: ( rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1268:2: rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Operation__Group_3__1__Impl_in_rule__Operation__Group_3__12548);
+            pushFollow(FOLLOW_rule__Operation__Group_3__1__Impl_in_rule__Operation__Group_3__12589);
             rule__Operation__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_3__2_in_rule__Operation__Group_3__12551);
+            pushFollow(FOLLOW_rule__Operation__Group_3__2_in_rule__Operation__Group_3__12592);
             rule__Operation__Group_3__2();
 
             state._fsp--;
@@ -3479,23 +3534,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_3__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1257:1: rule__Operation__Group_3__1__Impl : ( ( rule__Operation__InputNameAssignment_3_1 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1275:1: rule__Operation__Group_3__1__Impl : ( ( rule__Operation__InputNameAssignment_3_1 ) ) ;
     public final void rule__Operation__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1261:1: ( ( ( rule__Operation__InputNameAssignment_3_1 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1262:1: ( ( rule__Operation__InputNameAssignment_3_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1279:1: ( ( ( rule__Operation__InputNameAssignment_3_1 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1280:1: ( ( rule__Operation__InputNameAssignment_3_1 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1262:1: ( ( rule__Operation__InputNameAssignment_3_1 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1263:1: ( rule__Operation__InputNameAssignment_3_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1280:1: ( ( rule__Operation__InputNameAssignment_3_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1281:1: ( rule__Operation__InputNameAssignment_3_1 )
             {
              before(grammarAccess.getOperationAccess().getInputNameAssignment_3_1()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1264:1: ( rule__Operation__InputNameAssignment_3_1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1264:2: rule__Operation__InputNameAssignment_3_1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1282:1: ( rule__Operation__InputNameAssignment_3_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1282:2: rule__Operation__InputNameAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Operation__InputNameAssignment_3_1_in_rule__Operation__Group_3__1__Impl2578);
+            pushFollow(FOLLOW_rule__Operation__InputNameAssignment_3_1_in_rule__Operation__Group_3__1__Impl2619);
             rule__Operation__InputNameAssignment_3_1();
 
             state._fsp--;
@@ -3526,21 +3581,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_3__2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1274:1: rule__Operation__Group_3__2 : rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1292:1: rule__Operation__Group_3__2 : rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3 ;
     public final void rule__Operation__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1278:1: ( rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1279:2: rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1296:1: ( rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1297:2: rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3
             {
-            pushFollow(FOLLOW_rule__Operation__Group_3__2__Impl_in_rule__Operation__Group_3__22608);
+            pushFollow(FOLLOW_rule__Operation__Group_3__2__Impl_in_rule__Operation__Group_3__22649);
             rule__Operation__Group_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_3__3_in_rule__Operation__Group_3__22611);
+            pushFollow(FOLLOW_rule__Operation__Group_3__3_in_rule__Operation__Group_3__22652);
             rule__Operation__Group_3__3();
 
             state._fsp--;
@@ -3564,20 +3619,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_3__2__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1286:1: rule__Operation__Group_3__2__Impl : ( ':' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1304:1: rule__Operation__Group_3__2__Impl : ( ':' ) ;
     public final void rule__Operation__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1290:1: ( ( ':' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1291:1: ( ':' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1308:1: ( ( ':' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1309:1: ( ':' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1291:1: ( ':' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1292:1: ':'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1309:1: ( ':' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1310:1: ':'
             {
              before(grammarAccess.getOperationAccess().getColonKeyword_3_2()); 
-            match(input,27,FOLLOW_27_in_rule__Operation__Group_3__2__Impl2639); 
+            match(input,28,FOLLOW_28_in_rule__Operation__Group_3__2__Impl2680); 
              after(grammarAccess.getOperationAccess().getColonKeyword_3_2()); 
 
             }
@@ -3601,16 +3656,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_3__3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1305:1: rule__Operation__Group_3__3 : rule__Operation__Group_3__3__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1323:1: rule__Operation__Group_3__3 : rule__Operation__Group_3__3__Impl ;
     public final void rule__Operation__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1309:1: ( rule__Operation__Group_3__3__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1310:2: rule__Operation__Group_3__3__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1327:1: ( rule__Operation__Group_3__3__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1328:2: rule__Operation__Group_3__3__Impl
             {
-            pushFollow(FOLLOW_rule__Operation__Group_3__3__Impl_in_rule__Operation__Group_3__32670);
+            pushFollow(FOLLOW_rule__Operation__Group_3__3__Impl_in_rule__Operation__Group_3__32711);
             rule__Operation__Group_3__3__Impl();
 
             state._fsp--;
@@ -3634,23 +3689,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_3__3__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1316:1: rule__Operation__Group_3__3__Impl : ( ( rule__Operation__InputTypeAssignment_3_3 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1334:1: rule__Operation__Group_3__3__Impl : ( ( rule__Operation__InputTypeAssignment_3_3 ) ) ;
     public final void rule__Operation__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1320:1: ( ( ( rule__Operation__InputTypeAssignment_3_3 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1321:1: ( ( rule__Operation__InputTypeAssignment_3_3 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1338:1: ( ( ( rule__Operation__InputTypeAssignment_3_3 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1339:1: ( ( rule__Operation__InputTypeAssignment_3_3 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1321:1: ( ( rule__Operation__InputTypeAssignment_3_3 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1322:1: ( rule__Operation__InputTypeAssignment_3_3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1339:1: ( ( rule__Operation__InputTypeAssignment_3_3 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1340:1: ( rule__Operation__InputTypeAssignment_3_3 )
             {
              before(grammarAccess.getOperationAccess().getInputTypeAssignment_3_3()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1323:1: ( rule__Operation__InputTypeAssignment_3_3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1323:2: rule__Operation__InputTypeAssignment_3_3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1341:1: ( rule__Operation__InputTypeAssignment_3_3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1341:2: rule__Operation__InputTypeAssignment_3_3
             {
-            pushFollow(FOLLOW_rule__Operation__InputTypeAssignment_3_3_in_rule__Operation__Group_3__3__Impl2697);
+            pushFollow(FOLLOW_rule__Operation__InputTypeAssignment_3_3_in_rule__Operation__Group_3__3__Impl2738);
             rule__Operation__InputTypeAssignment_3_3();
 
             state._fsp--;
@@ -3681,21 +3736,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_4__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1341:1: rule__Operation__Group_4__0 : rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1359:1: rule__Operation__Group_4__0 : rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1 ;
     public final void rule__Operation__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1345:1: ( rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1346:2: rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1363:1: ( rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1364:2: rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Operation__Group_4__0__Impl_in_rule__Operation__Group_4__02735);
+            pushFollow(FOLLOW_rule__Operation__Group_4__0__Impl_in_rule__Operation__Group_4__02776);
             rule__Operation__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_4__1_in_rule__Operation__Group_4__02738);
+            pushFollow(FOLLOW_rule__Operation__Group_4__1_in_rule__Operation__Group_4__02779);
             rule__Operation__Group_4__1();
 
             state._fsp--;
@@ -3719,20 +3774,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_4__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1353:1: rule__Operation__Group_4__0__Impl : ( 'output' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1371:1: rule__Operation__Group_4__0__Impl : ( 'output' ) ;
     public final void rule__Operation__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1357:1: ( ( 'output' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1358:1: ( 'output' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1375:1: ( ( 'output' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1376:1: ( 'output' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1358:1: ( 'output' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1359:1: 'output'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1376:1: ( 'output' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1377:1: 'output'
             {
              before(grammarAccess.getOperationAccess().getOutputKeyword_4_0()); 
-            match(input,28,FOLLOW_28_in_rule__Operation__Group_4__0__Impl2766); 
+            match(input,29,FOLLOW_29_in_rule__Operation__Group_4__0__Impl2807); 
              after(grammarAccess.getOperationAccess().getOutputKeyword_4_0()); 
 
             }
@@ -3756,21 +3811,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_4__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1372:1: rule__Operation__Group_4__1 : rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1390:1: rule__Operation__Group_4__1 : rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2 ;
     public final void rule__Operation__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1376:1: ( rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1377:2: rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1394:1: ( rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1395:2: rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2
             {
-            pushFollow(FOLLOW_rule__Operation__Group_4__1__Impl_in_rule__Operation__Group_4__12797);
+            pushFollow(FOLLOW_rule__Operation__Group_4__1__Impl_in_rule__Operation__Group_4__12838);
             rule__Operation__Group_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_4__2_in_rule__Operation__Group_4__12800);
+            pushFollow(FOLLOW_rule__Operation__Group_4__2_in_rule__Operation__Group_4__12841);
             rule__Operation__Group_4__2();
 
             state._fsp--;
@@ -3794,23 +3849,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_4__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1384:1: rule__Operation__Group_4__1__Impl : ( ( rule__Operation__OutputNameAssignment_4_1 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1402:1: rule__Operation__Group_4__1__Impl : ( ( rule__Operation__OutputNameAssignment_4_1 ) ) ;
     public final void rule__Operation__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1388:1: ( ( ( rule__Operation__OutputNameAssignment_4_1 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1389:1: ( ( rule__Operation__OutputNameAssignment_4_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1406:1: ( ( ( rule__Operation__OutputNameAssignment_4_1 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1407:1: ( ( rule__Operation__OutputNameAssignment_4_1 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1389:1: ( ( rule__Operation__OutputNameAssignment_4_1 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1390:1: ( rule__Operation__OutputNameAssignment_4_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1407:1: ( ( rule__Operation__OutputNameAssignment_4_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1408:1: ( rule__Operation__OutputNameAssignment_4_1 )
             {
              before(grammarAccess.getOperationAccess().getOutputNameAssignment_4_1()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1391:1: ( rule__Operation__OutputNameAssignment_4_1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1391:2: rule__Operation__OutputNameAssignment_4_1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1409:1: ( rule__Operation__OutputNameAssignment_4_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1409:2: rule__Operation__OutputNameAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__Operation__OutputNameAssignment_4_1_in_rule__Operation__Group_4__1__Impl2827);
+            pushFollow(FOLLOW_rule__Operation__OutputNameAssignment_4_1_in_rule__Operation__Group_4__1__Impl2868);
             rule__Operation__OutputNameAssignment_4_1();
 
             state._fsp--;
@@ -3841,21 +3896,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_4__2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1401:1: rule__Operation__Group_4__2 : rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1419:1: rule__Operation__Group_4__2 : rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3 ;
     public final void rule__Operation__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1405:1: ( rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1406:2: rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1423:1: ( rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1424:2: rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3
             {
-            pushFollow(FOLLOW_rule__Operation__Group_4__2__Impl_in_rule__Operation__Group_4__22857);
+            pushFollow(FOLLOW_rule__Operation__Group_4__2__Impl_in_rule__Operation__Group_4__22898);
             rule__Operation__Group_4__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_4__3_in_rule__Operation__Group_4__22860);
+            pushFollow(FOLLOW_rule__Operation__Group_4__3_in_rule__Operation__Group_4__22901);
             rule__Operation__Group_4__3();
 
             state._fsp--;
@@ -3879,20 +3934,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_4__2__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1413:1: rule__Operation__Group_4__2__Impl : ( ':' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1431:1: rule__Operation__Group_4__2__Impl : ( ':' ) ;
     public final void rule__Operation__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1417:1: ( ( ':' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1418:1: ( ':' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1435:1: ( ( ':' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1436:1: ( ':' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1418:1: ( ':' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1419:1: ':'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1436:1: ( ':' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1437:1: ':'
             {
              before(grammarAccess.getOperationAccess().getColonKeyword_4_2()); 
-            match(input,27,FOLLOW_27_in_rule__Operation__Group_4__2__Impl2888); 
+            match(input,28,FOLLOW_28_in_rule__Operation__Group_4__2__Impl2929); 
              after(grammarAccess.getOperationAccess().getColonKeyword_4_2()); 
 
             }
@@ -3916,16 +3971,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_4__3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1432:1: rule__Operation__Group_4__3 : rule__Operation__Group_4__3__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1450:1: rule__Operation__Group_4__3 : rule__Operation__Group_4__3__Impl ;
     public final void rule__Operation__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1436:1: ( rule__Operation__Group_4__3__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1437:2: rule__Operation__Group_4__3__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1454:1: ( rule__Operation__Group_4__3__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1455:2: rule__Operation__Group_4__3__Impl
             {
-            pushFollow(FOLLOW_rule__Operation__Group_4__3__Impl_in_rule__Operation__Group_4__32919);
+            pushFollow(FOLLOW_rule__Operation__Group_4__3__Impl_in_rule__Operation__Group_4__32960);
             rule__Operation__Group_4__3__Impl();
 
             state._fsp--;
@@ -3949,23 +4004,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__Group_4__3__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1443:1: rule__Operation__Group_4__3__Impl : ( ( rule__Operation__OutputTypeAssignment_4_3 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1461:1: rule__Operation__Group_4__3__Impl : ( ( rule__Operation__OutputTypeAssignment_4_3 ) ) ;
     public final void rule__Operation__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1447:1: ( ( ( rule__Operation__OutputTypeAssignment_4_3 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1448:1: ( ( rule__Operation__OutputTypeAssignment_4_3 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1465:1: ( ( ( rule__Operation__OutputTypeAssignment_4_3 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1466:1: ( ( rule__Operation__OutputTypeAssignment_4_3 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1448:1: ( ( rule__Operation__OutputTypeAssignment_4_3 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1449:1: ( rule__Operation__OutputTypeAssignment_4_3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1466:1: ( ( rule__Operation__OutputTypeAssignment_4_3 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1467:1: ( rule__Operation__OutputTypeAssignment_4_3 )
             {
              before(grammarAccess.getOperationAccess().getOutputTypeAssignment_4_3()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1450:1: ( rule__Operation__OutputTypeAssignment_4_3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1450:2: rule__Operation__OutputTypeAssignment_4_3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1468:1: ( rule__Operation__OutputTypeAssignment_4_3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1468:2: rule__Operation__OutputTypeAssignment_4_3
             {
-            pushFollow(FOLLOW_rule__Operation__OutputTypeAssignment_4_3_in_rule__Operation__Group_4__3__Impl2946);
+            pushFollow(FOLLOW_rule__Operation__OutputTypeAssignment_4_3_in_rule__Operation__Group_4__3__Impl2987);
             rule__Operation__OutputTypeAssignment_4_3();
 
             state._fsp--;
@@ -3996,21 +4051,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__Group__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1468:1: rule__RESTService__Group__0 : rule__RESTService__Group__0__Impl rule__RESTService__Group__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1486:1: rule__RESTService__Group__0 : rule__RESTService__Group__0__Impl rule__RESTService__Group__1 ;
     public final void rule__RESTService__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1472:1: ( rule__RESTService__Group__0__Impl rule__RESTService__Group__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1473:2: rule__RESTService__Group__0__Impl rule__RESTService__Group__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1490:1: ( rule__RESTService__Group__0__Impl rule__RESTService__Group__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1491:2: rule__RESTService__Group__0__Impl rule__RESTService__Group__1
             {
-            pushFollow(FOLLOW_rule__RESTService__Group__0__Impl_in_rule__RESTService__Group__02984);
+            pushFollow(FOLLOW_rule__RESTService__Group__0__Impl_in_rule__RESTService__Group__03025);
             rule__RESTService__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RESTService__Group__1_in_rule__RESTService__Group__02987);
+            pushFollow(FOLLOW_rule__RESTService__Group__1_in_rule__RESTService__Group__03028);
             rule__RESTService__Group__1();
 
             state._fsp--;
@@ -4034,21 +4089,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__Group__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1480:1: rule__RESTService__Group__0__Impl : ( () ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1498:1: rule__RESTService__Group__0__Impl : ( () ) ;
     public final void rule__RESTService__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1484:1: ( ( () ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1485:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1502:1: ( ( () ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1503:1: ( () )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1485:1: ( () )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1486:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1503:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1504:1: ()
             {
              before(grammarAccess.getRESTServiceAccess().getRESTServiceAction_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1487:1: ()
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1489:1: 
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1505:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1507:1: 
             {
             }
 
@@ -4071,21 +4126,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__Group__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1499:1: rule__RESTService__Group__1 : rule__RESTService__Group__1__Impl rule__RESTService__Group__2 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1517:1: rule__RESTService__Group__1 : rule__RESTService__Group__1__Impl rule__RESTService__Group__2 ;
     public final void rule__RESTService__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1503:1: ( rule__RESTService__Group__1__Impl rule__RESTService__Group__2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1504:2: rule__RESTService__Group__1__Impl rule__RESTService__Group__2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1521:1: ( rule__RESTService__Group__1__Impl rule__RESTService__Group__2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1522:2: rule__RESTService__Group__1__Impl rule__RESTService__Group__2
             {
-            pushFollow(FOLLOW_rule__RESTService__Group__1__Impl_in_rule__RESTService__Group__13045);
+            pushFollow(FOLLOW_rule__RESTService__Group__1__Impl_in_rule__RESTService__Group__13086);
             rule__RESTService__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RESTService__Group__2_in_rule__RESTService__Group__13048);
+            pushFollow(FOLLOW_rule__RESTService__Group__2_in_rule__RESTService__Group__13089);
             rule__RESTService__Group__2();
 
             state._fsp--;
@@ -4109,20 +4164,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__Group__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1511:1: rule__RESTService__Group__1__Impl : ( 'REST service' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1529:1: rule__RESTService__Group__1__Impl : ( 'REST service' ) ;
     public final void rule__RESTService__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1515:1: ( ( 'REST service' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1516:1: ( 'REST service' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1533:1: ( ( 'REST service' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1534:1: ( 'REST service' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1516:1: ( 'REST service' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1517:1: 'REST service'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1534:1: ( 'REST service' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1535:1: 'REST service'
             {
              before(grammarAccess.getRESTServiceAccess().getRESTServiceKeyword_1()); 
-            match(input,29,FOLLOW_29_in_rule__RESTService__Group__1__Impl3076); 
+            match(input,30,FOLLOW_30_in_rule__RESTService__Group__1__Impl3117); 
              after(grammarAccess.getRESTServiceAccess().getRESTServiceKeyword_1()); 
 
             }
@@ -4146,21 +4201,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__Group__2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1530:1: rule__RESTService__Group__2 : rule__RESTService__Group__2__Impl rule__RESTService__Group__3 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1548:1: rule__RESTService__Group__2 : rule__RESTService__Group__2__Impl rule__RESTService__Group__3 ;
     public final void rule__RESTService__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1534:1: ( rule__RESTService__Group__2__Impl rule__RESTService__Group__3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1535:2: rule__RESTService__Group__2__Impl rule__RESTService__Group__3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1552:1: ( rule__RESTService__Group__2__Impl rule__RESTService__Group__3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1553:2: rule__RESTService__Group__2__Impl rule__RESTService__Group__3
             {
-            pushFollow(FOLLOW_rule__RESTService__Group__2__Impl_in_rule__RESTService__Group__23107);
+            pushFollow(FOLLOW_rule__RESTService__Group__2__Impl_in_rule__RESTService__Group__23148);
             rule__RESTService__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RESTService__Group__3_in_rule__RESTService__Group__23110);
+            pushFollow(FOLLOW_rule__RESTService__Group__3_in_rule__RESTService__Group__23151);
             rule__RESTService__Group__3();
 
             state._fsp--;
@@ -4184,23 +4239,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__Group__2__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1542:1: rule__RESTService__Group__2__Impl : ( ( rule__RESTService__NameAssignment_2 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1560:1: rule__RESTService__Group__2__Impl : ( ( rule__RESTService__NameAssignment_2 ) ) ;
     public final void rule__RESTService__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1546:1: ( ( ( rule__RESTService__NameAssignment_2 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1547:1: ( ( rule__RESTService__NameAssignment_2 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1564:1: ( ( ( rule__RESTService__NameAssignment_2 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1565:1: ( ( rule__RESTService__NameAssignment_2 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1547:1: ( ( rule__RESTService__NameAssignment_2 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1548:1: ( rule__RESTService__NameAssignment_2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1565:1: ( ( rule__RESTService__NameAssignment_2 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1566:1: ( rule__RESTService__NameAssignment_2 )
             {
              before(grammarAccess.getRESTServiceAccess().getNameAssignment_2()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1549:1: ( rule__RESTService__NameAssignment_2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1549:2: rule__RESTService__NameAssignment_2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1567:1: ( rule__RESTService__NameAssignment_2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1567:2: rule__RESTService__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__RESTService__NameAssignment_2_in_rule__RESTService__Group__2__Impl3137);
+            pushFollow(FOLLOW_rule__RESTService__NameAssignment_2_in_rule__RESTService__Group__2__Impl3178);
             rule__RESTService__NameAssignment_2();
 
             state._fsp--;
@@ -4231,21 +4286,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__Group__3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1559:1: rule__RESTService__Group__3 : rule__RESTService__Group__3__Impl rule__RESTService__Group__4 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1577:1: rule__RESTService__Group__3 : rule__RESTService__Group__3__Impl rule__RESTService__Group__4 ;
     public final void rule__RESTService__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1563:1: ( rule__RESTService__Group__3__Impl rule__RESTService__Group__4 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1564:2: rule__RESTService__Group__3__Impl rule__RESTService__Group__4
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1581:1: ( rule__RESTService__Group__3__Impl rule__RESTService__Group__4 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1582:2: rule__RESTService__Group__3__Impl rule__RESTService__Group__4
             {
-            pushFollow(FOLLOW_rule__RESTService__Group__3__Impl_in_rule__RESTService__Group__33167);
+            pushFollow(FOLLOW_rule__RESTService__Group__3__Impl_in_rule__RESTService__Group__33208);
             rule__RESTService__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RESTService__Group__4_in_rule__RESTService__Group__33170);
+            pushFollow(FOLLOW_rule__RESTService__Group__4_in_rule__RESTService__Group__33211);
             rule__RESTService__Group__4();
 
             state._fsp--;
@@ -4269,20 +4324,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__Group__3__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1571:1: rule__RESTService__Group__3__Impl : ( '{' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1589:1: rule__RESTService__Group__3__Impl : ( '{' ) ;
     public final void rule__RESTService__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1575:1: ( ( '{' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1576:1: ( '{' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1593:1: ( ( '{' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1594:1: ( '{' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1576:1: ( '{' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1577:1: '{'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1594:1: ( '{' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1595:1: '{'
             {
              before(grammarAccess.getRESTServiceAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,23,FOLLOW_23_in_rule__RESTService__Group__3__Impl3198); 
+            match(input,24,FOLLOW_24_in_rule__RESTService__Group__3__Impl3239); 
              after(grammarAccess.getRESTServiceAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -4306,16 +4361,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__Group__4"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1590:1: rule__RESTService__Group__4 : rule__RESTService__Group__4__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1608:1: rule__RESTService__Group__4 : rule__RESTService__Group__4__Impl ;
     public final void rule__RESTService__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1594:1: ( rule__RESTService__Group__4__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1595:2: rule__RESTService__Group__4__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1612:1: ( rule__RESTService__Group__4__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1613:2: rule__RESTService__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__RESTService__Group__4__Impl_in_rule__RESTService__Group__43229);
+            pushFollow(FOLLOW_rule__RESTService__Group__4__Impl_in_rule__RESTService__Group__43270);
             rule__RESTService__Group__4__Impl();
 
             state._fsp--;
@@ -4339,20 +4394,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__Group__4__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1601:1: rule__RESTService__Group__4__Impl : ( '}' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1619:1: rule__RESTService__Group__4__Impl : ( '}' ) ;
     public final void rule__RESTService__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1605:1: ( ( '}' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1606:1: ( '}' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1623:1: ( ( '}' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1624:1: ( '}' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1606:1: ( '}' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1607:1: '}'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1624:1: ( '}' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1625:1: '}'
             {
              before(grammarAccess.getRESTServiceAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,24,FOLLOW_24_in_rule__RESTService__Group__4__Impl3257); 
+            match(input,25,FOLLOW_25_in_rule__RESTService__Group__4__Impl3298); 
              after(grammarAccess.getRESTServiceAccess().getRightCurlyBracketKeyword_4()); 
 
             }
@@ -4376,21 +4431,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1630:1: rule__Node__Group__0 : rule__Node__Group__0__Impl rule__Node__Group__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1648:1: rule__Node__Group__0 : rule__Node__Group__0__Impl rule__Node__Group__1 ;
     public final void rule__Node__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1634:1: ( rule__Node__Group__0__Impl rule__Node__Group__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1635:2: rule__Node__Group__0__Impl rule__Node__Group__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1652:1: ( rule__Node__Group__0__Impl rule__Node__Group__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1653:2: rule__Node__Group__0__Impl rule__Node__Group__1
             {
-            pushFollow(FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__03298);
+            pushFollow(FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__03339);
             rule__Node__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__1_in_rule__Node__Group__03301);
+            pushFollow(FOLLOW_rule__Node__Group__1_in_rule__Node__Group__03342);
             rule__Node__Group__1();
 
             state._fsp--;
@@ -4414,21 +4469,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1642:1: rule__Node__Group__0__Impl : ( () ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1660:1: rule__Node__Group__0__Impl : ( () ) ;
     public final void rule__Node__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1646:1: ( ( () ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1647:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1664:1: ( ( () ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1665:1: ( () )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1647:1: ( () )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1648:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1665:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1666:1: ()
             {
              before(grammarAccess.getNodeAccess().getNodeAction_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1649:1: ()
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1651:1: 
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1667:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1669:1: 
             {
             }
 
@@ -4451,21 +4506,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1661:1: rule__Node__Group__1 : rule__Node__Group__1__Impl rule__Node__Group__2 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1679:1: rule__Node__Group__1 : rule__Node__Group__1__Impl rule__Node__Group__2 ;
     public final void rule__Node__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1665:1: ( rule__Node__Group__1__Impl rule__Node__Group__2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1666:2: rule__Node__Group__1__Impl rule__Node__Group__2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1683:1: ( rule__Node__Group__1__Impl rule__Node__Group__2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1684:2: rule__Node__Group__1__Impl rule__Node__Group__2
             {
-            pushFollow(FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__13359);
+            pushFollow(FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__13400);
             rule__Node__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__2_in_rule__Node__Group__13362);
+            pushFollow(FOLLOW_rule__Node__Group__2_in_rule__Node__Group__13403);
             rule__Node__Group__2();
 
             state._fsp--;
@@ -4489,20 +4544,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1673:1: rule__Node__Group__1__Impl : ( 'Node' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1691:1: rule__Node__Group__1__Impl : ( 'Node' ) ;
     public final void rule__Node__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1677:1: ( ( 'Node' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1678:1: ( 'Node' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1695:1: ( ( 'Node' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1696:1: ( 'Node' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1678:1: ( 'Node' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1679:1: 'Node'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1696:1: ( 'Node' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1697:1: 'Node'
             {
              before(grammarAccess.getNodeAccess().getNodeKeyword_1()); 
-            match(input,30,FOLLOW_30_in_rule__Node__Group__1__Impl3390); 
+            match(input,31,FOLLOW_31_in_rule__Node__Group__1__Impl3431); 
              after(grammarAccess.getNodeAccess().getNodeKeyword_1()); 
 
             }
@@ -4526,21 +4581,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1692:1: rule__Node__Group__2 : rule__Node__Group__2__Impl rule__Node__Group__3 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1710:1: rule__Node__Group__2 : rule__Node__Group__2__Impl rule__Node__Group__3 ;
     public final void rule__Node__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1696:1: ( rule__Node__Group__2__Impl rule__Node__Group__3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1697:2: rule__Node__Group__2__Impl rule__Node__Group__3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1714:1: ( rule__Node__Group__2__Impl rule__Node__Group__3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1715:2: rule__Node__Group__2__Impl rule__Node__Group__3
             {
-            pushFollow(FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__23421);
+            pushFollow(FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__23462);
             rule__Node__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__3_in_rule__Node__Group__23424);
+            pushFollow(FOLLOW_rule__Node__Group__3_in_rule__Node__Group__23465);
             rule__Node__Group__3();
 
             state._fsp--;
@@ -4564,23 +4619,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__2__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1704:1: rule__Node__Group__2__Impl : ( ( rule__Node__NameAssignment_2 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1722:1: rule__Node__Group__2__Impl : ( ( rule__Node__NameAssignment_2 ) ) ;
     public final void rule__Node__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1708:1: ( ( ( rule__Node__NameAssignment_2 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1709:1: ( ( rule__Node__NameAssignment_2 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1726:1: ( ( ( rule__Node__NameAssignment_2 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1727:1: ( ( rule__Node__NameAssignment_2 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1709:1: ( ( rule__Node__NameAssignment_2 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1710:1: ( rule__Node__NameAssignment_2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1727:1: ( ( rule__Node__NameAssignment_2 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1728:1: ( rule__Node__NameAssignment_2 )
             {
              before(grammarAccess.getNodeAccess().getNameAssignment_2()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1711:1: ( rule__Node__NameAssignment_2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1711:2: rule__Node__NameAssignment_2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1729:1: ( rule__Node__NameAssignment_2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1729:2: rule__Node__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Node__NameAssignment_2_in_rule__Node__Group__2__Impl3451);
+            pushFollow(FOLLOW_rule__Node__NameAssignment_2_in_rule__Node__Group__2__Impl3492);
             rule__Node__NameAssignment_2();
 
             state._fsp--;
@@ -4611,21 +4666,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1721:1: rule__Node__Group__3 : rule__Node__Group__3__Impl rule__Node__Group__4 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1739:1: rule__Node__Group__3 : rule__Node__Group__3__Impl rule__Node__Group__4 ;
     public final void rule__Node__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1725:1: ( rule__Node__Group__3__Impl rule__Node__Group__4 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1726:2: rule__Node__Group__3__Impl rule__Node__Group__4
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1743:1: ( rule__Node__Group__3__Impl rule__Node__Group__4 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1744:2: rule__Node__Group__3__Impl rule__Node__Group__4
             {
-            pushFollow(FOLLOW_rule__Node__Group__3__Impl_in_rule__Node__Group__33481);
+            pushFollow(FOLLOW_rule__Node__Group__3__Impl_in_rule__Node__Group__33522);
             rule__Node__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__4_in_rule__Node__Group__33484);
+            pushFollow(FOLLOW_rule__Node__Group__4_in_rule__Node__Group__33525);
             rule__Node__Group__4();
 
             state._fsp--;
@@ -4649,20 +4704,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__3__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1733:1: rule__Node__Group__3__Impl : ( 'uri' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1751:1: rule__Node__Group__3__Impl : ( 'uri' ) ;
     public final void rule__Node__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1737:1: ( ( 'uri' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1738:1: ( 'uri' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1755:1: ( ( 'uri' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1756:1: ( 'uri' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1738:1: ( 'uri' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1739:1: 'uri'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1756:1: ( 'uri' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1757:1: 'uri'
             {
              before(grammarAccess.getNodeAccess().getUriKeyword_3()); 
-            match(input,31,FOLLOW_31_in_rule__Node__Group__3__Impl3512); 
+            match(input,32,FOLLOW_32_in_rule__Node__Group__3__Impl3553); 
              after(grammarAccess.getNodeAccess().getUriKeyword_3()); 
 
             }
@@ -4686,21 +4741,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__4"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1752:1: rule__Node__Group__4 : rule__Node__Group__4__Impl rule__Node__Group__5 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1770:1: rule__Node__Group__4 : rule__Node__Group__4__Impl rule__Node__Group__5 ;
     public final void rule__Node__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1756:1: ( rule__Node__Group__4__Impl rule__Node__Group__5 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1757:2: rule__Node__Group__4__Impl rule__Node__Group__5
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1774:1: ( rule__Node__Group__4__Impl rule__Node__Group__5 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1775:2: rule__Node__Group__4__Impl rule__Node__Group__5
             {
-            pushFollow(FOLLOW_rule__Node__Group__4__Impl_in_rule__Node__Group__43543);
+            pushFollow(FOLLOW_rule__Node__Group__4__Impl_in_rule__Node__Group__43584);
             rule__Node__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__5_in_rule__Node__Group__43546);
+            pushFollow(FOLLOW_rule__Node__Group__5_in_rule__Node__Group__43587);
             rule__Node__Group__5();
 
             state._fsp--;
@@ -4724,20 +4779,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__4__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1764:1: rule__Node__Group__4__Impl : ( '=' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1782:1: rule__Node__Group__4__Impl : ( '=' ) ;
     public final void rule__Node__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1768:1: ( ( '=' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1769:1: ( '=' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1786:1: ( ( '=' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1787:1: ( '=' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1769:1: ( '=' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1770:1: '='
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1787:1: ( '=' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1788:1: '='
             {
              before(grammarAccess.getNodeAccess().getEqualsSignKeyword_4()); 
-            match(input,32,FOLLOW_32_in_rule__Node__Group__4__Impl3574); 
+            match(input,33,FOLLOW_33_in_rule__Node__Group__4__Impl3615); 
              after(grammarAccess.getNodeAccess().getEqualsSignKeyword_4()); 
 
             }
@@ -4761,21 +4816,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__5"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1783:1: rule__Node__Group__5 : rule__Node__Group__5__Impl rule__Node__Group__6 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1801:1: rule__Node__Group__5 : rule__Node__Group__5__Impl rule__Node__Group__6 ;
     public final void rule__Node__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1787:1: ( rule__Node__Group__5__Impl rule__Node__Group__6 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1788:2: rule__Node__Group__5__Impl rule__Node__Group__6
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1805:1: ( rule__Node__Group__5__Impl rule__Node__Group__6 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1806:2: rule__Node__Group__5__Impl rule__Node__Group__6
             {
-            pushFollow(FOLLOW_rule__Node__Group__5__Impl_in_rule__Node__Group__53605);
+            pushFollow(FOLLOW_rule__Node__Group__5__Impl_in_rule__Node__Group__53646);
             rule__Node__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__6_in_rule__Node__Group__53608);
+            pushFollow(FOLLOW_rule__Node__Group__6_in_rule__Node__Group__53649);
             rule__Node__Group__6();
 
             state._fsp--;
@@ -4799,23 +4854,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__5__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1795:1: rule__Node__Group__5__Impl : ( ( rule__Node__BaseURIAssignment_5 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1813:1: rule__Node__Group__5__Impl : ( ( rule__Node__BaseURIAssignment_5 ) ) ;
     public final void rule__Node__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1799:1: ( ( ( rule__Node__BaseURIAssignment_5 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1800:1: ( ( rule__Node__BaseURIAssignment_5 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1817:1: ( ( ( rule__Node__BaseURIAssignment_5 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1818:1: ( ( rule__Node__BaseURIAssignment_5 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1800:1: ( ( rule__Node__BaseURIAssignment_5 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1801:1: ( rule__Node__BaseURIAssignment_5 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1818:1: ( ( rule__Node__BaseURIAssignment_5 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1819:1: ( rule__Node__BaseURIAssignment_5 )
             {
              before(grammarAccess.getNodeAccess().getBaseURIAssignment_5()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1802:1: ( rule__Node__BaseURIAssignment_5 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1802:2: rule__Node__BaseURIAssignment_5
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1820:1: ( rule__Node__BaseURIAssignment_5 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1820:2: rule__Node__BaseURIAssignment_5
             {
-            pushFollow(FOLLOW_rule__Node__BaseURIAssignment_5_in_rule__Node__Group__5__Impl3635);
+            pushFollow(FOLLOW_rule__Node__BaseURIAssignment_5_in_rule__Node__Group__5__Impl3676);
             rule__Node__BaseURIAssignment_5();
 
             state._fsp--;
@@ -4846,21 +4901,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__6"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1812:1: rule__Node__Group__6 : rule__Node__Group__6__Impl rule__Node__Group__7 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1830:1: rule__Node__Group__6 : rule__Node__Group__6__Impl rule__Node__Group__7 ;
     public final void rule__Node__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1816:1: ( rule__Node__Group__6__Impl rule__Node__Group__7 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1817:2: rule__Node__Group__6__Impl rule__Node__Group__7
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1834:1: ( rule__Node__Group__6__Impl rule__Node__Group__7 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1835:2: rule__Node__Group__6__Impl rule__Node__Group__7
             {
-            pushFollow(FOLLOW_rule__Node__Group__6__Impl_in_rule__Node__Group__63665);
+            pushFollow(FOLLOW_rule__Node__Group__6__Impl_in_rule__Node__Group__63706);
             rule__Node__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__7_in_rule__Node__Group__63668);
+            pushFollow(FOLLOW_rule__Node__Group__7_in_rule__Node__Group__63709);
             rule__Node__Group__7();
 
             state._fsp--;
@@ -4884,20 +4939,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__6__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1824:1: rule__Node__Group__6__Impl : ( 'hosts' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1842:1: rule__Node__Group__6__Impl : ( 'hosts' ) ;
     public final void rule__Node__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1828:1: ( ( 'hosts' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1829:1: ( 'hosts' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1846:1: ( ( 'hosts' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1847:1: ( 'hosts' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1829:1: ( 'hosts' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1830:1: 'hosts'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1847:1: ( 'hosts' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1848:1: 'hosts'
             {
              before(grammarAccess.getNodeAccess().getHostsKeyword_6()); 
-            match(input,33,FOLLOW_33_in_rule__Node__Group__6__Impl3696); 
+            match(input,34,FOLLOW_34_in_rule__Node__Group__6__Impl3737); 
              after(grammarAccess.getNodeAccess().getHostsKeyword_6()); 
 
             }
@@ -4921,21 +4976,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__7"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1843:1: rule__Node__Group__7 : rule__Node__Group__7__Impl rule__Node__Group__8 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1861:1: rule__Node__Group__7 : rule__Node__Group__7__Impl rule__Node__Group__8 ;
     public final void rule__Node__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1847:1: ( rule__Node__Group__7__Impl rule__Node__Group__8 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1848:2: rule__Node__Group__7__Impl rule__Node__Group__8
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1865:1: ( rule__Node__Group__7__Impl rule__Node__Group__8 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1866:2: rule__Node__Group__7__Impl rule__Node__Group__8
             {
-            pushFollow(FOLLOW_rule__Node__Group__7__Impl_in_rule__Node__Group__73727);
+            pushFollow(FOLLOW_rule__Node__Group__7__Impl_in_rule__Node__Group__73768);
             rule__Node__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__8_in_rule__Node__Group__73730);
+            pushFollow(FOLLOW_rule__Node__Group__8_in_rule__Node__Group__73771);
             rule__Node__Group__8();
 
             state._fsp--;
@@ -4959,20 +5014,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__7__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1855:1: rule__Node__Group__7__Impl : ( '{' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1873:1: rule__Node__Group__7__Impl : ( '{' ) ;
     public final void rule__Node__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1859:1: ( ( '{' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1860:1: ( '{' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1877:1: ( ( '{' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1878:1: ( '{' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1860:1: ( '{' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1861:1: '{'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1878:1: ( '{' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1879:1: '{'
             {
              before(grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_7()); 
-            match(input,23,FOLLOW_23_in_rule__Node__Group__7__Impl3758); 
+            match(input,24,FOLLOW_24_in_rule__Node__Group__7__Impl3799); 
              after(grammarAccess.getNodeAccess().getLeftCurlyBracketKeyword_7()); 
 
             }
@@ -4996,21 +5051,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__8"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1874:1: rule__Node__Group__8 : rule__Node__Group__8__Impl rule__Node__Group__9 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1892:1: rule__Node__Group__8 : rule__Node__Group__8__Impl rule__Node__Group__9 ;
     public final void rule__Node__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1878:1: ( rule__Node__Group__8__Impl rule__Node__Group__9 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1879:2: rule__Node__Group__8__Impl rule__Node__Group__9
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1896:1: ( rule__Node__Group__8__Impl rule__Node__Group__9 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1897:2: rule__Node__Group__8__Impl rule__Node__Group__9
             {
-            pushFollow(FOLLOW_rule__Node__Group__8__Impl_in_rule__Node__Group__83789);
+            pushFollow(FOLLOW_rule__Node__Group__8__Impl_in_rule__Node__Group__83830);
             rule__Node__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__9_in_rule__Node__Group__83792);
+            pushFollow(FOLLOW_rule__Node__Group__9_in_rule__Node__Group__83833);
             rule__Node__Group__9();
 
             state._fsp--;
@@ -5034,23 +5089,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__8__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1886:1: rule__Node__Group__8__Impl : ( ( rule__Node__ServicesAssignment_8 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1904:1: rule__Node__Group__8__Impl : ( ( rule__Node__ServicesAssignment_8 ) ) ;
     public final void rule__Node__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1890:1: ( ( ( rule__Node__ServicesAssignment_8 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1891:1: ( ( rule__Node__ServicesAssignment_8 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1908:1: ( ( ( rule__Node__ServicesAssignment_8 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1909:1: ( ( rule__Node__ServicesAssignment_8 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1891:1: ( ( rule__Node__ServicesAssignment_8 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1892:1: ( rule__Node__ServicesAssignment_8 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1909:1: ( ( rule__Node__ServicesAssignment_8 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1910:1: ( rule__Node__ServicesAssignment_8 )
             {
              before(grammarAccess.getNodeAccess().getServicesAssignment_8()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1893:1: ( rule__Node__ServicesAssignment_8 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1893:2: rule__Node__ServicesAssignment_8
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1911:1: ( rule__Node__ServicesAssignment_8 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1911:2: rule__Node__ServicesAssignment_8
             {
-            pushFollow(FOLLOW_rule__Node__ServicesAssignment_8_in_rule__Node__Group__8__Impl3819);
+            pushFollow(FOLLOW_rule__Node__ServicesAssignment_8_in_rule__Node__Group__8__Impl3860);
             rule__Node__ServicesAssignment_8();
 
             state._fsp--;
@@ -5081,21 +5136,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__9"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1903:1: rule__Node__Group__9 : rule__Node__Group__9__Impl rule__Node__Group__10 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1921:1: rule__Node__Group__9 : rule__Node__Group__9__Impl rule__Node__Group__10 ;
     public final void rule__Node__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1907:1: ( rule__Node__Group__9__Impl rule__Node__Group__10 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1908:2: rule__Node__Group__9__Impl rule__Node__Group__10
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1925:1: ( rule__Node__Group__9__Impl rule__Node__Group__10 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1926:2: rule__Node__Group__9__Impl rule__Node__Group__10
             {
-            pushFollow(FOLLOW_rule__Node__Group__9__Impl_in_rule__Node__Group__93849);
+            pushFollow(FOLLOW_rule__Node__Group__9__Impl_in_rule__Node__Group__93890);
             rule__Node__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group__10_in_rule__Node__Group__93852);
+            pushFollow(FOLLOW_rule__Node__Group__10_in_rule__Node__Group__93893);
             rule__Node__Group__10();
 
             state._fsp--;
@@ -5119,35 +5174,35 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__9__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1915:1: rule__Node__Group__9__Impl : ( ( rule__Node__Group_9__0 )* ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1933:1: rule__Node__Group__9__Impl : ( ( rule__Node__Group_9__0 )* ) ;
     public final void rule__Node__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1919:1: ( ( ( rule__Node__Group_9__0 )* ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1920:1: ( ( rule__Node__Group_9__0 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1937:1: ( ( ( rule__Node__Group_9__0 )* ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1938:1: ( ( rule__Node__Group_9__0 )* )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1920:1: ( ( rule__Node__Group_9__0 )* )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1921:1: ( rule__Node__Group_9__0 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1938:1: ( ( rule__Node__Group_9__0 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1939:1: ( rule__Node__Group_9__0 )*
             {
              before(grammarAccess.getNodeAccess().getGroup_9()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1922:1: ( rule__Node__Group_9__0 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1940:1: ( rule__Node__Group_9__0 )*
             loop12:
             do {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( (LA12_0==34) ) {
+                if ( (LA12_0==35) ) {
                     alt12=1;
                 }
 
 
                 switch (alt12) {
             	case 1 :
-            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1922:2: rule__Node__Group_9__0
+            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1940:2: rule__Node__Group_9__0
             	    {
-            	    pushFollow(FOLLOW_rule__Node__Group_9__0_in_rule__Node__Group__9__Impl3879);
+            	    pushFollow(FOLLOW_rule__Node__Group_9__0_in_rule__Node__Group__9__Impl3920);
             	    rule__Node__Group_9__0();
 
             	    state._fsp--;
@@ -5184,16 +5239,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__10"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1932:1: rule__Node__Group__10 : rule__Node__Group__10__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1950:1: rule__Node__Group__10 : rule__Node__Group__10__Impl ;
     public final void rule__Node__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1936:1: ( rule__Node__Group__10__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1937:2: rule__Node__Group__10__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1954:1: ( rule__Node__Group__10__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1955:2: rule__Node__Group__10__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group__10__Impl_in_rule__Node__Group__103910);
+            pushFollow(FOLLOW_rule__Node__Group__10__Impl_in_rule__Node__Group__103951);
             rule__Node__Group__10__Impl();
 
             state._fsp--;
@@ -5217,20 +5272,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group__10__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1943:1: rule__Node__Group__10__Impl : ( '}' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1961:1: rule__Node__Group__10__Impl : ( '}' ) ;
     public final void rule__Node__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1947:1: ( ( '}' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1948:1: ( '}' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1965:1: ( ( '}' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1966:1: ( '}' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1948:1: ( '}' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1949:1: '}'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1966:1: ( '}' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1967:1: '}'
             {
              before(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_10()); 
-            match(input,24,FOLLOW_24_in_rule__Node__Group__10__Impl3938); 
+            match(input,25,FOLLOW_25_in_rule__Node__Group__10__Impl3979); 
              after(grammarAccess.getNodeAccess().getRightCurlyBracketKeyword_10()); 
 
             }
@@ -5254,21 +5309,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group_9__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1984:1: rule__Node__Group_9__0 : rule__Node__Group_9__0__Impl rule__Node__Group_9__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2002:1: rule__Node__Group_9__0 : rule__Node__Group_9__0__Impl rule__Node__Group_9__1 ;
     public final void rule__Node__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1988:1: ( rule__Node__Group_9__0__Impl rule__Node__Group_9__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1989:2: rule__Node__Group_9__0__Impl rule__Node__Group_9__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2006:1: ( rule__Node__Group_9__0__Impl rule__Node__Group_9__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2007:2: rule__Node__Group_9__0__Impl rule__Node__Group_9__1
             {
-            pushFollow(FOLLOW_rule__Node__Group_9__0__Impl_in_rule__Node__Group_9__03991);
+            pushFollow(FOLLOW_rule__Node__Group_9__0__Impl_in_rule__Node__Group_9__04032);
             rule__Node__Group_9__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Node__Group_9__1_in_rule__Node__Group_9__03994);
+            pushFollow(FOLLOW_rule__Node__Group_9__1_in_rule__Node__Group_9__04035);
             rule__Node__Group_9__1();
 
             state._fsp--;
@@ -5292,20 +5347,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group_9__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:1996:1: rule__Node__Group_9__0__Impl : ( ',' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2014:1: rule__Node__Group_9__0__Impl : ( ',' ) ;
     public final void rule__Node__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2000:1: ( ( ',' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2001:1: ( ',' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2018:1: ( ( ',' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2019:1: ( ',' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2001:1: ( ',' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2002:1: ','
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2019:1: ( ',' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2020:1: ','
             {
              before(grammarAccess.getNodeAccess().getCommaKeyword_9_0()); 
-            match(input,34,FOLLOW_34_in_rule__Node__Group_9__0__Impl4022); 
+            match(input,35,FOLLOW_35_in_rule__Node__Group_9__0__Impl4063); 
              after(grammarAccess.getNodeAccess().getCommaKeyword_9_0()); 
 
             }
@@ -5329,16 +5384,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group_9__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2015:1: rule__Node__Group_9__1 : rule__Node__Group_9__1__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2033:1: rule__Node__Group_9__1 : rule__Node__Group_9__1__Impl ;
     public final void rule__Node__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2019:1: ( rule__Node__Group_9__1__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2020:2: rule__Node__Group_9__1__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2037:1: ( rule__Node__Group_9__1__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2038:2: rule__Node__Group_9__1__Impl
             {
-            pushFollow(FOLLOW_rule__Node__Group_9__1__Impl_in_rule__Node__Group_9__14053);
+            pushFollow(FOLLOW_rule__Node__Group_9__1__Impl_in_rule__Node__Group_9__14094);
             rule__Node__Group_9__1__Impl();
 
             state._fsp--;
@@ -5362,23 +5417,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__Group_9__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2026:1: rule__Node__Group_9__1__Impl : ( ( rule__Node__ServicesAssignment_9_1 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2044:1: rule__Node__Group_9__1__Impl : ( ( rule__Node__ServicesAssignment_9_1 ) ) ;
     public final void rule__Node__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2030:1: ( ( ( rule__Node__ServicesAssignment_9_1 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2031:1: ( ( rule__Node__ServicesAssignment_9_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2048:1: ( ( ( rule__Node__ServicesAssignment_9_1 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2049:1: ( ( rule__Node__ServicesAssignment_9_1 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2031:1: ( ( rule__Node__ServicesAssignment_9_1 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2032:1: ( rule__Node__ServicesAssignment_9_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2049:1: ( ( rule__Node__ServicesAssignment_9_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2050:1: ( rule__Node__ServicesAssignment_9_1 )
             {
              before(grammarAccess.getNodeAccess().getServicesAssignment_9_1()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2033:1: ( rule__Node__ServicesAssignment_9_1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2033:2: rule__Node__ServicesAssignment_9_1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2051:1: ( rule__Node__ServicesAssignment_9_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2051:2: rule__Node__ServicesAssignment_9_1
             {
-            pushFollow(FOLLOW_rule__Node__ServicesAssignment_9_1_in_rule__Node__Group_9__1__Impl4080);
+            pushFollow(FOLLOW_rule__Node__ServicesAssignment_9_1_in_rule__Node__Group_9__1__Impl4121);
             rule__Node__ServicesAssignment_9_1();
 
             state._fsp--;
@@ -5409,21 +5464,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2047:1: rule__ComplexElement__Group__0 : rule__ComplexElement__Group__0__Impl rule__ComplexElement__Group__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2065:1: rule__ComplexElement__Group__0 : rule__ComplexElement__Group__0__Impl rule__ComplexElement__Group__1 ;
     public final void rule__ComplexElement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2051:1: ( rule__ComplexElement__Group__0__Impl rule__ComplexElement__Group__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2052:2: rule__ComplexElement__Group__0__Impl rule__ComplexElement__Group__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2069:1: ( rule__ComplexElement__Group__0__Impl rule__ComplexElement__Group__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2070:2: rule__ComplexElement__Group__0__Impl rule__ComplexElement__Group__1
             {
-            pushFollow(FOLLOW_rule__ComplexElement__Group__0__Impl_in_rule__ComplexElement__Group__04114);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__0__Impl_in_rule__ComplexElement__Group__04155);
             rule__ComplexElement__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexElement__Group__1_in_rule__ComplexElement__Group__04117);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__1_in_rule__ComplexElement__Group__04158);
             rule__ComplexElement__Group__1();
 
             state._fsp--;
@@ -5447,21 +5502,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2059:1: rule__ComplexElement__Group__0__Impl : ( () ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2077:1: rule__ComplexElement__Group__0__Impl : ( () ) ;
     public final void rule__ComplexElement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2063:1: ( ( () ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2064:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2081:1: ( ( () ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2082:1: ( () )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2064:1: ( () )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2065:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2082:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2083:1: ()
             {
              before(grammarAccess.getComplexElementAccess().getComplexElementAction_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2066:1: ()
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2068:1: 
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2084:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2086:1: 
             {
             }
 
@@ -5484,21 +5539,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2078:1: rule__ComplexElement__Group__1 : rule__ComplexElement__Group__1__Impl rule__ComplexElement__Group__2 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2096:1: rule__ComplexElement__Group__1 : rule__ComplexElement__Group__1__Impl rule__ComplexElement__Group__2 ;
     public final void rule__ComplexElement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2082:1: ( rule__ComplexElement__Group__1__Impl rule__ComplexElement__Group__2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2083:2: rule__ComplexElement__Group__1__Impl rule__ComplexElement__Group__2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2100:1: ( rule__ComplexElement__Group__1__Impl rule__ComplexElement__Group__2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2101:2: rule__ComplexElement__Group__1__Impl rule__ComplexElement__Group__2
             {
-            pushFollow(FOLLOW_rule__ComplexElement__Group__1__Impl_in_rule__ComplexElement__Group__14175);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__1__Impl_in_rule__ComplexElement__Group__14216);
             rule__ComplexElement__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexElement__Group__2_in_rule__ComplexElement__Group__14178);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__2_in_rule__ComplexElement__Group__14219);
             rule__ComplexElement__Group__2();
 
             state._fsp--;
@@ -5522,20 +5577,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2090:1: rule__ComplexElement__Group__1__Impl : ( 'complex-data' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2108:1: rule__ComplexElement__Group__1__Impl : ( 'complex-data' ) ;
     public final void rule__ComplexElement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2094:1: ( ( 'complex-data' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2095:1: ( 'complex-data' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2112:1: ( ( 'complex-data' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2113:1: ( 'complex-data' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2095:1: ( 'complex-data' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2096:1: 'complex-data'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2113:1: ( 'complex-data' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2114:1: 'complex-data'
             {
              before(grammarAccess.getComplexElementAccess().getComplexDataKeyword_1()); 
-            match(input,35,FOLLOW_35_in_rule__ComplexElement__Group__1__Impl4206); 
+            match(input,36,FOLLOW_36_in_rule__ComplexElement__Group__1__Impl4247); 
              after(grammarAccess.getComplexElementAccess().getComplexDataKeyword_1()); 
 
             }
@@ -5559,21 +5614,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2109:1: rule__ComplexElement__Group__2 : rule__ComplexElement__Group__2__Impl rule__ComplexElement__Group__3 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2127:1: rule__ComplexElement__Group__2 : rule__ComplexElement__Group__2__Impl rule__ComplexElement__Group__3 ;
     public final void rule__ComplexElement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2113:1: ( rule__ComplexElement__Group__2__Impl rule__ComplexElement__Group__3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2114:2: rule__ComplexElement__Group__2__Impl rule__ComplexElement__Group__3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2131:1: ( rule__ComplexElement__Group__2__Impl rule__ComplexElement__Group__3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2132:2: rule__ComplexElement__Group__2__Impl rule__ComplexElement__Group__3
             {
-            pushFollow(FOLLOW_rule__ComplexElement__Group__2__Impl_in_rule__ComplexElement__Group__24237);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__2__Impl_in_rule__ComplexElement__Group__24278);
             rule__ComplexElement__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexElement__Group__3_in_rule__ComplexElement__Group__24240);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__3_in_rule__ComplexElement__Group__24281);
             rule__ComplexElement__Group__3();
 
             state._fsp--;
@@ -5597,23 +5652,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__2__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2121:1: rule__ComplexElement__Group__2__Impl : ( ( rule__ComplexElement__NameAssignment_2 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2139:1: rule__ComplexElement__Group__2__Impl : ( ( rule__ComplexElement__NameAssignment_2 ) ) ;
     public final void rule__ComplexElement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2125:1: ( ( ( rule__ComplexElement__NameAssignment_2 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2126:1: ( ( rule__ComplexElement__NameAssignment_2 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2143:1: ( ( ( rule__ComplexElement__NameAssignment_2 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2144:1: ( ( rule__ComplexElement__NameAssignment_2 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2126:1: ( ( rule__ComplexElement__NameAssignment_2 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2127:1: ( rule__ComplexElement__NameAssignment_2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2144:1: ( ( rule__ComplexElement__NameAssignment_2 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2145:1: ( rule__ComplexElement__NameAssignment_2 )
             {
              before(grammarAccess.getComplexElementAccess().getNameAssignment_2()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2128:1: ( rule__ComplexElement__NameAssignment_2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2128:2: rule__ComplexElement__NameAssignment_2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2146:1: ( rule__ComplexElement__NameAssignment_2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2146:2: rule__ComplexElement__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__ComplexElement__NameAssignment_2_in_rule__ComplexElement__Group__2__Impl4267);
+            pushFollow(FOLLOW_rule__ComplexElement__NameAssignment_2_in_rule__ComplexElement__Group__2__Impl4308);
             rule__ComplexElement__NameAssignment_2();
 
             state._fsp--;
@@ -5644,21 +5699,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2138:1: rule__ComplexElement__Group__3 : rule__ComplexElement__Group__3__Impl rule__ComplexElement__Group__4 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2156:1: rule__ComplexElement__Group__3 : rule__ComplexElement__Group__3__Impl rule__ComplexElement__Group__4 ;
     public final void rule__ComplexElement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2142:1: ( rule__ComplexElement__Group__3__Impl rule__ComplexElement__Group__4 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2143:2: rule__ComplexElement__Group__3__Impl rule__ComplexElement__Group__4
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2160:1: ( rule__ComplexElement__Group__3__Impl rule__ComplexElement__Group__4 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2161:2: rule__ComplexElement__Group__3__Impl rule__ComplexElement__Group__4
             {
-            pushFollow(FOLLOW_rule__ComplexElement__Group__3__Impl_in_rule__ComplexElement__Group__34297);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__3__Impl_in_rule__ComplexElement__Group__34338);
             rule__ComplexElement__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexElement__Group__4_in_rule__ComplexElement__Group__34300);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__4_in_rule__ComplexElement__Group__34341);
             rule__ComplexElement__Group__4();
 
             state._fsp--;
@@ -5682,20 +5737,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__3__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2150:1: rule__ComplexElement__Group__3__Impl : ( '{' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2168:1: rule__ComplexElement__Group__3__Impl : ( '{' ) ;
     public final void rule__ComplexElement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2154:1: ( ( '{' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2155:1: ( '{' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2172:1: ( ( '{' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2173:1: ( '{' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2155:1: ( '{' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2156:1: '{'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2173:1: ( '{' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2174:1: '{'
             {
              before(grammarAccess.getComplexElementAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,23,FOLLOW_23_in_rule__ComplexElement__Group__3__Impl4328); 
+            match(input,24,FOLLOW_24_in_rule__ComplexElement__Group__3__Impl4369); 
              after(grammarAccess.getComplexElementAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -5719,21 +5774,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__4"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2169:1: rule__ComplexElement__Group__4 : rule__ComplexElement__Group__4__Impl rule__ComplexElement__Group__5 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2187:1: rule__ComplexElement__Group__4 : rule__ComplexElement__Group__4__Impl rule__ComplexElement__Group__5 ;
     public final void rule__ComplexElement__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2173:1: ( rule__ComplexElement__Group__4__Impl rule__ComplexElement__Group__5 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2174:2: rule__ComplexElement__Group__4__Impl rule__ComplexElement__Group__5
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2191:1: ( rule__ComplexElement__Group__4__Impl rule__ComplexElement__Group__5 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2192:2: rule__ComplexElement__Group__4__Impl rule__ComplexElement__Group__5
             {
-            pushFollow(FOLLOW_rule__ComplexElement__Group__4__Impl_in_rule__ComplexElement__Group__44359);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__4__Impl_in_rule__ComplexElement__Group__44400);
             rule__ComplexElement__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ComplexElement__Group__5_in_rule__ComplexElement__Group__44362);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__5_in_rule__ComplexElement__Group__44403);
             rule__ComplexElement__Group__5();
 
             state._fsp--;
@@ -5757,20 +5812,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__4__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2181:1: rule__ComplexElement__Group__4__Impl : ( ( rule__ComplexElement__ElementsAssignment_4 )* ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2199:1: rule__ComplexElement__Group__4__Impl : ( ( rule__ComplexElement__ElementsAssignment_4 )* ) ;
     public final void rule__ComplexElement__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2185:1: ( ( ( rule__ComplexElement__ElementsAssignment_4 )* ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2186:1: ( ( rule__ComplexElement__ElementsAssignment_4 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2203:1: ( ( ( rule__ComplexElement__ElementsAssignment_4 )* ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2204:1: ( ( rule__ComplexElement__ElementsAssignment_4 )* )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2186:1: ( ( rule__ComplexElement__ElementsAssignment_4 )* )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2187:1: ( rule__ComplexElement__ElementsAssignment_4 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2204:1: ( ( rule__ComplexElement__ElementsAssignment_4 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2205:1: ( rule__ComplexElement__ElementsAssignment_4 )*
             {
              before(grammarAccess.getComplexElementAccess().getElementsAssignment_4()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2188:1: ( rule__ComplexElement__ElementsAssignment_4 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2206:1: ( rule__ComplexElement__ElementsAssignment_4 )*
             loop13:
             do {
                 int alt13=2;
@@ -5783,9 +5838,9 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
                 switch (alt13) {
             	case 1 :
-            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2188:2: rule__ComplexElement__ElementsAssignment_4
+            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2206:2: rule__ComplexElement__ElementsAssignment_4
             	    {
-            	    pushFollow(FOLLOW_rule__ComplexElement__ElementsAssignment_4_in_rule__ComplexElement__Group__4__Impl4389);
+            	    pushFollow(FOLLOW_rule__ComplexElement__ElementsAssignment_4_in_rule__ComplexElement__Group__4__Impl4430);
             	    rule__ComplexElement__ElementsAssignment_4();
 
             	    state._fsp--;
@@ -5822,16 +5877,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__5"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2198:1: rule__ComplexElement__Group__5 : rule__ComplexElement__Group__5__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2216:1: rule__ComplexElement__Group__5 : rule__ComplexElement__Group__5__Impl ;
     public final void rule__ComplexElement__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2202:1: ( rule__ComplexElement__Group__5__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2203:2: rule__ComplexElement__Group__5__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2220:1: ( rule__ComplexElement__Group__5__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2221:2: rule__ComplexElement__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__ComplexElement__Group__5__Impl_in_rule__ComplexElement__Group__54420);
+            pushFollow(FOLLOW_rule__ComplexElement__Group__5__Impl_in_rule__ComplexElement__Group__54461);
             rule__ComplexElement__Group__5__Impl();
 
             state._fsp--;
@@ -5855,20 +5910,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__Group__5__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2209:1: rule__ComplexElement__Group__5__Impl : ( '}' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2227:1: rule__ComplexElement__Group__5__Impl : ( '}' ) ;
     public final void rule__ComplexElement__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2213:1: ( ( '}' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2214:1: ( '}' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2231:1: ( ( '}' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2232:1: ( '}' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2214:1: ( '}' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2215:1: '}'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2232:1: ( '}' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2233:1: '}'
             {
              before(grammarAccess.getComplexElementAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,24,FOLLOW_24_in_rule__ComplexElement__Group__5__Impl4448); 
+            match(input,25,FOLLOW_25_in_rule__ComplexElement__Group__5__Impl4489); 
              after(grammarAccess.getComplexElementAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -5892,21 +5947,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Group__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2240:1: rule__SimpleElement__Group__0 : rule__SimpleElement__Group__0__Impl rule__SimpleElement__Group__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2258:1: rule__SimpleElement__Group__0 : rule__SimpleElement__Group__0__Impl rule__SimpleElement__Group__1 ;
     public final void rule__SimpleElement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2244:1: ( rule__SimpleElement__Group__0__Impl rule__SimpleElement__Group__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2245:2: rule__SimpleElement__Group__0__Impl rule__SimpleElement__Group__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2262:1: ( rule__SimpleElement__Group__0__Impl rule__SimpleElement__Group__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2263:2: rule__SimpleElement__Group__0__Impl rule__SimpleElement__Group__1
             {
-            pushFollow(FOLLOW_rule__SimpleElement__Group__0__Impl_in_rule__SimpleElement__Group__04491);
+            pushFollow(FOLLOW_rule__SimpleElement__Group__0__Impl_in_rule__SimpleElement__Group__04532);
             rule__SimpleElement__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleElement__Group__1_in_rule__SimpleElement__Group__04494);
+            pushFollow(FOLLOW_rule__SimpleElement__Group__1_in_rule__SimpleElement__Group__04535);
             rule__SimpleElement__Group__1();
 
             state._fsp--;
@@ -5930,21 +5985,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Group__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2252:1: rule__SimpleElement__Group__0__Impl : ( () ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2270:1: rule__SimpleElement__Group__0__Impl : ( () ) ;
     public final void rule__SimpleElement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2256:1: ( ( () ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2257:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2274:1: ( ( () ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2275:1: ( () )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2257:1: ( () )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2258:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2275:1: ( () )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2276:1: ()
             {
              before(grammarAccess.getSimpleElementAccess().getSimpleElementAction_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2259:1: ()
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2261:1: 
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2277:1: ()
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2279:1: 
             {
             }
 
@@ -5967,21 +6022,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Group__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2271:1: rule__SimpleElement__Group__1 : rule__SimpleElement__Group__1__Impl rule__SimpleElement__Group__2 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2289:1: rule__SimpleElement__Group__1 : rule__SimpleElement__Group__1__Impl rule__SimpleElement__Group__2 ;
     public final void rule__SimpleElement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2275:1: ( rule__SimpleElement__Group__1__Impl rule__SimpleElement__Group__2 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2276:2: rule__SimpleElement__Group__1__Impl rule__SimpleElement__Group__2
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2293:1: ( rule__SimpleElement__Group__1__Impl rule__SimpleElement__Group__2 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2294:2: rule__SimpleElement__Group__1__Impl rule__SimpleElement__Group__2
             {
-            pushFollow(FOLLOW_rule__SimpleElement__Group__1__Impl_in_rule__SimpleElement__Group__14552);
+            pushFollow(FOLLOW_rule__SimpleElement__Group__1__Impl_in_rule__SimpleElement__Group__14593);
             rule__SimpleElement__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleElement__Group__2_in_rule__SimpleElement__Group__14555);
+            pushFollow(FOLLOW_rule__SimpleElement__Group__2_in_rule__SimpleElement__Group__14596);
             rule__SimpleElement__Group__2();
 
             state._fsp--;
@@ -6005,23 +6060,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Group__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2283:1: rule__SimpleElement__Group__1__Impl : ( ( rule__SimpleElement__NameAssignment_1 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2301:1: rule__SimpleElement__Group__1__Impl : ( ( rule__SimpleElement__NameAssignment_1 ) ) ;
     public final void rule__SimpleElement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2287:1: ( ( ( rule__SimpleElement__NameAssignment_1 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2288:1: ( ( rule__SimpleElement__NameAssignment_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2305:1: ( ( ( rule__SimpleElement__NameAssignment_1 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2306:1: ( ( rule__SimpleElement__NameAssignment_1 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2288:1: ( ( rule__SimpleElement__NameAssignment_1 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2289:1: ( rule__SimpleElement__NameAssignment_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2306:1: ( ( rule__SimpleElement__NameAssignment_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2307:1: ( rule__SimpleElement__NameAssignment_1 )
             {
              before(grammarAccess.getSimpleElementAccess().getNameAssignment_1()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2290:1: ( rule__SimpleElement__NameAssignment_1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2290:2: rule__SimpleElement__NameAssignment_1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2308:1: ( rule__SimpleElement__NameAssignment_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2308:2: rule__SimpleElement__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__SimpleElement__NameAssignment_1_in_rule__SimpleElement__Group__1__Impl4582);
+            pushFollow(FOLLOW_rule__SimpleElement__NameAssignment_1_in_rule__SimpleElement__Group__1__Impl4623);
             rule__SimpleElement__NameAssignment_1();
 
             state._fsp--;
@@ -6052,21 +6107,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Group__2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2300:1: rule__SimpleElement__Group__2 : rule__SimpleElement__Group__2__Impl rule__SimpleElement__Group__3 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2318:1: rule__SimpleElement__Group__2 : rule__SimpleElement__Group__2__Impl rule__SimpleElement__Group__3 ;
     public final void rule__SimpleElement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2304:1: ( rule__SimpleElement__Group__2__Impl rule__SimpleElement__Group__3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2305:2: rule__SimpleElement__Group__2__Impl rule__SimpleElement__Group__3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2322:1: ( rule__SimpleElement__Group__2__Impl rule__SimpleElement__Group__3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2323:2: rule__SimpleElement__Group__2__Impl rule__SimpleElement__Group__3
             {
-            pushFollow(FOLLOW_rule__SimpleElement__Group__2__Impl_in_rule__SimpleElement__Group__24612);
+            pushFollow(FOLLOW_rule__SimpleElement__Group__2__Impl_in_rule__SimpleElement__Group__24653);
             rule__SimpleElement__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleElement__Group__3_in_rule__SimpleElement__Group__24615);
+            pushFollow(FOLLOW_rule__SimpleElement__Group__3_in_rule__SimpleElement__Group__24656);
             rule__SimpleElement__Group__3();
 
             state._fsp--;
@@ -6090,20 +6145,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Group__2__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2312:1: rule__SimpleElement__Group__2__Impl : ( ':' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2330:1: rule__SimpleElement__Group__2__Impl : ( ':' ) ;
     public final void rule__SimpleElement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2316:1: ( ( ':' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2317:1: ( ':' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2334:1: ( ( ':' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2335:1: ( ':' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2317:1: ( ':' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2318:1: ':'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2335:1: ( ':' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2336:1: ':'
             {
              before(grammarAccess.getSimpleElementAccess().getColonKeyword_2()); 
-            match(input,27,FOLLOW_27_in_rule__SimpleElement__Group__2__Impl4643); 
+            match(input,28,FOLLOW_28_in_rule__SimpleElement__Group__2__Impl4684); 
              after(grammarAccess.getSimpleElementAccess().getColonKeyword_2()); 
 
             }
@@ -6127,21 +6182,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Group__3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2331:1: rule__SimpleElement__Group__3 : rule__SimpleElement__Group__3__Impl rule__SimpleElement__Group__4 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2349:1: rule__SimpleElement__Group__3 : rule__SimpleElement__Group__3__Impl rule__SimpleElement__Group__4 ;
     public final void rule__SimpleElement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2335:1: ( rule__SimpleElement__Group__3__Impl rule__SimpleElement__Group__4 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2336:2: rule__SimpleElement__Group__3__Impl rule__SimpleElement__Group__4
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2353:1: ( rule__SimpleElement__Group__3__Impl rule__SimpleElement__Group__4 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2354:2: rule__SimpleElement__Group__3__Impl rule__SimpleElement__Group__4
             {
-            pushFollow(FOLLOW_rule__SimpleElement__Group__3__Impl_in_rule__SimpleElement__Group__34674);
+            pushFollow(FOLLOW_rule__SimpleElement__Group__3__Impl_in_rule__SimpleElement__Group__34715);
             rule__SimpleElement__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleElement__Group__4_in_rule__SimpleElement__Group__34677);
+            pushFollow(FOLLOW_rule__SimpleElement__Group__4_in_rule__SimpleElement__Group__34718);
             rule__SimpleElement__Group__4();
 
             state._fsp--;
@@ -6165,23 +6220,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Group__3__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2343:1: rule__SimpleElement__Group__3__Impl : ( ( rule__SimpleElement__Alternatives_3 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2361:1: rule__SimpleElement__Group__3__Impl : ( ( rule__SimpleElement__Alternatives_3 ) ) ;
     public final void rule__SimpleElement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2347:1: ( ( ( rule__SimpleElement__Alternatives_3 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2348:1: ( ( rule__SimpleElement__Alternatives_3 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2365:1: ( ( ( rule__SimpleElement__Alternatives_3 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2366:1: ( ( rule__SimpleElement__Alternatives_3 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2348:1: ( ( rule__SimpleElement__Alternatives_3 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2349:1: ( rule__SimpleElement__Alternatives_3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2366:1: ( ( rule__SimpleElement__Alternatives_3 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2367:1: ( rule__SimpleElement__Alternatives_3 )
             {
              before(grammarAccess.getSimpleElementAccess().getAlternatives_3()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2350:1: ( rule__SimpleElement__Alternatives_3 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2350:2: rule__SimpleElement__Alternatives_3
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2368:1: ( rule__SimpleElement__Alternatives_3 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2368:2: rule__SimpleElement__Alternatives_3
             {
-            pushFollow(FOLLOW_rule__SimpleElement__Alternatives_3_in_rule__SimpleElement__Group__3__Impl4704);
+            pushFollow(FOLLOW_rule__SimpleElement__Alternatives_3_in_rule__SimpleElement__Group__3__Impl4745);
             rule__SimpleElement__Alternatives_3();
 
             state._fsp--;
@@ -6212,16 +6267,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Group__4"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2360:1: rule__SimpleElement__Group__4 : rule__SimpleElement__Group__4__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2378:1: rule__SimpleElement__Group__4 : rule__SimpleElement__Group__4__Impl ;
     public final void rule__SimpleElement__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2364:1: ( rule__SimpleElement__Group__4__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2365:2: rule__SimpleElement__Group__4__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2382:1: ( rule__SimpleElement__Group__4__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2383:2: rule__SimpleElement__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleElement__Group__4__Impl_in_rule__SimpleElement__Group__44734);
+            pushFollow(FOLLOW_rule__SimpleElement__Group__4__Impl_in_rule__SimpleElement__Group__44775);
             rule__SimpleElement__Group__4__Impl();
 
             state._fsp--;
@@ -6245,32 +6300,32 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__Group__4__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2371:1: rule__SimpleElement__Group__4__Impl : ( ( rule__SimpleElement__Alternatives_4 )? ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2389:1: rule__SimpleElement__Group__4__Impl : ( ( rule__SimpleElement__MultiplicityAssignment_4 )? ) ;
     public final void rule__SimpleElement__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2375:1: ( ( ( rule__SimpleElement__Alternatives_4 )? ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2376:1: ( ( rule__SimpleElement__Alternatives_4 )? )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2393:1: ( ( ( rule__SimpleElement__MultiplicityAssignment_4 )? ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2394:1: ( ( rule__SimpleElement__MultiplicityAssignment_4 )? )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2376:1: ( ( rule__SimpleElement__Alternatives_4 )? )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2377:1: ( rule__SimpleElement__Alternatives_4 )?
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2394:1: ( ( rule__SimpleElement__MultiplicityAssignment_4 )? )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2395:1: ( rule__SimpleElement__MultiplicityAssignment_4 )?
             {
-             before(grammarAccess.getSimpleElementAccess().getAlternatives_4()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2378:1: ( rule__SimpleElement__Alternatives_4 )?
+             before(grammarAccess.getSimpleElementAccess().getMultiplicityAssignment_4()); 
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2396:1: ( rule__SimpleElement__MultiplicityAssignment_4 )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
-            if ( ((LA14_0>=11 && LA14_0<=12)||LA14_0==39) ) {
+            if ( ((LA14_0>=19 && LA14_0<=21)) ) {
                 alt14=1;
             }
             switch (alt14) {
                 case 1 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2378:2: rule__SimpleElement__Alternatives_4
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2396:2: rule__SimpleElement__MultiplicityAssignment_4
                     {
-                    pushFollow(FOLLOW_rule__SimpleElement__Alternatives_4_in_rule__SimpleElement__Group__4__Impl4761);
-                    rule__SimpleElement__Alternatives_4();
+                    pushFollow(FOLLOW_rule__SimpleElement__MultiplicityAssignment_4_in_rule__SimpleElement__Group__4__Impl4802);
+                    rule__SimpleElement__MultiplicityAssignment_4();
 
                     state._fsp--;
 
@@ -6280,7 +6335,7 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getSimpleElementAccess().getAlternatives_4()); 
+             after(grammarAccess.getSimpleElementAccess().getMultiplicityAssignment_4()); 
 
             }
 
@@ -6303,21 +6358,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FQN__Group__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2398:1: rule__FQN__Group__0 : rule__FQN__Group__0__Impl rule__FQN__Group__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2416:1: rule__FQN__Group__0 : rule__FQN__Group__0__Impl rule__FQN__Group__1 ;
     public final void rule__FQN__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2402:1: ( rule__FQN__Group__0__Impl rule__FQN__Group__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2403:2: rule__FQN__Group__0__Impl rule__FQN__Group__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2420:1: ( rule__FQN__Group__0__Impl rule__FQN__Group__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2421:2: rule__FQN__Group__0__Impl rule__FQN__Group__1
             {
-            pushFollow(FOLLOW_rule__FQN__Group__0__Impl_in_rule__FQN__Group__04802);
+            pushFollow(FOLLOW_rule__FQN__Group__0__Impl_in_rule__FQN__Group__04843);
             rule__FQN__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FQN__Group__1_in_rule__FQN__Group__04805);
+            pushFollow(FOLLOW_rule__FQN__Group__1_in_rule__FQN__Group__04846);
             rule__FQN__Group__1();
 
             state._fsp--;
@@ -6341,20 +6396,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FQN__Group__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2410:1: rule__FQN__Group__0__Impl : ( RULE_ID ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2428:1: rule__FQN__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__FQN__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2414:1: ( ( RULE_ID ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2415:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2432:1: ( ( RULE_ID ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2433:1: ( RULE_ID )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2415:1: ( RULE_ID )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2416:1: RULE_ID
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2433:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2434:1: RULE_ID
             {
              before(grammarAccess.getFQNAccess().getIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FQN__Group__0__Impl4832); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FQN__Group__0__Impl4873); 
              after(grammarAccess.getFQNAccess().getIDTerminalRuleCall_0()); 
 
             }
@@ -6378,16 +6433,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FQN__Group__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2427:1: rule__FQN__Group__1 : rule__FQN__Group__1__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2445:1: rule__FQN__Group__1 : rule__FQN__Group__1__Impl ;
     public final void rule__FQN__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2431:1: ( rule__FQN__Group__1__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2432:2: rule__FQN__Group__1__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2449:1: ( rule__FQN__Group__1__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2450:2: rule__FQN__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__FQN__Group__1__Impl_in_rule__FQN__Group__14861);
+            pushFollow(FOLLOW_rule__FQN__Group__1__Impl_in_rule__FQN__Group__14902);
             rule__FQN__Group__1__Impl();
 
             state._fsp--;
@@ -6411,35 +6466,35 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FQN__Group__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2438:1: rule__FQN__Group__1__Impl : ( ( rule__FQN__Group_1__0 )* ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2456:1: rule__FQN__Group__1__Impl : ( ( rule__FQN__Group_1__0 )* ) ;
     public final void rule__FQN__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2442:1: ( ( ( rule__FQN__Group_1__0 )* ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2443:1: ( ( rule__FQN__Group_1__0 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2460:1: ( ( ( rule__FQN__Group_1__0 )* ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2461:1: ( ( rule__FQN__Group_1__0 )* )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2443:1: ( ( rule__FQN__Group_1__0 )* )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2444:1: ( rule__FQN__Group_1__0 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2461:1: ( ( rule__FQN__Group_1__0 )* )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2462:1: ( rule__FQN__Group_1__0 )*
             {
              before(grammarAccess.getFQNAccess().getGroup_1()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2445:1: ( rule__FQN__Group_1__0 )*
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2463:1: ( rule__FQN__Group_1__0 )*
             loop15:
             do {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( (LA15_0==36) ) {
+                if ( (LA15_0==37) ) {
                     alt15=1;
                 }
 
 
                 switch (alt15) {
             	case 1 :
-            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2445:2: rule__FQN__Group_1__0
+            	    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2463:2: rule__FQN__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__FQN__Group_1__0_in_rule__FQN__Group__1__Impl4888);
+            	    pushFollow(FOLLOW_rule__FQN__Group_1__0_in_rule__FQN__Group__1__Impl4929);
             	    rule__FQN__Group_1__0();
 
             	    state._fsp--;
@@ -6476,21 +6531,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FQN__Group_1__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2459:1: rule__FQN__Group_1__0 : rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2477:1: rule__FQN__Group_1__0 : rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1 ;
     public final void rule__FQN__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2463:1: ( rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2464:2: rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2481:1: ( rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2482:2: rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1
             {
-            pushFollow(FOLLOW_rule__FQN__Group_1__0__Impl_in_rule__FQN__Group_1__04923);
+            pushFollow(FOLLOW_rule__FQN__Group_1__0__Impl_in_rule__FQN__Group_1__04964);
             rule__FQN__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FQN__Group_1__1_in_rule__FQN__Group_1__04926);
+            pushFollow(FOLLOW_rule__FQN__Group_1__1_in_rule__FQN__Group_1__04967);
             rule__FQN__Group_1__1();
 
             state._fsp--;
@@ -6514,20 +6569,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FQN__Group_1__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2471:1: rule__FQN__Group_1__0__Impl : ( '.' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2489:1: rule__FQN__Group_1__0__Impl : ( '.' ) ;
     public final void rule__FQN__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2475:1: ( ( '.' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2476:1: ( '.' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2493:1: ( ( '.' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2494:1: ( '.' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2476:1: ( '.' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2477:1: '.'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2494:1: ( '.' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2495:1: '.'
             {
              before(grammarAccess.getFQNAccess().getFullStopKeyword_1_0()); 
-            match(input,36,FOLLOW_36_in_rule__FQN__Group_1__0__Impl4954); 
+            match(input,37,FOLLOW_37_in_rule__FQN__Group_1__0__Impl4995); 
              after(grammarAccess.getFQNAccess().getFullStopKeyword_1_0()); 
 
             }
@@ -6551,16 +6606,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FQN__Group_1__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2490:1: rule__FQN__Group_1__1 : rule__FQN__Group_1__1__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2508:1: rule__FQN__Group_1__1 : rule__FQN__Group_1__1__Impl ;
     public final void rule__FQN__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2494:1: ( rule__FQN__Group_1__1__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2495:2: rule__FQN__Group_1__1__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2512:1: ( rule__FQN__Group_1__1__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2513:2: rule__FQN__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__FQN__Group_1__1__Impl_in_rule__FQN__Group_1__14985);
+            pushFollow(FOLLOW_rule__FQN__Group_1__1__Impl_in_rule__FQN__Group_1__15026);
             rule__FQN__Group_1__1__Impl();
 
             state._fsp--;
@@ -6584,20 +6639,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FQN__Group_1__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2501:1: rule__FQN__Group_1__1__Impl : ( RULE_ID ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2519:1: rule__FQN__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__FQN__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2505:1: ( ( RULE_ID ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2506:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2523:1: ( ( RULE_ID ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2524:1: ( RULE_ID )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2506:1: ( RULE_ID )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2507:1: RULE_ID
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2524:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2525:1: RULE_ID
             {
              before(grammarAccess.getFQNAccess().getIDTerminalRuleCall_1_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FQN__Group_1__1__Impl5012); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FQN__Group_1__1__Impl5053); 
              after(grammarAccess.getFQNAccess().getIDTerminalRuleCall_1_1()); 
 
             }
@@ -6621,21 +6676,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FqnWildcard__Group__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2522:1: rule__FqnWildcard__Group__0 : rule__FqnWildcard__Group__0__Impl rule__FqnWildcard__Group__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2540:1: rule__FqnWildcard__Group__0 : rule__FqnWildcard__Group__0__Impl rule__FqnWildcard__Group__1 ;
     public final void rule__FqnWildcard__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2526:1: ( rule__FqnWildcard__Group__0__Impl rule__FqnWildcard__Group__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2527:2: rule__FqnWildcard__Group__0__Impl rule__FqnWildcard__Group__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2544:1: ( rule__FqnWildcard__Group__0__Impl rule__FqnWildcard__Group__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2545:2: rule__FqnWildcard__Group__0__Impl rule__FqnWildcard__Group__1
             {
-            pushFollow(FOLLOW_rule__FqnWildcard__Group__0__Impl_in_rule__FqnWildcard__Group__05045);
+            pushFollow(FOLLOW_rule__FqnWildcard__Group__0__Impl_in_rule__FqnWildcard__Group__05086);
             rule__FqnWildcard__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FqnWildcard__Group__1_in_rule__FqnWildcard__Group__05048);
+            pushFollow(FOLLOW_rule__FqnWildcard__Group__1_in_rule__FqnWildcard__Group__05089);
             rule__FqnWildcard__Group__1();
 
             state._fsp--;
@@ -6659,20 +6714,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FqnWildcard__Group__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2534:1: rule__FqnWildcard__Group__0__Impl : ( ruleFQN ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2552:1: rule__FqnWildcard__Group__0__Impl : ( ruleFQN ) ;
     public final void rule__FqnWildcard__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2538:1: ( ( ruleFQN ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2539:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2556:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2557:1: ( ruleFQN )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2539:1: ( ruleFQN )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2540:1: ruleFQN
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2557:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2558:1: ruleFQN
             {
              before(grammarAccess.getFqnWildcardAccess().getFQNParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleFQN_in_rule__FqnWildcard__Group__0__Impl5075);
+            pushFollow(FOLLOW_ruleFQN_in_rule__FqnWildcard__Group__0__Impl5116);
             ruleFQN();
 
             state._fsp--;
@@ -6700,16 +6755,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FqnWildcard__Group__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2551:1: rule__FqnWildcard__Group__1 : rule__FqnWildcard__Group__1__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2569:1: rule__FqnWildcard__Group__1 : rule__FqnWildcard__Group__1__Impl ;
     public final void rule__FqnWildcard__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2555:1: ( rule__FqnWildcard__Group__1__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2556:2: rule__FqnWildcard__Group__1__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2573:1: ( rule__FqnWildcard__Group__1__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2574:2: rule__FqnWildcard__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__FqnWildcard__Group__1__Impl_in_rule__FqnWildcard__Group__15104);
+            pushFollow(FOLLOW_rule__FqnWildcard__Group__1__Impl_in_rule__FqnWildcard__Group__15145);
             rule__FqnWildcard__Group__1__Impl();
 
             state._fsp--;
@@ -6733,31 +6788,31 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FqnWildcard__Group__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2562:1: rule__FqnWildcard__Group__1__Impl : ( ( '.*' )? ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2580:1: rule__FqnWildcard__Group__1__Impl : ( ( '.*' )? ) ;
     public final void rule__FqnWildcard__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2566:1: ( ( ( '.*' )? ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2567:1: ( ( '.*' )? )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2584:1: ( ( ( '.*' )? ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2585:1: ( ( '.*' )? )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2567:1: ( ( '.*' )? )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2568:1: ( '.*' )?
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2585:1: ( ( '.*' )? )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2586:1: ( '.*' )?
             {
              before(grammarAccess.getFqnWildcardAccess().getFullStopAsteriskKeyword_1()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2569:1: ( '.*' )?
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2587:1: ( '.*' )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( (LA16_0==37) ) {
+            if ( (LA16_0==38) ) {
                 alt16=1;
             }
             switch (alt16) {
                 case 1 :
-                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2570:2: '.*'
+                    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2588:2: '.*'
                     {
-                    match(input,37,FOLLOW_37_in_rule__FqnWildcard__Group__1__Impl5133); 
+                    match(input,38,FOLLOW_38_in_rule__FqnWildcard__Group__1__Impl5174); 
 
                     }
                     break;
@@ -6787,21 +6842,21 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Import__Group__0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2585:1: rule__Import__Group__0 : rule__Import__Group__0__Impl rule__Import__Group__1 ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2603:1: rule__Import__Group__0 : rule__Import__Group__0__Impl rule__Import__Group__1 ;
     public final void rule__Import__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2589:1: ( rule__Import__Group__0__Impl rule__Import__Group__1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2590:2: rule__Import__Group__0__Impl rule__Import__Group__1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2607:1: ( rule__Import__Group__0__Impl rule__Import__Group__1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2608:2: rule__Import__Group__0__Impl rule__Import__Group__1
             {
-            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__05170);
+            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__05211);
             rule__Import__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__05173);
+            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__05214);
             rule__Import__Group__1();
 
             state._fsp--;
@@ -6825,20 +6880,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Import__Group__0__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2597:1: rule__Import__Group__0__Impl : ( 'import' ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2615:1: rule__Import__Group__0__Impl : ( 'import' ) ;
     public final void rule__Import__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2601:1: ( ( 'import' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2602:1: ( 'import' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2619:1: ( ( 'import' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2620:1: ( 'import' )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2602:1: ( 'import' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2603:1: 'import'
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2620:1: ( 'import' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2621:1: 'import'
             {
              before(grammarAccess.getImportAccess().getImportKeyword_0()); 
-            match(input,38,FOLLOW_38_in_rule__Import__Group__0__Impl5201); 
+            match(input,39,FOLLOW_39_in_rule__Import__Group__0__Impl5242); 
              after(grammarAccess.getImportAccess().getImportKeyword_0()); 
 
             }
@@ -6862,16 +6917,16 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Import__Group__1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2616:1: rule__Import__Group__1 : rule__Import__Group__1__Impl ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2634:1: rule__Import__Group__1 : rule__Import__Group__1__Impl ;
     public final void rule__Import__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2620:1: ( rule__Import__Group__1__Impl )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2621:2: rule__Import__Group__1__Impl
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2638:1: ( rule__Import__Group__1__Impl )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2639:2: rule__Import__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__15232);
+            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__15273);
             rule__Import__Group__1__Impl();
 
             state._fsp--;
@@ -6895,23 +6950,23 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Import__Group__1__Impl"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2627:1: rule__Import__Group__1__Impl : ( ( rule__Import__ImportedNamespaceAssignment_1 ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2645:1: rule__Import__Group__1__Impl : ( ( rule__Import__ImportedNamespaceAssignment_1 ) ) ;
     public final void rule__Import__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2631:1: ( ( ( rule__Import__ImportedNamespaceAssignment_1 ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2632:1: ( ( rule__Import__ImportedNamespaceAssignment_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2649:1: ( ( ( rule__Import__ImportedNamespaceAssignment_1 ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2650:1: ( ( rule__Import__ImportedNamespaceAssignment_1 ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2632:1: ( ( rule__Import__ImportedNamespaceAssignment_1 ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2633:1: ( rule__Import__ImportedNamespaceAssignment_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2650:1: ( ( rule__Import__ImportedNamespaceAssignment_1 ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2651:1: ( rule__Import__ImportedNamespaceAssignment_1 )
             {
              before(grammarAccess.getImportAccess().getImportedNamespaceAssignment_1()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2634:1: ( rule__Import__ImportedNamespaceAssignment_1 )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2634:2: rule__Import__ImportedNamespaceAssignment_1
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2652:1: ( rule__Import__ImportedNamespaceAssignment_1 )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2652:2: rule__Import__ImportedNamespaceAssignment_1
             {
-            pushFollow(FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl5259);
+            pushFollow(FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl5300);
             rule__Import__ImportedNamespaceAssignment_1();
 
             state._fsp--;
@@ -6942,20 +6997,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__NameAssignment_2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2649:1: rule__ServiceDSL__NameAssignment_2 : ( ruleFQN ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2667:1: rule__ServiceDSL__NameAssignment_2 : ( ruleFQN ) ;
     public final void rule__ServiceDSL__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2653:1: ( ( ruleFQN ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2654:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2671:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2672:1: ( ruleFQN )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2654:1: ( ruleFQN )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2655:1: ruleFQN
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2672:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2673:1: ruleFQN
             {
              before(grammarAccess.getServiceDSLAccess().getNameFQNParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleFQN_in_rule__ServiceDSL__NameAssignment_25298);
+            pushFollow(FOLLOW_ruleFQN_in_rule__ServiceDSL__NameAssignment_25339);
             ruleFQN();
 
             state._fsp--;
@@ -6983,20 +7038,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__ImportsAssignment_3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2664:1: rule__ServiceDSL__ImportsAssignment_3 : ( ruleImport ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2682:1: rule__ServiceDSL__ImportsAssignment_3 : ( ruleImport ) ;
     public final void rule__ServiceDSL__ImportsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2668:1: ( ( ruleImport ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2669:1: ( ruleImport )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2686:1: ( ( ruleImport ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2687:1: ( ruleImport )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2669:1: ( ruleImport )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2670:1: ruleImport
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2687:1: ( ruleImport )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2688:1: ruleImport
             {
              before(grammarAccess.getServiceDSLAccess().getImportsImportParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleImport_in_rule__ServiceDSL__ImportsAssignment_35329);
+            pushFollow(FOLLOW_ruleImport_in_rule__ServiceDSL__ImportsAssignment_35370);
             ruleImport();
 
             state._fsp--;
@@ -7024,20 +7079,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__ServicesAssignment_4_0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2679:1: rule__ServiceDSL__ServicesAssignment_4_0 : ( ruleService ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2697:1: rule__ServiceDSL__ServicesAssignment_4_0 : ( ruleService ) ;
     public final void rule__ServiceDSL__ServicesAssignment_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2683:1: ( ( ruleService ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2684:1: ( ruleService )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2701:1: ( ( ruleService ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2702:1: ( ruleService )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2684:1: ( ruleService )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2685:1: ruleService
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2702:1: ( ruleService )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2703:1: ruleService
             {
              before(grammarAccess.getServiceDSLAccess().getServicesServiceParserRuleCall_4_0_0()); 
-            pushFollow(FOLLOW_ruleService_in_rule__ServiceDSL__ServicesAssignment_4_05360);
+            pushFollow(FOLLOW_ruleService_in_rule__ServiceDSL__ServicesAssignment_4_05401);
             ruleService();
 
             state._fsp--;
@@ -7065,20 +7120,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__DataAssignment_4_1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2694:1: rule__ServiceDSL__DataAssignment_4_1 : ( ruleDataElement ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2712:1: rule__ServiceDSL__DataAssignment_4_1 : ( ruleDataElement ) ;
     public final void rule__ServiceDSL__DataAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2698:1: ( ( ruleDataElement ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2699:1: ( ruleDataElement )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2716:1: ( ( ruleDataElement ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2717:1: ( ruleDataElement )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2699:1: ( ruleDataElement )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2700:1: ruleDataElement
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2717:1: ( ruleDataElement )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2718:1: ruleDataElement
             {
              before(grammarAccess.getServiceDSLAccess().getDataDataElementParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_ruleDataElement_in_rule__ServiceDSL__DataAssignment_4_15391);
+            pushFollow(FOLLOW_ruleDataElement_in_rule__ServiceDSL__DataAssignment_4_15432);
             ruleDataElement();
 
             state._fsp--;
@@ -7106,20 +7161,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ServiceDSL__NodesAssignment_4_2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2709:1: rule__ServiceDSL__NodesAssignment_4_2 : ( ruleNode ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2727:1: rule__ServiceDSL__NodesAssignment_4_2 : ( ruleNode ) ;
     public final void rule__ServiceDSL__NodesAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2713:1: ( ( ruleNode ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2714:1: ( ruleNode )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2731:1: ( ( ruleNode ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2732:1: ( ruleNode )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2714:1: ( ruleNode )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2715:1: ruleNode
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2732:1: ( ruleNode )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2733:1: ruleNode
             {
              before(grammarAccess.getServiceDSLAccess().getNodesNodeParserRuleCall_4_2_0()); 
-            pushFollow(FOLLOW_ruleNode_in_rule__ServiceDSL__NodesAssignment_4_25422);
+            pushFollow(FOLLOW_ruleNode_in_rule__ServiceDSL__NodesAssignment_4_25463);
             ruleNode();
 
             state._fsp--;
@@ -7147,20 +7202,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__NameAssignment_2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2724:1: rule__WebService__NameAssignment_2 : ( RULE_ID ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2742:1: rule__WebService__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__WebService__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2728:1: ( ( RULE_ID ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2729:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2746:1: ( ( RULE_ID ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2747:1: ( RULE_ID )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2729:1: ( RULE_ID )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2730:1: RULE_ID
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2747:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2748:1: RULE_ID
             {
              before(grammarAccess.getWebServiceAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__WebService__NameAssignment_25453); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__WebService__NameAssignment_25494); 
              after(grammarAccess.getWebServiceAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -7184,20 +7239,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WebService__OperationsAssignment_4_1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2739:1: rule__WebService__OperationsAssignment_4_1 : ( ruleOperation ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2757:1: rule__WebService__OperationsAssignment_4_1 : ( ruleOperation ) ;
     public final void rule__WebService__OperationsAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2743:1: ( ( ruleOperation ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2744:1: ( ruleOperation )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2761:1: ( ( ruleOperation ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2762:1: ( ruleOperation )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2744:1: ( ruleOperation )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2745:1: ruleOperation
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2762:1: ( ruleOperation )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2763:1: ruleOperation
             {
              before(grammarAccess.getWebServiceAccess().getOperationsOperationParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_ruleOperation_in_rule__WebService__OperationsAssignment_4_15484);
+            pushFollow(FOLLOW_ruleOperation_in_rule__WebService__OperationsAssignment_4_15525);
             ruleOperation();
 
             state._fsp--;
@@ -7225,20 +7280,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__NameAssignment_1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2754:1: rule__Operation__NameAssignment_1 : ( RULE_ID ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2772:1: rule__Operation__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Operation__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2758:1: ( ( RULE_ID ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2759:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2776:1: ( ( RULE_ID ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2777:1: ( RULE_ID )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2759:1: ( RULE_ID )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2760:1: RULE_ID
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2777:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2778:1: RULE_ID
             {
              before(grammarAccess.getOperationAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Operation__NameAssignment_15515); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Operation__NameAssignment_15556); 
              after(grammarAccess.getOperationAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -7262,20 +7317,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__InputNameAssignment_3_1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2769:1: rule__Operation__InputNameAssignment_3_1 : ( RULE_STRING ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2787:1: rule__Operation__InputNameAssignment_3_1 : ( RULE_STRING ) ;
     public final void rule__Operation__InputNameAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2773:1: ( ( RULE_STRING ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2774:1: ( RULE_STRING )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2791:1: ( ( RULE_STRING ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2792:1: ( RULE_STRING )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2774:1: ( RULE_STRING )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2775:1: RULE_STRING
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2792:1: ( RULE_STRING )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2793:1: RULE_STRING
             {
              before(grammarAccess.getOperationAccess().getInputNameSTRINGTerminalRuleCall_3_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Operation__InputNameAssignment_3_15546); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Operation__InputNameAssignment_3_15587); 
              after(grammarAccess.getOperationAccess().getInputNameSTRINGTerminalRuleCall_3_1_0()); 
 
             }
@@ -7299,24 +7354,24 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__InputTypeAssignment_3_3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2784:1: rule__Operation__InputTypeAssignment_3_3 : ( ( ruleFQN ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2802:1: rule__Operation__InputTypeAssignment_3_3 : ( ( ruleFQN ) ) ;
     public final void rule__Operation__InputTypeAssignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2788:1: ( ( ( ruleFQN ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2789:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2806:1: ( ( ( ruleFQN ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2807:1: ( ( ruleFQN ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2789:1: ( ( ruleFQN ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2790:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2807:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2808:1: ( ruleFQN )
             {
              before(grammarAccess.getOperationAccess().getInputTypeDataElementCrossReference_3_3_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2791:1: ( ruleFQN )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2792:1: ruleFQN
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2809:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2810:1: ruleFQN
             {
              before(grammarAccess.getOperationAccess().getInputTypeDataElementFQNParserRuleCall_3_3_0_1()); 
-            pushFollow(FOLLOW_ruleFQN_in_rule__Operation__InputTypeAssignment_3_35581);
+            pushFollow(FOLLOW_ruleFQN_in_rule__Operation__InputTypeAssignment_3_35622);
             ruleFQN();
 
             state._fsp--;
@@ -7348,20 +7403,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__OutputNameAssignment_4_1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2803:1: rule__Operation__OutputNameAssignment_4_1 : ( RULE_STRING ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2821:1: rule__Operation__OutputNameAssignment_4_1 : ( RULE_STRING ) ;
     public final void rule__Operation__OutputNameAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2807:1: ( ( RULE_STRING ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2808:1: ( RULE_STRING )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2825:1: ( ( RULE_STRING ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2826:1: ( RULE_STRING )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2808:1: ( RULE_STRING )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2809:1: RULE_STRING
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2826:1: ( RULE_STRING )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2827:1: RULE_STRING
             {
              before(grammarAccess.getOperationAccess().getOutputNameSTRINGTerminalRuleCall_4_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Operation__OutputNameAssignment_4_15616); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Operation__OutputNameAssignment_4_15657); 
              after(grammarAccess.getOperationAccess().getOutputNameSTRINGTerminalRuleCall_4_1_0()); 
 
             }
@@ -7385,24 +7440,24 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Operation__OutputTypeAssignment_4_3"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2818:1: rule__Operation__OutputTypeAssignment_4_3 : ( ( ruleFQN ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2836:1: rule__Operation__OutputTypeAssignment_4_3 : ( ( ruleFQN ) ) ;
     public final void rule__Operation__OutputTypeAssignment_4_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2822:1: ( ( ( ruleFQN ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2823:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2840:1: ( ( ( ruleFQN ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2841:1: ( ( ruleFQN ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2823:1: ( ( ruleFQN ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2824:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2841:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2842:1: ( ruleFQN )
             {
              before(grammarAccess.getOperationAccess().getOutputTypeDataElementCrossReference_4_3_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2825:1: ( ruleFQN )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2826:1: ruleFQN
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2843:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2844:1: ruleFQN
             {
              before(grammarAccess.getOperationAccess().getOutputTypeDataElementFQNParserRuleCall_4_3_0_1()); 
-            pushFollow(FOLLOW_ruleFQN_in_rule__Operation__OutputTypeAssignment_4_35651);
+            pushFollow(FOLLOW_ruleFQN_in_rule__Operation__OutputTypeAssignment_4_35692);
             ruleFQN();
 
             state._fsp--;
@@ -7434,20 +7489,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RESTService__NameAssignment_2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2837:1: rule__RESTService__NameAssignment_2 : ( RULE_ID ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2855:1: rule__RESTService__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__RESTService__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2841:1: ( ( RULE_ID ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2842:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2859:1: ( ( RULE_ID ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2860:1: ( RULE_ID )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2842:1: ( RULE_ID )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2843:1: RULE_ID
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2860:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2861:1: RULE_ID
             {
              before(grammarAccess.getRESTServiceAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RESTService__NameAssignment_25686); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RESTService__NameAssignment_25727); 
              after(grammarAccess.getRESTServiceAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -7471,20 +7526,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__NameAssignment_2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2852:1: rule__Node__NameAssignment_2 : ( RULE_ID ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2870:1: rule__Node__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Node__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2856:1: ( ( RULE_ID ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2857:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2874:1: ( ( RULE_ID ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2875:1: ( RULE_ID )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2857:1: ( RULE_ID )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2858:1: RULE_ID
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2875:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2876:1: RULE_ID
             {
              before(grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Node__NameAssignment_25717); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Node__NameAssignment_25758); 
              after(grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -7508,20 +7563,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__BaseURIAssignment_5"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2867:1: rule__Node__BaseURIAssignment_5 : ( RULE_STRING ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2885:1: rule__Node__BaseURIAssignment_5 : ( RULE_STRING ) ;
     public final void rule__Node__BaseURIAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2871:1: ( ( RULE_STRING ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2872:1: ( RULE_STRING )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2889:1: ( ( RULE_STRING ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2890:1: ( RULE_STRING )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2872:1: ( RULE_STRING )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2873:1: RULE_STRING
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2890:1: ( RULE_STRING )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2891:1: RULE_STRING
             {
              before(grammarAccess.getNodeAccess().getBaseURISTRINGTerminalRuleCall_5_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Node__BaseURIAssignment_55748); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Node__BaseURIAssignment_55789); 
              after(grammarAccess.getNodeAccess().getBaseURISTRINGTerminalRuleCall_5_0()); 
 
             }
@@ -7545,24 +7600,24 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__ServicesAssignment_8"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2882:1: rule__Node__ServicesAssignment_8 : ( ( ruleFQN ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2900:1: rule__Node__ServicesAssignment_8 : ( ( ruleFQN ) ) ;
     public final void rule__Node__ServicesAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2886:1: ( ( ( ruleFQN ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2887:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2904:1: ( ( ( ruleFQN ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2905:1: ( ( ruleFQN ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2887:1: ( ( ruleFQN ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2888:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2905:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2906:1: ( ruleFQN )
             {
              before(grammarAccess.getNodeAccess().getServicesServiceCrossReference_8_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2889:1: ( ruleFQN )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2890:1: ruleFQN
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2907:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2908:1: ruleFQN
             {
              before(grammarAccess.getNodeAccess().getServicesServiceFQNParserRuleCall_8_0_1()); 
-            pushFollow(FOLLOW_ruleFQN_in_rule__Node__ServicesAssignment_85783);
+            pushFollow(FOLLOW_ruleFQN_in_rule__Node__ServicesAssignment_85824);
             ruleFQN();
 
             state._fsp--;
@@ -7594,24 +7649,24 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Node__ServicesAssignment_9_1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2901:1: rule__Node__ServicesAssignment_9_1 : ( ( ruleFQN ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2919:1: rule__Node__ServicesAssignment_9_1 : ( ( ruleFQN ) ) ;
     public final void rule__Node__ServicesAssignment_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2905:1: ( ( ( ruleFQN ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2906:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2923:1: ( ( ( ruleFQN ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2924:1: ( ( ruleFQN ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2906:1: ( ( ruleFQN ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2907:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2924:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2925:1: ( ruleFQN )
             {
              before(grammarAccess.getNodeAccess().getServicesServiceCrossReference_9_1_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2908:1: ( ruleFQN )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2909:1: ruleFQN
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2926:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2927:1: ruleFQN
             {
              before(grammarAccess.getNodeAccess().getServicesServiceFQNParserRuleCall_9_1_0_1()); 
-            pushFollow(FOLLOW_ruleFQN_in_rule__Node__ServicesAssignment_9_15822);
+            pushFollow(FOLLOW_ruleFQN_in_rule__Node__ServicesAssignment_9_15863);
             ruleFQN();
 
             state._fsp--;
@@ -7643,20 +7698,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__NameAssignment_2"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2920:1: rule__ComplexElement__NameAssignment_2 : ( RULE_ID ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2938:1: rule__ComplexElement__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__ComplexElement__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2924:1: ( ( RULE_ID ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2925:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2942:1: ( ( RULE_ID ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2943:1: ( RULE_ID )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2925:1: ( RULE_ID )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2926:1: RULE_ID
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2943:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2944:1: RULE_ID
             {
              before(grammarAccess.getComplexElementAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ComplexElement__NameAssignment_25857); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ComplexElement__NameAssignment_25898); 
              after(grammarAccess.getComplexElementAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -7680,20 +7735,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ComplexElement__ElementsAssignment_4"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2935:1: rule__ComplexElement__ElementsAssignment_4 : ( ruleSimpleElement ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2953:1: rule__ComplexElement__ElementsAssignment_4 : ( ruleSimpleElement ) ;
     public final void rule__ComplexElement__ElementsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2939:1: ( ( ruleSimpleElement ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2940:1: ( ruleSimpleElement )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2957:1: ( ( ruleSimpleElement ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2958:1: ( ruleSimpleElement )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2940:1: ( ruleSimpleElement )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2941:1: ruleSimpleElement
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2958:1: ( ruleSimpleElement )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2959:1: ruleSimpleElement
             {
              before(grammarAccess.getComplexElementAccess().getElementsSimpleElementParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleSimpleElement_in_rule__ComplexElement__ElementsAssignment_45888);
+            pushFollow(FOLLOW_ruleSimpleElement_in_rule__ComplexElement__ElementsAssignment_45929);
             ruleSimpleElement();
 
             state._fsp--;
@@ -7721,20 +7776,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__NameAssignment_1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2950:1: rule__SimpleElement__NameAssignment_1 : ( RULE_ID ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2968:1: rule__SimpleElement__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__SimpleElement__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2954:1: ( ( RULE_ID ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2955:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2972:1: ( ( RULE_ID ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2973:1: ( RULE_ID )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2955:1: ( RULE_ID )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2956:1: RULE_ID
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2973:1: ( RULE_ID )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2974:1: RULE_ID
             {
              before(grammarAccess.getSimpleElementAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SimpleElement__NameAssignment_15919); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SimpleElement__NameAssignment_15960); 
              after(grammarAccess.getSimpleElementAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -7758,20 +7813,20 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__TypeAssignment_3_0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2965:1: rule__SimpleElement__TypeAssignment_3_0 : ( ruleDATATYPE ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2983:1: rule__SimpleElement__TypeAssignment_3_0 : ( ruleDATATYPE ) ;
     public final void rule__SimpleElement__TypeAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2969:1: ( ( ruleDATATYPE ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2970:1: ( ruleDATATYPE )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2987:1: ( ( ruleDATATYPE ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2988:1: ( ruleDATATYPE )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2970:1: ( ruleDATATYPE )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2971:1: ruleDATATYPE
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2988:1: ( ruleDATATYPE )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2989:1: ruleDATATYPE
             {
              before(grammarAccess.getSimpleElementAccess().getTypeDATATYPEEnumRuleCall_3_0_0()); 
-            pushFollow(FOLLOW_ruleDATATYPE_in_rule__SimpleElement__TypeAssignment_3_05950);
+            pushFollow(FOLLOW_ruleDATATYPE_in_rule__SimpleElement__TypeAssignment_3_05991);
             ruleDATATYPE();
 
             state._fsp--;
@@ -7799,24 +7854,24 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SimpleElement__RefAssignment_3_1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2980:1: rule__SimpleElement__RefAssignment_3_1 : ( ( ruleFQN ) ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2998:1: rule__SimpleElement__RefAssignment_3_1 : ( ( ruleFQN ) ) ;
     public final void rule__SimpleElement__RefAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2984:1: ( ( ( ruleFQN ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2985:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3002:1: ( ( ( ruleFQN ) ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3003:1: ( ( ruleFQN ) )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2985:1: ( ( ruleFQN ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2986:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3003:1: ( ( ruleFQN ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3004:1: ( ruleFQN )
             {
              before(grammarAccess.getSimpleElementAccess().getRefComplexElementCrossReference_3_1_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2987:1: ( ruleFQN )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2988:1: ruleFQN
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3005:1: ( ruleFQN )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3006:1: ruleFQN
             {
              before(grammarAccess.getSimpleElementAccess().getRefComplexElementFQNParserRuleCall_3_1_0_1()); 
-            pushFollow(FOLLOW_ruleFQN_in_rule__SimpleElement__RefAssignment_3_15985);
+            pushFollow(FOLLOW_ruleFQN_in_rule__SimpleElement__RefAssignment_3_16026);
             ruleFQN();
 
             state._fsp--;
@@ -7847,30 +7902,26 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__SimpleElement__RefAssignment_3_1"
 
 
-    // $ANTLR start "rule__SimpleElement__MultiplicityAssignment_4_0"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:2999:1: rule__SimpleElement__MultiplicityAssignment_4_0 : ( ( '?' ) ) ;
-    public final void rule__SimpleElement__MultiplicityAssignment_4_0() throws RecognitionException {
+    // $ANTLR start "rule__SimpleElement__MultiplicityAssignment_4"
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3017:1: rule__SimpleElement__MultiplicityAssignment_4 : ( ruleMULTIPLICITY ) ;
+    public final void rule__SimpleElement__MultiplicityAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3003:1: ( ( ( '?' ) ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3004:1: ( ( '?' ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3021:1: ( ( ruleMULTIPLICITY ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3022:1: ( ruleMULTIPLICITY )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3004:1: ( ( '?' ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3005:1: ( '?' )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3022:1: ( ruleMULTIPLICITY )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3023:1: ruleMULTIPLICITY
             {
-             before(grammarAccess.getSimpleElementAccess().getMultiplicityQuestionMarkKeyword_4_0_0()); 
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3006:1: ( '?' )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3007:1: '?'
-            {
-             before(grammarAccess.getSimpleElementAccess().getMultiplicityQuestionMarkKeyword_4_0_0()); 
-            match(input,39,FOLLOW_39_in_rule__SimpleElement__MultiplicityAssignment_4_06025); 
-             after(grammarAccess.getSimpleElementAccess().getMultiplicityQuestionMarkKeyword_4_0_0()); 
+             before(grammarAccess.getSimpleElementAccess().getMultiplicityMULTIPLICITYEnumRuleCall_4_0()); 
+            pushFollow(FOLLOW_ruleMULTIPLICITY_in_rule__SimpleElement__MultiplicityAssignment_46061);
+            ruleMULTIPLICITY();
 
-            }
+            state._fsp--;
 
-             after(grammarAccess.getSimpleElementAccess().getMultiplicityQuestionMarkKeyword_4_0_0()); 
+             after(grammarAccess.getSimpleElementAccess().getMultiplicityMULTIPLICITYEnumRuleCall_4_0()); 
 
             }
 
@@ -7889,24 +7940,24 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleElement__MultiplicityAssignment_4_0"
+    // $ANTLR end "rule__SimpleElement__MultiplicityAssignment_4"
 
 
     // $ANTLR start "rule__Import__ImportedNamespaceAssignment_1"
-    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3022:1: rule__Import__ImportedNamespaceAssignment_1 : ( ruleFqnWildcard ) ;
+    // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3032:1: rule__Import__ImportedNamespaceAssignment_1 : ( ruleFqnWildcard ) ;
     public final void rule__Import__ImportedNamespaceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3026:1: ( ( ruleFqnWildcard ) )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3027:1: ( ruleFqnWildcard )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3036:1: ( ( ruleFqnWildcard ) )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3037:1: ( ruleFqnWildcard )
             {
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3027:1: ( ruleFqnWildcard )
-            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3028:1: ruleFqnWildcard
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3037:1: ( ruleFqnWildcard )
+            // ../service.dsl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalServiceDsl.g:3038:1: ruleFqnWildcard
             {
              before(grammarAccess.getImportAccess().getImportedNamespaceFqnWildcardParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleFqnWildcard_in_rule__Import__ImportedNamespaceAssignment_16064);
+            pushFollow(FOLLOW_ruleFqnWildcard_in_rule__Import__ImportedNamespaceAssignment_16092);
             ruleFqnWildcard();
 
             state._fsp--;
@@ -7974,219 +8025,220 @@ public class InternalServiceDslParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_EOF_in_entryRuleImport728 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Import__Group__0_in_ruleImport754 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__DATATYPE__Alternatives_in_ruleDATATYPE791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__ServicesAssignment_4_0_in_rule__ServiceDSL__Alternatives_4826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__DataAssignment_4_1_in_rule__ServiceDSL__Alternatives_4844 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__NodesAssignment_4_2_in_rule__ServiceDSL__Alternatives_4862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWebService_in_rule__Service__Alternatives895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRESTService_in_rule__Service__Alternatives912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleElement_in_rule__DataElement__Alternatives944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComplexElement_in_rule__DataElement__Alternatives961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__TypeAssignment_3_0_in_rule__SimpleElement__Alternatives_3993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__RefAssignment_3_1_in_rule__SimpleElement__Alternatives_31011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__MultiplicityAssignment_4_0_in_rule__SimpleElement__Alternatives_41044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__SimpleElement__Alternatives_41063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__SimpleElement__Alternatives_41083 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__DATATYPE__Alternatives1118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__DATATYPE__Alternatives1139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__DATATYPE__Alternatives1160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__DATATYPE__Alternatives1181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__DATATYPE__Alternatives1202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__DATATYPE__Alternatives1223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__DATATYPE__Alternatives1244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__DATATYPE__Alternatives1265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__Group__0__Impl_in_rule__ServiceDSL__Group__01298 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__Group__1_in_rule__ServiceDSL__Group__01301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__Group__1__Impl_in_rule__ServiceDSL__Group__11359 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__Group__2_in_rule__ServiceDSL__Group__11362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__ServiceDSL__Group__1__Impl1390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__Group__2__Impl_in_rule__ServiceDSL__Group__21421 = new BitSet(new long[]{0x0000004860400010L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__Group__3_in_rule__ServiceDSL__Group__21424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__NameAssignment_2_in_rule__ServiceDSL__Group__2__Impl1451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__Group__3__Impl_in_rule__ServiceDSL__Group__31481 = new BitSet(new long[]{0x0000004860400010L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__Group__4_in_rule__ServiceDSL__Group__31484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__ImportsAssignment_3_in_rule__ServiceDSL__Group__3__Impl1511 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__Group__4__Impl_in_rule__ServiceDSL__Group__41542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ServiceDSL__Alternatives_4_in_rule__ServiceDSL__Group__4__Impl1569 = new BitSet(new long[]{0x0000000860400012L});
-    public static final BitSet FOLLOW_rule__WebService__Group__0__Impl_in_rule__WebService__Group__01610 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__WebService__Group__1_in_rule__WebService__Group__01613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebService__Group__1__Impl_in_rule__WebService__Group__11671 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__WebService__Group__2_in_rule__WebService__Group__11674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__WebService__Group__1__Impl1702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebService__Group__2__Impl_in_rule__WebService__Group__21733 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__WebService__Group__3_in_rule__WebService__Group__21736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebService__NameAssignment_2_in_rule__WebService__Group__2__Impl1763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebService__Group__3__Impl_in_rule__WebService__Group__31793 = new BitSet(new long[]{0x0000000003000000L});
-    public static final BitSet FOLLOW_rule__WebService__Group__4_in_rule__WebService__Group__31796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__WebService__Group__3__Impl1824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebService__Group__4__Impl_in_rule__WebService__Group__41855 = new BitSet(new long[]{0x0000000003000000L});
-    public static final BitSet FOLLOW_rule__WebService__Group__5_in_rule__WebService__Group__41858 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebService__Group_4__0_in_rule__WebService__Group__4__Impl1885 = new BitSet(new long[]{0x0000000002000002L});
-    public static final BitSet FOLLOW_rule__WebService__Group__5__Impl_in_rule__WebService__Group__51916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__WebService__Group__5__Impl1944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebService__Group_4__0__Impl_in_rule__WebService__Group_4__01987 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__WebService__Group_4__1_in_rule__WebService__Group_4__01990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__WebService__Group_4__0__Impl2018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebService__Group_4__1__Impl_in_rule__WebService__Group_4__12049 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebService__OperationsAssignment_4_1_in_rule__WebService__Group_4__1__Impl2076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__0__Impl_in_rule__Operation__Group__02110 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Operation__Group__1_in_rule__Operation__Group__02113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__1__Impl_in_rule__Operation__Group__12171 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__Operation__Group__2_in_rule__Operation__Group__12174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__NameAssignment_1_in_rule__Operation__Group__1__Impl2201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__2__Impl_in_rule__Operation__Group__22231 = new BitSet(new long[]{0x0000000015000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group__3_in_rule__Operation__Group__22234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Operation__Group__2__Impl2262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__3__Impl_in_rule__Operation__Group__32293 = new BitSet(new long[]{0x0000000015000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group__4_in_rule__Operation__Group__32296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__0_in_rule__Operation__Group__3__Impl2323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__4__Impl_in_rule__Operation__Group__42354 = new BitSet(new long[]{0x0000000015000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group__5_in_rule__Operation__Group__42357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__0_in_rule__Operation__Group__4__Impl2384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__5__Impl_in_rule__Operation__Group__52415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Operation__Group__5__Impl2443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__0__Impl_in_rule__Operation__Group_3__02486 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__1_in_rule__Operation__Group_3__02489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Operation__Group_3__0__Impl2517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__1__Impl_in_rule__Operation__Group_3__12548 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__2_in_rule__Operation__Group_3__12551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__InputNameAssignment_3_1_in_rule__Operation__Group_3__1__Impl2578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__2__Impl_in_rule__Operation__Group_3__22608 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__3_in_rule__Operation__Group_3__22611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Operation__Group_3__2__Impl2639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__3__Impl_in_rule__Operation__Group_3__32670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__InputTypeAssignment_3_3_in_rule__Operation__Group_3__3__Impl2697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__0__Impl_in_rule__Operation__Group_4__02735 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__1_in_rule__Operation__Group_4__02738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Operation__Group_4__0__Impl2766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__1__Impl_in_rule__Operation__Group_4__12797 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__2_in_rule__Operation__Group_4__12800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__OutputNameAssignment_4_1_in_rule__Operation__Group_4__1__Impl2827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__2__Impl_in_rule__Operation__Group_4__22857 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__3_in_rule__Operation__Group_4__22860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Operation__Group_4__2__Impl2888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__3__Impl_in_rule__Operation__Group_4__32919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__OutputTypeAssignment_4_3_in_rule__Operation__Group_4__3__Impl2946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RESTService__Group__0__Impl_in_rule__RESTService__Group__02984 = new BitSet(new long[]{0x0000000020400000L});
-    public static final BitSet FOLLOW_rule__RESTService__Group__1_in_rule__RESTService__Group__02987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RESTService__Group__1__Impl_in_rule__RESTService__Group__13045 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RESTService__Group__2_in_rule__RESTService__Group__13048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__RESTService__Group__1__Impl3076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RESTService__Group__2__Impl_in_rule__RESTService__Group__23107 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__RESTService__Group__3_in_rule__RESTService__Group__23110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RESTService__NameAssignment_2_in_rule__RESTService__Group__2__Impl3137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RESTService__Group__3__Impl_in_rule__RESTService__Group__33167 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__RESTService__Group__4_in_rule__RESTService__Group__33170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__RESTService__Group__3__Impl3198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RESTService__Group__4__Impl_in_rule__RESTService__Group__43229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__RESTService__Group__4__Impl3257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__03298 = new BitSet(new long[]{0x0000000860400010L});
-    public static final BitSet FOLLOW_rule__Node__Group__1_in_rule__Node__Group__03301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__13359 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Node__Group__2_in_rule__Node__Group__13362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Node__Group__1__Impl3390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__23421 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__Node__Group__3_in_rule__Node__Group__23424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__NameAssignment_2_in_rule__Node__Group__2__Impl3451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__3__Impl_in_rule__Node__Group__33481 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Node__Group__4_in_rule__Node__Group__33484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Node__Group__3__Impl3512 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__4__Impl_in_rule__Node__Group__43543 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Node__Group__5_in_rule__Node__Group__43546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Node__Group__4__Impl3574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__5__Impl_in_rule__Node__Group__53605 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Node__Group__6_in_rule__Node__Group__53608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__BaseURIAssignment_5_in_rule__Node__Group__5__Impl3635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__6__Impl_in_rule__Node__Group__63665 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__Node__Group__7_in_rule__Node__Group__63668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Node__Group__6__Impl3696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__7__Impl_in_rule__Node__Group__73727 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Node__Group__8_in_rule__Node__Group__73730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Node__Group__7__Impl3758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__8__Impl_in_rule__Node__Group__83789 = new BitSet(new long[]{0x0000000401000000L});
-    public static final BitSet FOLLOW_rule__Node__Group__9_in_rule__Node__Group__83792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__ServicesAssignment_8_in_rule__Node__Group__8__Impl3819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__9__Impl_in_rule__Node__Group__93849 = new BitSet(new long[]{0x0000000401000000L});
-    public static final BitSet FOLLOW_rule__Node__Group__10_in_rule__Node__Group__93852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_9__0_in_rule__Node__Group__9__Impl3879 = new BitSet(new long[]{0x0000000400000002L});
-    public static final BitSet FOLLOW_rule__Node__Group__10__Impl_in_rule__Node__Group__103910 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Node__Group__10__Impl3938 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_9__0__Impl_in_rule__Node__Group_9__03991 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Node__Group_9__1_in_rule__Node__Group_9__03994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Node__Group_9__0__Impl4022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__Group_9__1__Impl_in_rule__Node__Group_9__14053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Node__ServicesAssignment_9_1_in_rule__Node__Group_9__1__Impl4080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__0__Impl_in_rule__ComplexElement__Group__04114 = new BitSet(new long[]{0x0000000800000010L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__1_in_rule__ComplexElement__Group__04117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__1__Impl_in_rule__ComplexElement__Group__14175 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__2_in_rule__ComplexElement__Group__14178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__ComplexElement__Group__1__Impl4206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__2__Impl_in_rule__ComplexElement__Group__24237 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__3_in_rule__ComplexElement__Group__24240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexElement__NameAssignment_2_in_rule__ComplexElement__Group__2__Impl4267 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__3__Impl_in_rule__ComplexElement__Group__34297 = new BitSet(new long[]{0x0000000001000010L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__4_in_rule__ComplexElement__Group__34300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__ComplexElement__Group__3__Impl4328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__4__Impl_in_rule__ComplexElement__Group__44359 = new BitSet(new long[]{0x0000000001000010L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__5_in_rule__ComplexElement__Group__44362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComplexElement__ElementsAssignment_4_in_rule__ComplexElement__Group__4__Impl4389 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__ComplexElement__Group__5__Impl_in_rule__ComplexElement__Group__54420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__ComplexElement__Group__5__Impl4448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Group__0__Impl_in_rule__SimpleElement__Group__04491 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Group__1_in_rule__SimpleElement__Group__04494 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Group__1__Impl_in_rule__SimpleElement__Group__14552 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Group__2_in_rule__SimpleElement__Group__14555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__NameAssignment_1_in_rule__SimpleElement__Group__1__Impl4582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Group__2__Impl_in_rule__SimpleElement__Group__24612 = new BitSet(new long[]{0x00000000001FE010L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Group__3_in_rule__SimpleElement__Group__24615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__SimpleElement__Group__2__Impl4643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Group__3__Impl_in_rule__SimpleElement__Group__34674 = new BitSet(new long[]{0x0000008000001800L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Group__4_in_rule__SimpleElement__Group__34677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Alternatives_3_in_rule__SimpleElement__Group__3__Impl4704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Group__4__Impl_in_rule__SimpleElement__Group__44734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleElement__Alternatives_4_in_rule__SimpleElement__Group__4__Impl4761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group__0__Impl_in_rule__FQN__Group__04802 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__FQN__Group__1_in_rule__FQN__Group__04805 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FQN__Group__0__Impl4832 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group__1__Impl_in_rule__FQN__Group__14861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group_1__0_in_rule__FQN__Group__1__Impl4888 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group_1__0__Impl_in_rule__FQN__Group_1__04923 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__FQN__Group_1__1_in_rule__FQN__Group_1__04926 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__FQN__Group_1__0__Impl4954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group_1__1__Impl_in_rule__FQN__Group_1__14985 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FQN__Group_1__1__Impl5012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FqnWildcard__Group__0__Impl_in_rule__FqnWildcard__Group__05045 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__FqnWildcard__Group__1_in_rule__FqnWildcard__Group__05048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_rule__FqnWildcard__Group__0__Impl5075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FqnWildcard__Group__1__Impl_in_rule__FqnWildcard__Group__15104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__FqnWildcard__Group__1__Impl5133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__05170 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__05173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Import__Group__0__Impl5201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__15232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl5259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_rule__ServiceDSL__NameAssignment_25298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_rule__ServiceDSL__ImportsAssignment_35329 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleService_in_rule__ServiceDSL__ServicesAssignment_4_05360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDataElement_in_rule__ServiceDSL__DataAssignment_4_15391 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNode_in_rule__ServiceDSL__NodesAssignment_4_25422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__WebService__NameAssignment_25453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperation_in_rule__WebService__OperationsAssignment_4_15484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Operation__NameAssignment_15515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Operation__InputNameAssignment_3_15546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_rule__Operation__InputTypeAssignment_3_35581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Operation__OutputNameAssignment_4_15616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_rule__Operation__OutputTypeAssignment_4_35651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RESTService__NameAssignment_25686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Node__NameAssignment_25717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Node__BaseURIAssignment_55748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_rule__Node__ServicesAssignment_85783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_rule__Node__ServicesAssignment_9_15822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ComplexElement__NameAssignment_25857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleElement_in_rule__ComplexElement__ElementsAssignment_45888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SimpleElement__NameAssignment_15919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDATATYPE_in_rule__SimpleElement__TypeAssignment_3_05950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_rule__SimpleElement__RefAssignment_3_15985 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__SimpleElement__MultiplicityAssignment_4_06025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFqnWildcard_in_rule__Import__ImportedNamespaceAssignment_16064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MULTIPLICITY__Alternatives_in_ruleMULTIPLICITY827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__ServicesAssignment_4_0_in_rule__ServiceDSL__Alternatives_4862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__DataAssignment_4_1_in_rule__ServiceDSL__Alternatives_4880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__NodesAssignment_4_2_in_rule__ServiceDSL__Alternatives_4898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWebService_in_rule__Service__Alternatives931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRESTService_in_rule__Service__Alternatives948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleElement_in_rule__DataElement__Alternatives980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComplexElement_in_rule__DataElement__Alternatives997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleElement__TypeAssignment_3_0_in_rule__SimpleElement__Alternatives_31029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleElement__RefAssignment_3_1_in_rule__SimpleElement__Alternatives_31047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__DATATYPE__Alternatives1081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__DATATYPE__Alternatives1102 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__DATATYPE__Alternatives1123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__DATATYPE__Alternatives1144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__DATATYPE__Alternatives1165 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__DATATYPE__Alternatives1186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__DATATYPE__Alternatives1207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__DATATYPE__Alternatives1228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__MULTIPLICITY__Alternatives1264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__MULTIPLICITY__Alternatives1285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__MULTIPLICITY__Alternatives1306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__Group__0__Impl_in_rule__ServiceDSL__Group__01339 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__Group__1_in_rule__ServiceDSL__Group__01342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__Group__1__Impl_in_rule__ServiceDSL__Group__11400 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__Group__2_in_rule__ServiceDSL__Group__11403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__ServiceDSL__Group__1__Impl1431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__Group__2__Impl_in_rule__ServiceDSL__Group__21462 = new BitSet(new long[]{0x00000090C0800010L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__Group__3_in_rule__ServiceDSL__Group__21465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__NameAssignment_2_in_rule__ServiceDSL__Group__2__Impl1492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__Group__3__Impl_in_rule__ServiceDSL__Group__31522 = new BitSet(new long[]{0x00000090C0800010L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__Group__4_in_rule__ServiceDSL__Group__31525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__ImportsAssignment_3_in_rule__ServiceDSL__Group__3__Impl1552 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__Group__4__Impl_in_rule__ServiceDSL__Group__41583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ServiceDSL__Alternatives_4_in_rule__ServiceDSL__Group__4__Impl1610 = new BitSet(new long[]{0x00000010C0800012L});
+    public static final BitSet FOLLOW_rule__WebService__Group__0__Impl_in_rule__WebService__Group__01651 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__WebService__Group__1_in_rule__WebService__Group__01654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebService__Group__1__Impl_in_rule__WebService__Group__11712 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__WebService__Group__2_in_rule__WebService__Group__11715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__WebService__Group__1__Impl1743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebService__Group__2__Impl_in_rule__WebService__Group__21774 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__WebService__Group__3_in_rule__WebService__Group__21777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebService__NameAssignment_2_in_rule__WebService__Group__2__Impl1804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebService__Group__3__Impl_in_rule__WebService__Group__31834 = new BitSet(new long[]{0x0000000006000000L});
+    public static final BitSet FOLLOW_rule__WebService__Group__4_in_rule__WebService__Group__31837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__WebService__Group__3__Impl1865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebService__Group__4__Impl_in_rule__WebService__Group__41896 = new BitSet(new long[]{0x0000000006000000L});
+    public static final BitSet FOLLOW_rule__WebService__Group__5_in_rule__WebService__Group__41899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebService__Group_4__0_in_rule__WebService__Group__4__Impl1926 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__WebService__Group__5__Impl_in_rule__WebService__Group__51957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__WebService__Group__5__Impl1985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebService__Group_4__0__Impl_in_rule__WebService__Group_4__02028 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__WebService__Group_4__1_in_rule__WebService__Group_4__02031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__WebService__Group_4__0__Impl2059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebService__Group_4__1__Impl_in_rule__WebService__Group_4__12090 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebService__OperationsAssignment_4_1_in_rule__WebService__Group_4__1__Impl2117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__0__Impl_in_rule__Operation__Group__02151 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Operation__Group__1_in_rule__Operation__Group__02154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__1__Impl_in_rule__Operation__Group__12212 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group__2_in_rule__Operation__Group__12215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__NameAssignment_1_in_rule__Operation__Group__1__Impl2242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__2__Impl_in_rule__Operation__Group__22272 = new BitSet(new long[]{0x000000002A000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group__3_in_rule__Operation__Group__22275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Operation__Group__2__Impl2303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__3__Impl_in_rule__Operation__Group__32334 = new BitSet(new long[]{0x000000002A000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group__4_in_rule__Operation__Group__32337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__0_in_rule__Operation__Group__3__Impl2364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__4__Impl_in_rule__Operation__Group__42395 = new BitSet(new long[]{0x000000002A000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group__5_in_rule__Operation__Group__42398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__0_in_rule__Operation__Group__4__Impl2425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__5__Impl_in_rule__Operation__Group__52456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Operation__Group__5__Impl2484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__0__Impl_in_rule__Operation__Group_3__02527 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__1_in_rule__Operation__Group_3__02530 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Operation__Group_3__0__Impl2558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__1__Impl_in_rule__Operation__Group_3__12589 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__2_in_rule__Operation__Group_3__12592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__InputNameAssignment_3_1_in_rule__Operation__Group_3__1__Impl2619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__2__Impl_in_rule__Operation__Group_3__22649 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__3_in_rule__Operation__Group_3__22652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Operation__Group_3__2__Impl2680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__3__Impl_in_rule__Operation__Group_3__32711 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__InputTypeAssignment_3_3_in_rule__Operation__Group_3__3__Impl2738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__0__Impl_in_rule__Operation__Group_4__02776 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__1_in_rule__Operation__Group_4__02779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Operation__Group_4__0__Impl2807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__1__Impl_in_rule__Operation__Group_4__12838 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__2_in_rule__Operation__Group_4__12841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__OutputNameAssignment_4_1_in_rule__Operation__Group_4__1__Impl2868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__2__Impl_in_rule__Operation__Group_4__22898 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__3_in_rule__Operation__Group_4__22901 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Operation__Group_4__2__Impl2929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__3__Impl_in_rule__Operation__Group_4__32960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__OutputTypeAssignment_4_3_in_rule__Operation__Group_4__3__Impl2987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RESTService__Group__0__Impl_in_rule__RESTService__Group__03025 = new BitSet(new long[]{0x0000000040800000L});
+    public static final BitSet FOLLOW_rule__RESTService__Group__1_in_rule__RESTService__Group__03028 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RESTService__Group__1__Impl_in_rule__RESTService__Group__13086 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RESTService__Group__2_in_rule__RESTService__Group__13089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__RESTService__Group__1__Impl3117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RESTService__Group__2__Impl_in_rule__RESTService__Group__23148 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__RESTService__Group__3_in_rule__RESTService__Group__23151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RESTService__NameAssignment_2_in_rule__RESTService__Group__2__Impl3178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RESTService__Group__3__Impl_in_rule__RESTService__Group__33208 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__RESTService__Group__4_in_rule__RESTService__Group__33211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__RESTService__Group__3__Impl3239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RESTService__Group__4__Impl_in_rule__RESTService__Group__43270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__RESTService__Group__4__Impl3298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__0__Impl_in_rule__Node__Group__03339 = new BitSet(new long[]{0x00000010C0800010L});
+    public static final BitSet FOLLOW_rule__Node__Group__1_in_rule__Node__Group__03342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__1__Impl_in_rule__Node__Group__13400 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Node__Group__2_in_rule__Node__Group__13403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Node__Group__1__Impl3431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__2__Impl_in_rule__Node__Group__23462 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Node__Group__3_in_rule__Node__Group__23465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__NameAssignment_2_in_rule__Node__Group__2__Impl3492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__3__Impl_in_rule__Node__Group__33522 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Node__Group__4_in_rule__Node__Group__33525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Node__Group__3__Impl3553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__4__Impl_in_rule__Node__Group__43584 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Node__Group__5_in_rule__Node__Group__43587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Node__Group__4__Impl3615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__5__Impl_in_rule__Node__Group__53646 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__Node__Group__6_in_rule__Node__Group__53649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__BaseURIAssignment_5_in_rule__Node__Group__5__Impl3676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__6__Impl_in_rule__Node__Group__63706 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Node__Group__7_in_rule__Node__Group__63709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Node__Group__6__Impl3737 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__7__Impl_in_rule__Node__Group__73768 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Node__Group__8_in_rule__Node__Group__73771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Node__Group__7__Impl3799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__8__Impl_in_rule__Node__Group__83830 = new BitSet(new long[]{0x0000000802000000L});
+    public static final BitSet FOLLOW_rule__Node__Group__9_in_rule__Node__Group__83833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__ServicesAssignment_8_in_rule__Node__Group__8__Impl3860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__9__Impl_in_rule__Node__Group__93890 = new BitSet(new long[]{0x0000000802000000L});
+    public static final BitSet FOLLOW_rule__Node__Group__10_in_rule__Node__Group__93893 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_9__0_in_rule__Node__Group__9__Impl3920 = new BitSet(new long[]{0x0000000800000002L});
+    public static final BitSet FOLLOW_rule__Node__Group__10__Impl_in_rule__Node__Group__103951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Node__Group__10__Impl3979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_9__0__Impl_in_rule__Node__Group_9__04032 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Node__Group_9__1_in_rule__Node__Group_9__04035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Node__Group_9__0__Impl4063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__Group_9__1__Impl_in_rule__Node__Group_9__14094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Node__ServicesAssignment_9_1_in_rule__Node__Group_9__1__Impl4121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__0__Impl_in_rule__ComplexElement__Group__04155 = new BitSet(new long[]{0x0000001000000010L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__1_in_rule__ComplexElement__Group__04158 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__1__Impl_in_rule__ComplexElement__Group__14216 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__2_in_rule__ComplexElement__Group__14219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__ComplexElement__Group__1__Impl4247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__2__Impl_in_rule__ComplexElement__Group__24278 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__3_in_rule__ComplexElement__Group__24281 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexElement__NameAssignment_2_in_rule__ComplexElement__Group__2__Impl4308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__3__Impl_in_rule__ComplexElement__Group__34338 = new BitSet(new long[]{0x0000000002000010L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__4_in_rule__ComplexElement__Group__34341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__ComplexElement__Group__3__Impl4369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__4__Impl_in_rule__ComplexElement__Group__44400 = new BitSet(new long[]{0x0000000002000010L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__5_in_rule__ComplexElement__Group__44403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComplexElement__ElementsAssignment_4_in_rule__ComplexElement__Group__4__Impl4430 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__ComplexElement__Group__5__Impl_in_rule__ComplexElement__Group__54461 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__ComplexElement__Group__5__Impl4489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleElement__Group__0__Impl_in_rule__SimpleElement__Group__04532 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__SimpleElement__Group__1_in_rule__SimpleElement__Group__04535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleElement__Group__1__Impl_in_rule__SimpleElement__Group__14593 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__SimpleElement__Group__2_in_rule__SimpleElement__Group__14596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleElement__NameAssignment_1_in_rule__SimpleElement__Group__1__Impl4623 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleElement__Group__2__Impl_in_rule__SimpleElement__Group__24653 = new BitSet(new long[]{0x000000000007F810L});
+    public static final BitSet FOLLOW_rule__SimpleElement__Group__3_in_rule__SimpleElement__Group__24656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__SimpleElement__Group__2__Impl4684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleElement__Group__3__Impl_in_rule__SimpleElement__Group__34715 = new BitSet(new long[]{0x0000000000380000L});
+    public static final BitSet FOLLOW_rule__SimpleElement__Group__4_in_rule__SimpleElement__Group__34718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleElement__Alternatives_3_in_rule__SimpleElement__Group__3__Impl4745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleElement__Group__4__Impl_in_rule__SimpleElement__Group__44775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleElement__MultiplicityAssignment_4_in_rule__SimpleElement__Group__4__Impl4802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group__0__Impl_in_rule__FQN__Group__04843 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__FQN__Group__1_in_rule__FQN__Group__04846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FQN__Group__0__Impl4873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group__1__Impl_in_rule__FQN__Group__14902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group_1__0_in_rule__FQN__Group__1__Impl4929 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group_1__0__Impl_in_rule__FQN__Group_1__04964 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__FQN__Group_1__1_in_rule__FQN__Group_1__04967 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__FQN__Group_1__0__Impl4995 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group_1__1__Impl_in_rule__FQN__Group_1__15026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FQN__Group_1__1__Impl5053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FqnWildcard__Group__0__Impl_in_rule__FqnWildcard__Group__05086 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__FqnWildcard__Group__1_in_rule__FqnWildcard__Group__05089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_rule__FqnWildcard__Group__0__Impl5116 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FqnWildcard__Group__1__Impl_in_rule__FqnWildcard__Group__15145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__FqnWildcard__Group__1__Impl5174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__05211 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__05214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__Import__Group__0__Impl5242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__15273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl5300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_rule__ServiceDSL__NameAssignment_25339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_rule__ServiceDSL__ImportsAssignment_35370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleService_in_rule__ServiceDSL__ServicesAssignment_4_05401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDataElement_in_rule__ServiceDSL__DataAssignment_4_15432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNode_in_rule__ServiceDSL__NodesAssignment_4_25463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__WebService__NameAssignment_25494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperation_in_rule__WebService__OperationsAssignment_4_15525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Operation__NameAssignment_15556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Operation__InputNameAssignment_3_15587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_rule__Operation__InputTypeAssignment_3_35622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Operation__OutputNameAssignment_4_15657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_rule__Operation__OutputTypeAssignment_4_35692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RESTService__NameAssignment_25727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Node__NameAssignment_25758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Node__BaseURIAssignment_55789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_rule__Node__ServicesAssignment_85824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_rule__Node__ServicesAssignment_9_15863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ComplexElement__NameAssignment_25898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleElement_in_rule__ComplexElement__ElementsAssignment_45929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SimpleElement__NameAssignment_15960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDATATYPE_in_rule__SimpleElement__TypeAssignment_3_05991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_rule__SimpleElement__RefAssignment_3_16026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMULTIPLICITY_in_rule__SimpleElement__MultiplicityAssignment_46061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFqnWildcard_in_rule__Import__ImportedNamespaceAssignment_16092 = new BitSet(new long[]{0x0000000000000002L});
 
 }

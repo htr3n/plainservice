@@ -19,10 +19,10 @@
         </elements>
         <elements xsi:type="xtext:Keyword" value="module"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="imports" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
         </elements>
         <elements xsi:type="xtext:Alternatives" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="services" operator="+=">
@@ -95,7 +95,7 @@
               <type metamodel="/0/@metamodelDeclarations.1">
                 <classifier xsi:type="ecore:EClass" href="http://cs.univie.ac.at/swa/soa/ServiceDsl#//DataElement"/>
               </type>
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
             </terminal>
           </elements>
         </elements>
@@ -110,7 +110,7 @@
               <type metamodel="/0/@metamodelDeclarations.1">
                 <classifier xsi:type="ecore:EClass" href="http://cs.univie.ac.at/swa/soa/ServiceDsl#//DataElement"/>
               </type>
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
             </terminal>
           </elements>
         </elements>
@@ -161,7 +161,7 @@
             <type metamodel="/0/@metamodelDeclarations.1">
               <classifier xsi:type="ecore:EClass" href="http://cs.univie.ac.at/swa/soa/ServiceDsl#//Service"/>
             </type>
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
           </terminal>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="*">
@@ -171,7 +171,7 @@
               <type metamodel="/0/@metamodelDeclarations.1">
                 <classifier xsi:type="ecore:EClass" href="http://cs.univie.ac.at/swa/soa/ServiceDsl#//Service"/>
               </type>
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
             </terminal>
           </elements>
         </elements>
@@ -231,16 +231,12 @@
               <type metamodel="/0/@metamodelDeclarations.1">
                 <classifier xsi:type="ecore:EClass" href="http://cs.univie.ac.at/swa/soa/ServiceDsl#//ComplexElement"/>
               </type>
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
             </terminal>
           </elements>
         </elements>
-        <elements xsi:type="xtext:Alternatives" cardinality="?">
-          <elements xsi:type="xtext:Assignment" feature="multiplicity" operator="=">
-            <terminal xsi:type="xtext:Keyword" value="?"/>
-          </elements>
-          <elements xsi:type="xtext:Keyword" value="+"/>
-          <elements xsi:type="xtext:Keyword" value="*"/>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="multiplicity" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
         </elements>
       </alternatives>
     </rules>
@@ -283,6 +279,25 @@
         </elements>
       </alternatives>
     </rules>
+    <rules xsi:type="xtext:EnumRule" name="MULTIPLICITY">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EEnum" href="http://cs.univie.ac.at/swa/soa/ServiceDsl#//MULTIPLICITY"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://cs.univie.ac.at/swa/soa/ServiceDsl#//MULTIPLICITY/OPTIONAL"/>
+          <literal value="?"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://cs.univie.ac.at/swa/soa/ServiceDsl#//MULTIPLICITY/PLUS"/>
+          <literal value="+"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://cs.univie.ac.at/swa/soa/ServiceDsl#//MULTIPLICITY/STAR"/>
+          <literal value="*"/>
+        </elements>
+      </alternatives>
+    </rules>
     <rules xsi:type="xtext:ParserRule" name="FQN">
       <type metamodel="/0/@metamodelDeclarations.0">
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -300,7 +315,7 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
         <elements xsi:type="xtext:Keyword" cardinality="?" value=".*"/>
       </alternatives>
     </rules>
@@ -311,7 +326,7 @@
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="import"/>
         <elements xsi:type="xtext:Assignment" feature="importedNamespace" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
         </elements>
       </alternatives>
     </rules>

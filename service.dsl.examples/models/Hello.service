@@ -1,22 +1,21 @@
-module at.ac.univie.cs.swa.hello  
+module at.ac.univie.cs.swa.hello
 
-Web service HelloWorld {    
+Web service HelloWorld {
 	operation sayHello {
-		input "input" : at.ac.univie.cs.swa.data.SimpleRequest 
-		output "output" : at.ac.univie.cs.swa.data.SimpleResponse 
+		input "input" : at.ac.univie.cs.swa.data.SimpleRequest
+		output "output" : at.ac.univie.cs.swa.data.SimpleResponse
 	}
-}  
+}
 
-Web service Greeting {      
+Web service Greeting {
 	operation createGreating {
-		input "input" : at.ac.univie.cs.swa.data.SimpleRequest 
-		output "output" : at.ac.univie.cs.swa.data.ComplexMixedSubType 
+		input "input" : at.ac.univie.cs.swa.data.SimpleRequest
+		output "output" : at.ac.univie.cs.swa.data.ComplexMixedSubType
 	}
 	operation doOtherThing {
-		input "request" : at.ac.univie.cs.swa.data.AllType 
+		input "request" : at.ac.univie.cs.swa.data.AllType
 	}
-} 
+}
 
-
-Node Test1 uri = "http://localhost:9999" hosts { HelloWorld, Greeting} 
+Node Test1 uri = "http://localhost:9999" hosts { HelloWorld, Greeting } 
 

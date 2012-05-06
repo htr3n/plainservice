@@ -1,22 +1,22 @@
-module at.ac.univie.cs.swa.data  
+module at.ac.univie.cs.swa.data
 
-complex-data SimpleRequest { 
+complex-data SimpleRequest {
 	name : string
 }
 
-complex-data SimpleResponse {  
+complex-data SimpleResponse {
 	greeting : string
 }
 
 complex-data AllType {
 	e0 : binary
-	e1 : boolean 
-	e2 : date 
-	e3 : datetime
+	e1 : boolean ?
+	e2 : date *
+	e3 : datetime +
 	e4 : float
 	e5 : integer
-	e6 : string 
-	e7 : time 
+	e6 : string
+	e7 : time
 }
 
 complex-data ComplexMixedSubType {

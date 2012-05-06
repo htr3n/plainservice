@@ -112,6 +112,13 @@ public class ServiceDslPackageImpl extends EPackageImpl implements ServiceDslPac
   private EEnum datatypeEEnum = null;
 
   /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum multiplicityEEnum = null;
+
+  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -499,6 +506,16 @@ public class ServiceDslPackageImpl extends EPackageImpl implements ServiceDslPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getMULTIPLICITY()
+  {
+    return multiplicityEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ServiceDslFactory getServiceDslFactory()
   {
     return (ServiceDslFactory)getEFactoryInstance();
@@ -567,6 +584,7 @@ public class ServiceDslPackageImpl extends EPackageImpl implements ServiceDslPac
 
     // Create enums
     datatypeEEnum = createEEnum(DATATYPE);
+    multiplicityEEnum = createEEnum(MULTIPLICITY);
   }
 
   /**
@@ -640,7 +658,7 @@ public class ServiceDslPackageImpl extends EPackageImpl implements ServiceDslPac
     initEClass(simpleElementEClass, SimpleElement.class, "SimpleElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSimpleElement_Type(), this.getDATATYPE(), "type", null, 0, 1, SimpleElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSimpleElement_Ref(), this.getComplexElement(), null, "ref", null, 0, 1, SimpleElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSimpleElement_Multiplicity(), ecorePackage.getEString(), "multiplicity", null, 0, 1, SimpleElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSimpleElement_Multiplicity(), this.getMULTIPLICITY(), "multiplicity", null, 0, 1, SimpleElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getImport_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -655,6 +673,11 @@ public class ServiceDslPackageImpl extends EPackageImpl implements ServiceDslPac
     addEEnumLiteral(datatypeEEnum, at.ac.univie.cs.swa.soa.serviceDsl.DATATYPE.DATETIME);
     addEEnumLiteral(datatypeEEnum, at.ac.univie.cs.swa.soa.serviceDsl.DATATYPE.BINARY);
     addEEnumLiteral(datatypeEEnum, at.ac.univie.cs.swa.soa.serviceDsl.DATATYPE.BOOLEAN);
+
+    initEEnum(multiplicityEEnum, at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY.class, "MULTIPLICITY");
+    addEEnumLiteral(multiplicityEEnum, at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY.OPTIONAL);
+    addEEnumLiteral(multiplicityEEnum, at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY.PLUS);
+    addEEnumLiteral(multiplicityEEnum, at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY.STAR);
 
     // Create resource
     createResource(eNS_URI);

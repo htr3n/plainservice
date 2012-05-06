@@ -95,6 +95,8 @@ public class ServiceDslFactoryImpl extends EFactoryImpl implements ServiceDslFac
     {
       case ServiceDslPackage.DATATYPE:
         return createDATATYPEFromString(eDataType, initialValue);
+      case ServiceDslPackage.MULTIPLICITY:
+        return createMULTIPLICITYFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -112,6 +114,8 @@ public class ServiceDslFactoryImpl extends EFactoryImpl implements ServiceDslFac
     {
       case ServiceDslPackage.DATATYPE:
         return convertDATATYPEToString(eDataType, instanceValue);
+      case ServiceDslPackage.MULTIPLICITY:
+        return convertMULTIPLICITYToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -245,6 +249,28 @@ public class ServiceDslFactoryImpl extends EFactoryImpl implements ServiceDslFac
    * @generated
    */
   public String convertDATATYPEToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MULTIPLICITY createMULTIPLICITYFromString(EDataType eDataType, String initialValue)
+  {
+    MULTIPLICITY result = MULTIPLICITY.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertMULTIPLICITYToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

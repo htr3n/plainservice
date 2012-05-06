@@ -6,6 +6,7 @@ import at.ac.univie.cs.swa.soa.serviceDsl.ServiceDSL
 import at.ac.univie.cs.swa.soa.serviceDsl.ComplexElement
 import at.ac.univie.cs.swa.soa.serviceDsl.SimpleElement
 import at.ac.univie.cs.swa.soa.serviceDsl.DATATYPE
+import at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY
 
 class Data {
 	
@@ -98,18 +99,27 @@ public class «className» {
 	}
 	
 	def protected boolean isRequired(SimpleElement e){
-		return e.multiplicity == "+";
+		return e.multiplicity == null || e.multiplicity == MULTIPLICITY::PLUS;
 	}
 	
 	def protected String convertType(SimpleElement e){
+		var boolean isMany = (e.multiplicity == MULTIPLICITY::PLUS  || e.multiplicity == MULTIPLICITY::STAR) 
 		if (e.ref != null){
 			var outputQualifiedPath = (e.ref.eContainer as ServiceDSL).name
-			return outputQualifiedPath + "." + e.ref.name
+			var result = outputQualifiedPath + "." + e.ref.name 
+			if (isMany)
+				return "java.util.List<" + result + ">"
+			else 
+				return result
 		} else if (e.type != null) {
-			return e.type.toJavaType
+			var result = e.type.toJavaType 
+			if (isMany)
+				return "java.util.List<" + result + ">"
+			else 
+				return result
 		}
 		else {
-			return ""
+			return null
 		}
 	}
 	
@@ -117,12 +127,12 @@ public class «className» {
 		switch type {
 			case DATATYPE::BINARY: return "byte[]"
 			case DATATYPE::BOOLEAN: return "boolean"
-			case DATATYPE::DATE: return "String"
+			case DATATYPE::DATE: return "javax.xml.datatype.XMLGregorianCalendar"
 			case DATATYPE::DATETIME: return "javax.xml.datatype.XMLGregorianCalendar"
+			case DATATYPE::TIME: return "javax.xml.datatype.XMLGregorianCalendar"
 			case DATATYPE::FLOAT: return "float"
-			case DATATYPE::INTEGER: return "String"
+			case DATATYPE::INTEGER: return "int"
 			case DATATYPE::STRING: return "String"
-			case DATATYPE::TIME: return "String"
 		}
 		return "Object";
 	}	

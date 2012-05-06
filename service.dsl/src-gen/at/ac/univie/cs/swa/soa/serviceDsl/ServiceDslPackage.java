@@ -485,6 +485,16 @@ public interface ServiceDslPackage extends EPackage
    */
   int DATATYPE = 10;
 
+  /**
+   * The meta object id for the '{@link at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY <em>MULTIPLICITY</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY
+   * @see at.ac.univie.cs.swa.soa.serviceDsl.impl.ServiceDslPackageImpl#getMULTIPLICITY()
+   * @generated
+   */
+  int MULTIPLICITY = 11;
+
 
   /**
    * Returns the meta object for class '{@link at.ac.univie.cs.swa.soa.serviceDsl.ServiceDSL <em>Service DSL</em>}'.
@@ -828,6 +838,16 @@ public interface ServiceDslPackage extends EPackage
   EEnum getDATATYPE();
 
   /**
+   * Returns the meta object for enum '{@link at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY <em>MULTIPLICITY</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>MULTIPLICITY</em>'.
+   * @see at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY
+   * @generated
+   */
+  EEnum getMULTIPLICITY();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1127,6 +1147,16 @@ public interface ServiceDslPackage extends EPackage
      * @generated
      */
     EEnum DATATYPE = eINSTANCE.getDATATYPE();
+
+    /**
+     * The meta object literal for the '{@link at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY <em>MULTIPLICITY</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.ac.univie.cs.swa.soa.serviceDsl.MULTIPLICITY
+     * @see at.ac.univie.cs.swa.soa.serviceDsl.impl.ServiceDslPackageImpl#getMULTIPLICITY()
+     * @generated
+     */
+    EEnum MULTIPLICITY = eINSTANCE.getMULTIPLICITY();
 
   }
 
