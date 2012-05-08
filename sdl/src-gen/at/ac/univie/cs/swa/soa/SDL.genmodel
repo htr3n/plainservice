@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/sdl/src-gen"
+    editDirectory="/sdl.edit/src" editorDirectory="/sdl.editor/src" modelPluginID="sdl"
+    forceOverwrite="true" modelName="SDL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="sdl.edit" editorPluginID="sdl.editor">
+  <genPackages prefix="Sdl" basePackage="at.ac.univie.cs.swa.soa" disposableProviderFactory="true"
+      ecorePackage="SDL.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SDL.ecore#//DATATYPE">
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//DATATYPE/string"/>
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//DATATYPE/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//DATATYPE/float"/>
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//DATATYPE/date"/>
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//DATATYPE/time"/>
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//DATATYPE/datetime"/>
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//DATATYPE/binary"/>
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//DATATYPE/boolean"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SDL.ecore#//MULTIPLICITY">
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//MULTIPLICITY/OPTIONAL"/>
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//MULTIPLICITY/PLUS"/>
+      <genEnumLiterals ecoreEnumLiteral="SDL.ecore#//MULTIPLICITY/STAR"/>
+    </genEnums>
+    <genClasses ecoreClass="SDL.ecore#//SDL">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//SDL/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SDL.ecore#//SDL/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SDL.ecore#//SDL/services"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SDL.ecore#//SDL/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SDL.ecore#//SDL/nodes"/>
+    </genClasses>
+    <genClasses ecoreClass="SDL.ecore#//Service">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//Service/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SDL.ecore#//Service/operations"/>
+    </genClasses>
+    <genClasses ecoreClass="SDL.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//Operation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//Operation/inputName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SDL.ecore#//Operation/inputType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//Operation/outputName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SDL.ecore#//Operation/outputType"/>
+    </genClasses>
+    <genClasses ecoreClass="SDL.ecore#//Node">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//Node/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//Node/baseURI"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SDL.ecore#//Node/services"/>
+    </genClasses>
+    <genClasses ecoreClass="SDL.ecore#//DataElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//DataElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="SDL.ecore#//ComplexElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SDL.ecore#//ComplexElement/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="SDL.ecore#//SimpleElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//SimpleElement/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SDL.ecore#//SimpleElement/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//SimpleElement/multiplicity"/>
+    </genClasses>
+    <genClasses ecoreClass="SDL.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SDL.ecore#//Import/importedNamespace"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,63 @@
+grammar at.ac.univie.cs.swa.soa.SDL with org.eclipse.xtext.common.Terminals
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+generate sdl "http://cs.univie.ac.at/swa/soa/sdl"
+
+SDL:
+	{SDL}
+	'module' name=FQN
+	(imports+=Import)*
+	(services+=Service | data+=DataElement | nodes+=Node)*;
+
+Service:
+	{Service}
+	'Service'
+	name=ID
+	'{'
+	('operation' operations+=Operation)*
+	'}';
+
+Operation:
+	{Operation}
+	name=ID '{'
+	('input' inputName=STRING ':' inputType=[DataElement|FQN])?
+	('output' outputName=STRING ':' outputType=[DataElement|FQN])?
+	'}';
+
+Node:
+	{Node}
+	'Node'name=ID 'uri''=' baseURI=STRING 'hosts' 
+	'{' 
+		services+=[Service|FQN] (',' services+=[Service|FQN])* 
+	'}';
+
+DataElement:
+	SimpleElement | ComplexElement;
+
+ComplexElement:
+	{ComplexElement}
+	'complex-data'
+	name=ID '{'
+	elements+=SimpleElement*
+	'}';
+
+SimpleElement:
+	{SimpleElement}
+	name=ID ':' (type=DATATYPE | ref=[ComplexElement|FQN])
+	(multiplicity=MULTIPLICITY)?;
+
+enum DATATYPE:
+	string | integer | float | date | time | datetime | binary | boolean;
+
+enum MULTIPLICITY:
+	OPTIONAL='?' | PLUS='+' | STAR='*'
+	;
+
+FQN:
+	ID ("." ID)*;
+
+FqnWildcard:
+	FQN '.*'?;
+
+Import:
+	'import' importedNamespace=FqnWildcard;
