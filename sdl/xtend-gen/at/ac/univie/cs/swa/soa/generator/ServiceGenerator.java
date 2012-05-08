@@ -78,18 +78,8 @@ public class ServiceGenerator {
       _builder.newLine();
       _builder.append("import java.net.URL;");
       _builder.newLine();
-      _builder.append("import javax.xml.namespace.QName;");
       _builder.newLine();
-      _builder.append("import javax.xml.ws.WebEndpoint;");
-      _builder.newLine();
-      _builder.append("import javax.xml.ws.WebServiceClient;");
-      _builder.newLine();
-      _builder.append("import javax.xml.ws.WebServiceFeature;");
-      _builder.newLine();
-      _builder.append("import javax.xml.ws.Service;");
-      _builder.newLine();
-      _builder.newLine();
-      _builder.append("@WebServiceClient(name = \"");
+      _builder.append("@javax.xml.ws.WebServiceClient(name = \"");
       String _name_3 = s.getName();
       _builder.append(_name_3, "");
       _builder.append("\", ");
@@ -101,7 +91,7 @@ public class ServiceGenerator {
       _builder.newLineIfNotEmpty();
       _builder.append("public class ");
       _builder.append(className, "");
-      _builder.append(" extends Service {");
+      _builder.append(" extends javax.xml.ws.Service {");
       _builder.newLineIfNotEmpty();
       _builder.newLine();
       _builder.append("    ");
@@ -134,7 +124,7 @@ public class ServiceGenerator {
       _builder.newLine();
       _builder.newLine();
       _builder.append("    ");
-      _builder.append("public final static QName SERVICE = new QName(\"");
+      _builder.append("public final static javax.xml.namespace.QName SERVICE = new javax.xml.namespace.QName(\"");
       _builder.append(nsURI, "    ");
       _builder.append("\", \"");
       String _name_4 = s.getName();
@@ -142,10 +132,10 @@ public class ServiceGenerator {
       _builder.append("\");");
       _builder.newLineIfNotEmpty();
       _builder.append("    ");
-      _builder.append("public final static QName ");
+      _builder.append("public final static javax.xml.namespace.QName ");
       String _firstLower = StringExtensions.toFirstLower(portName);
       _builder.append(_firstLower, "    ");
-      _builder.append(" = new QName(\"");
+      _builder.append(" = new javax.xml.namespace.QName(\"");
       _builder.append(nsURI, "    ");
       _builder.append("\", \"");
       _builder.append(portName, "    ");
@@ -167,7 +157,7 @@ public class ServiceGenerator {
       _builder.append("    ");
       _builder.append("public ");
       _builder.append(className, "    ");
-      _builder.append("(URL wsdlLocation, QName serviceName) {");
+      _builder.append("(URL wsdlLocation, javax.xml.namespace.QName serviceName) {");
       _builder.newLineIfNotEmpty();
       _builder.append("        ");
       _builder.append("super(wsdlLocation, serviceName);");
@@ -190,7 +180,7 @@ public class ServiceGenerator {
       _builder.append("    ");
       _builder.newLine();
       _builder.append("    ");
-      _builder.append("@WebEndpoint(name = \"");
+      _builder.append("@javax.xml.ws.WebEndpoint(name = \"");
       _builder.append(portName, "    ");
       _builder.append("\")");
       _builder.newLineIfNotEmpty();
@@ -217,7 +207,7 @@ public class ServiceGenerator {
       _builder.newLine();
       _builder.newLine();
       _builder.append("    ");
-      _builder.append("@WebEndpoint(name = \"");
+      _builder.append("@javax.xml.ws.WebEndpoint(name = \"");
       _builder.append(portName, "    ");
       _builder.append("\")");
       _builder.newLineIfNotEmpty();
@@ -227,7 +217,7 @@ public class ServiceGenerator {
       _builder.append(_name_8, "    ");
       _builder.append(" get");
       _builder.append(portName, "    ");
-      _builder.append("(WebServiceFeature... features) {");
+      _builder.append("(javax.xml.ws.WebServiceFeature... features) {");
       _builder.newLineIfNotEmpty();
       _builder.append("        ");
       _builder.append("return super.getPort(");

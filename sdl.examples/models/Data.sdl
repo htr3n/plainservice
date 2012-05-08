@@ -19,7 +19,7 @@ complex-data AllType {
 	e7 : time
 }
 
-complex-data ComplexMixedSubType {
+complex-data ComplexMixedSubType { 
 	e0 : string
 	e1 : integer
 	e2 : SimpleRequest

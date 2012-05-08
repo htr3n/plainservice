@@ -17,5 +17,5 @@ Service Greeting {
 	}
 }
 
-Node Test1 uri = "http://localhost:9999" hosts { HelloWorld, Greeting } 
+Node Test uri = "http://localhost:9999" hosts { HelloWorld, Greeting } 
 

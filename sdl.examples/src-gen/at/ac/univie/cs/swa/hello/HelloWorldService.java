@@ -2,15 +2,10 @@
 package at.ac.univie.cs.swa.hello;
 
 import java.net.URL;
-import javax.xml.namespace.QName;
-import javax.xml.ws.WebEndpoint;
-import javax.xml.ws.WebServiceClient;
-import javax.xml.ws.WebServiceFeature;
-import javax.xml.ws.Service;
 
-@WebServiceClient(name = "HelloWorld", 
+@javax.xml.ws.WebServiceClient(name = "HelloWorld", 
                   targetNamespace = "urn:at:ac:univie:cs:swa:hello") 
-public class HelloWorldService extends Service {
+public class HelloWorldService extends javax.xml.ws.Service {
 
     public static URL WSDL_LOCATION = null;
 
@@ -22,14 +17,14 @@ public class HelloWorldService extends Service {
 		}
     }
 
-    public final static QName SERVICE = new QName("urn:at:ac:univie:cs:swa:hello", "HelloWorld");
-    public final static QName helloWorldPort = new QName("urn:at:ac:univie:cs:swa:hello", "HelloWorldPort");
+    public final static javax.xml.namespace.QName SERVICE = new javax.xml.namespace.QName("urn:at:ac:univie:cs:swa:hello", "HelloWorld");
+    public final static javax.xml.namespace.QName helloWorldPort = new javax.xml.namespace.QName("urn:at:ac:univie:cs:swa:hello", "HelloWorldPort");
 
     public HelloWorldService(URL wsdlLocation) {
         super(wsdlLocation, SERVICE);
     }
 
-    public HelloWorldService(URL wsdlLocation, QName serviceName) {
+    public HelloWorldService(URL wsdlLocation, javax.xml.namespace.QName serviceName) {
         super(wsdlLocation, serviceName);
     }
 
@@ -37,13 +32,13 @@ public class HelloWorldService extends Service {
         super(WSDL_LOCATION, SERVICE);
     }
     
-    @WebEndpoint(name = "HelloWorldPort")
+    @javax.xml.ws.WebEndpoint(name = "HelloWorldPort")
     public HelloWorld getHelloWorld() {
         return super.getPort(helloWorldPort, HelloWorld.class);
     }
 
-    @WebEndpoint(name = "HelloWorldPort")
-    public HelloWorld getHelloWorldPort(WebServiceFeature... features) {
+    @javax.xml.ws.WebEndpoint(name = "HelloWorldPort")
+    public HelloWorld getHelloWorldPort(javax.xml.ws.WebServiceFeature... features) {
         return super.getPort(helloWorldPort, HelloWorld.class, features);
     }
 }

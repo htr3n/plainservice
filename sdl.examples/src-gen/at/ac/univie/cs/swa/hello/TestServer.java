@@ -2,7 +2,7 @@ package at.ac.univie.cs.swa.hello;
 
 import javax.xml.ws.Endpoint;
 
-public class Test1Server{
+public class TestServer{
 
     public static void main(String args[]) throws java.lang.Exception {
         System.out.println("Starting Server");

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry exported="true" kind="lib" path="asm-3.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-api-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-bindings-soap-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-bindings-xml-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-core-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-databinding-jaxb-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-frontend-jaxws-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-frontend-simple-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-transports-http-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-transports-http-jetty-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-transports-local-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-ws-addr-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="cxf-rt-ws-policy-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="geronimo-javamail_1.4_spec-1.7.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="geronimo-servlet_2.5_spec-1.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="jaxb-api-2.2.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="jaxb-impl-2.1.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="jetty-continuation-7.5.4.v20111024.jar"/>
+	<classpathentry exported="true" kind="lib" path="jetty-http-7.5.4.v20111024.jar"/>
+	<classpathentry exported="true" kind="lib" path="jetty-io-7.5.4.v20111024.jar"/>
+	<classpathentry exported="true" kind="lib" path="jetty-security-7.5.4.v20111024.jar"/>
+	<classpathentry exported="true" kind="lib" path="jetty-server-7.5.4.v20111024.jar"/>
+	<classpathentry exported="true" kind="lib" path="jetty-util-7.5.4.v20111024.jar"/>
+	<classpathentry exported="true" kind="lib" path="jsr181-api-1.0-MR1.jar"/>
+	<classpathentry exported="true" kind="lib" path="neethi-3.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="slf4j-api-1.6.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="stax2-api-3.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="woodstox-core-asl-4.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="wsdl4j-1.6.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="xml-resolver-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="xmlschema-core-2.0.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

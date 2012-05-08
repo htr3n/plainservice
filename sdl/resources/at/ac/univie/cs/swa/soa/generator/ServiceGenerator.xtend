@@ -28,15 +28,10 @@ class ServiceGenerator {
 package «packageName»;
 
 import java.net.URL;
-import javax.xml.namespace.QName;
-import javax.xml.ws.WebEndpoint;
-import javax.xml.ws.WebServiceClient;
-import javax.xml.ws.WebServiceFeature;
-import javax.xml.ws.Service;
 
-@WebServiceClient(name = "«s.name»", 
+@javax.xml.ws.WebServiceClient(name = "«s.name»", 
                   targetNamespace = "«nsURI»") 
-public class «className» extends Service {
+public class «className» extends javax.xml.ws.Service {
 
     public static URL WSDL_LOCATION = null;
 
@@ -48,14 +43,14 @@ public class «className» extends Service {
 		}
     }
 
-    public final static QName SERVICE = new QName("«nsURI»", "«s.name»");
-    public final static QName «portName.toFirstLower» = new QName("«nsURI»", "«portName»");
+    public final static javax.xml.namespace.QName SERVICE = new javax.xml.namespace.QName("«nsURI»", "«s.name»");
+    public final static javax.xml.namespace.QName «portName.toFirstLower» = new javax.xml.namespace.QName("«nsURI»", "«portName»");
 
     public «className»(URL wsdlLocation) {
         super(wsdlLocation, SERVICE);
     }
 
-    public «className»(URL wsdlLocation, QName serviceName) {
+    public «className»(URL wsdlLocation, javax.xml.namespace.QName serviceName) {
         super(wsdlLocation, serviceName);
     }
 
@@ -63,13 +58,13 @@ public class «className» extends Service {
         super(WSDL_LOCATION, SERVICE);
     }
     
-    @WebEndpoint(name = "«portName»")
+    @javax.xml.ws.WebEndpoint(name = "«portName»")
     public «s.name» get«s.name»() {
         return super.getPort(«portName.toFirstLower», «s.name».class);
     }
 
-    @WebEndpoint(name = "«portName»")
-    public «s.name» get«portName»(WebServiceFeature... features) {
+    @javax.xml.ws.WebEndpoint(name = "«portName»")
+    public «s.name» get«portName»(javax.xml.ws.WebServiceFeature... features) {
         return super.getPort(«portName.toFirstLower», «s.name».class, features);
     }
 }
