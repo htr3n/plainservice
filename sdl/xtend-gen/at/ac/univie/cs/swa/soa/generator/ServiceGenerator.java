@@ -21,10 +21,10 @@ public class ServiceGenerator {
       String _name = dsl.getName();
       String _lowerCase = _name.toLowerCase();
       String _replace = _lowerCase.replace(".", File.separator);
-      String packagePath = _replace;
+      final String packagePath = _replace;
       EList<Service> _services = dsl.getServices();
       Iterable<Service> _filter = IterableExtensions.<Service>filter(_services, at.ac.univie.cs.swa.soa.sdl.Service.class);
-      Iterable<Service> webServices = _filter;
+      final Iterable<Service> webServices = _filter;
       Object _xifexpression = null;
       boolean _operator_and = false;
       boolean _operator_notEquals = ObjectExtensions.operator_notEquals(webServices, null);
@@ -42,7 +42,7 @@ public class ServiceGenerator {
             String _name_1 = s.getName();
             String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, _name_1);
             String _operator_plus_2 = StringExtensions.operator_plus(_operator_plus_1, "Service.java");
-            String file = _operator_plus_2;
+            final String file = _operator_plus_2;
             CharSequence _generate = this.generate(dsl, s);
             fsa.generateFile(file, _generate);
           }
@@ -58,17 +58,17 @@ public class ServiceGenerator {
     {
       String _name = dsl.getName();
       String _lowerCase = _name.toLowerCase();
-      String packageName = _lowerCase;
+      final String packageName = _lowerCase;
       String _name_1 = s.getName();
       String _operator_plus = StringExtensions.operator_plus(_name_1, "Service");
-      String className = _operator_plus;
+      final String className = _operator_plus;
       String _replace = packageName.replace(".", ":");
       String _lowerCase_1 = _replace.toLowerCase();
       String _operator_plus_1 = StringExtensions.operator_plus("urn:", _lowerCase_1);
-      String nsURI = _operator_plus_1;
+      final String nsURI = _operator_plus_1;
       String _name_2 = s.getName();
       String _operator_plus_2 = StringExtensions.operator_plus(_name_2, "Port");
-      String portName = _operator_plus_2;
+      final String portName = _operator_plus_2;
       StringConcatenation _builder = new StringConcatenation();
       _builder.newLine();
       _builder.append("package ");
@@ -282,7 +282,7 @@ public class ServiceGenerator {
                 int _length = url.length();
                 int _operator_minus = IntegerExtensions.operator_minus(_length, 1);
                 String _substring = url.substring(_operator_minus);
-                String endingSlash = _substring;
+                final String endingSlash = _substring;
                 boolean _operator_notEquals_3 = ObjectExtensions.operator_notEquals(endingSlash, "/");
                 if (_operator_notEquals_3) {
                   String _operator_plus = StringExtensions.operator_plus(url, "/");

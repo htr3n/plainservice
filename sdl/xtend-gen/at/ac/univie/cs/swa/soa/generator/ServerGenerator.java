@@ -20,9 +20,9 @@ public class ServerGenerator {
       String _name = dsl.getName();
       String _lowerCase = _name.toLowerCase();
       String _replace = _lowerCase.replace(".", File.separator);
-      String packagePath = _replace;
+      final String packagePath = _replace;
       EList<Node> _nodes = dsl.getNodes();
-      EList<Node> nodes = _nodes;
+      final EList<Node> nodes = _nodes;
       Object _xifexpression = null;
       boolean _operator_and = false;
       boolean _operator_notEquals = ObjectExtensions.operator_notEquals(nodes, null);
@@ -50,12 +50,12 @@ public class ServerGenerator {
             {
               String _name_3 = node.getName();
               String _replace_1 = _name_3.replace("^", "");
-              String hostName = _replace_1;
+              final String hostName = _replace_1;
               String _operator_plus = StringExtensions.operator_plus(packagePath, File.separator);
               String _firstUpper = StringExtensions.toFirstUpper(hostName);
               String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, _firstUpper);
               String _operator_plus_2 = StringExtensions.operator_plus(_operator_plus_1, "Server.java");
-              String file = _operator_plus_2;
+              final String file = _operator_plus_2;
               CharSequence _generate = this.generate(dsl, node);
               fsa.generateFile(file, _generate);
             }
@@ -72,12 +72,12 @@ public class ServerGenerator {
     {
       String _name = dsl.getName();
       String _lowerCase = _name.toLowerCase();
-      String packageName = _lowerCase;
+      final String packageName = _lowerCase;
       String _name_1 = node.getName();
       String _replace = _name_1.replace("^", "");
       String _firstUpper = StringExtensions.toFirstUpper(_replace);
       String _operator_plus = StringExtensions.operator_plus(_firstUpper, "Server");
-      String className = _operator_plus;
+      final String className = _operator_plus;
       String _baseURI = node.getBaseURI();
       String address = _baseURI;
       boolean _operator_and = false;
@@ -94,7 +94,7 @@ public class ServerGenerator {
           int _length = address.length();
           int _operator_minus = IntegerExtensions.operator_minus(_length, 1);
           String _substring = address.substring(_operator_minus);
-          String endingSlash = _substring;
+          final String endingSlash = _substring;
           boolean _operator_notEquals_1 = ObjectExtensions.operator_notEquals(endingSlash, "/");
           if (_operator_notEquals_1) {
             String _operator_plus_1 = StringExtensions.operator_plus(address, "/");

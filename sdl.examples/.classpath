@@ -2,5 +2,36 @@
 <classpath>
 	<classpathentry kind="src" path="src-gen"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/sdl.cxf/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-api-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-bindings-soap-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-bindings-xml-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-core-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-databinding-jaxb-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-frontend-jaxws-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-frontend-simple-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-transports-http-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-transports-http-jetty-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-transports-local-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-ws-addr-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/cxf-rt-ws-policy-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/geronimo-javamail_1.4_spec-1.7.1.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/geronimo-servlet_2.5_spec-1.1.2.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/jaxb-api-2.2.6.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/jaxb-impl-2.1.13.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/jetty-continuation-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/jetty-http-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/jetty-io-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/jetty-security-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/jetty-server-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/jetty-util-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/jsr181-api-1.0-MR1.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/neethi-3.0.2.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/slf4j-api-1.6.2.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/stax2-api-3.1.1.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/woodstox-core-asl-4.1.2.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/wsdl4j-1.6.2.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/xml-resolver-1.2.jar"/>
+	<classpathentry kind="lib" path="/sdl.cxf/xmlschema-core-2.0.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

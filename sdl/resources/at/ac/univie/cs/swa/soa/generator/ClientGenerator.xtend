@@ -10,21 +10,21 @@ import at.ac.univie.cs.swa.soa.sdl.Service
 class ClientGenerator {
 	
 	def generateClient(IFileSystemAccess fsa, SDL dsl){
-		var packagePath = dsl.name.toLowerCase.replace(".", java::io::File::separator)
-		var webServices = dsl.services.filter(typeof(Service))
+		val packagePath = dsl.name.toLowerCase.replace(".", java::io::File::separator)
+		val webServices = dsl.services.filter(typeof(Service))
 		 
 		if (webServices != null && !webServices.empty){
 			for (s : webServices){
-				var file = packagePath + File::separator + s.name +"Client.java"
+				val file = packagePath + File::separator + s.name +"Client.java"
 				fsa.generateFile(file, generate(dsl, s))
 			}			
 		}
 	}
 	
 	def protected generate(SDL dsl, Service s){			
-		var packageName = dsl.name.toLowerCase
-		var className = s.name + "Client" 
-		var serviceQualifiedPath = if (s != null) (s.eContainer as SDL).name else null
+		val packageName = dsl.name.toLowerCase
+		val className = s.name + "Client" 
+		val serviceQualifiedPath = if (s != null) (s.eContainer as SDL).name else null
 		'''
 		package «packageName»;
 
@@ -47,10 +47,10 @@ public final class «className» {
 	}
 	
 	def protected generateOperationInvocation(Operation operation){
-		var hasInput = operation.inputType != null && operation.inputType.name != null && !operation.inputType.name.empty	
-		var hasOutput = operation.outputType != null && operation.outputType.name != null && !operation.outputType.name.empty
-		var inputQualifiedPath = if (operation.inputType != null) (operation.inputType.eContainer as SDL).name else null
-		var outputQualifiedPath = if (operation.outputType != null) (operation.outputType.eContainer as SDL).name else null
+		val hasInput = operation.inputType != null && operation.inputType.name != null && !operation.inputType.name.empty	
+		val hasOutput = operation.outputType != null && operation.outputType.name != null && !operation.outputType.name.empty
+		val inputQualifiedPath = if (operation.inputType != null) (operation.inputType.eContainer as SDL).name else null
+		val outputQualifiedPath = if (operation.outputType != null) (operation.outputType.eContainer as SDL).name else null
 
 		'''
 		«IF hasInput»

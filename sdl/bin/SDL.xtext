@@ -47,7 +47,7 @@ SimpleElement:
 	(multiplicity=MULTIPLICITY)?;
 
 enum DATATYPE:
-	string | integer | float | date | time | datetime | binary | boolean;
+	string='string' | integer='integer' | float='float' | date='date' | time='time' | datetime='dateTime' | binary='binary' | boolean='boolean';
 
 enum MULTIPLICITY:
 	OPTIONAL='?' | PLUS='+' | STAR='*'

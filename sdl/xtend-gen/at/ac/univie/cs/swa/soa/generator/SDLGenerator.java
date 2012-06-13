@@ -20,10 +20,16 @@ import org.eclipse.xtext.xbase.lib.StringExtensions;
 @SuppressWarnings("all")
 public class SDLGenerator implements IGenerator2 {
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
-      EList<EObject> _contents = resource.getContents();
-      EObject _head = IterableExtensions.<EObject>head(_contents);
-      SDL dsl = ((SDL) _head);
-      this.toJavaCode(fsa, dsl);
+    EList<EObject> _contents = resource.getContents();
+    EObject _head = IterableExtensions.<EObject>head(_contents);
+    if ((_head instanceof SDL)) {
+      {
+        EList<EObject> _contents_1 = resource.getContents();
+        EObject _head_1 = IterableExtensions.<EObject>head(_contents_1);
+        final SDL dsl = ((SDL) _head_1);
+        this.toJavaCode(fsa, dsl);
+      }
+    }
   }
   
   public Object toJavaCode(final IFileSystemAccess fsa, final SDL dsl) {

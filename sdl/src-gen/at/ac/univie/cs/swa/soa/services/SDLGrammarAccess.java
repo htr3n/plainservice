@@ -530,17 +530,17 @@ public class SDLGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cTimeEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
 		private final Keyword cTimeTimeKeyword_4_0 = (Keyword)cTimeEnumLiteralDeclaration_4.eContents().get(0);
 		private final EnumLiteralDeclaration cDatetimeEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
-		private final Keyword cDatetimeDatetimeKeyword_5_0 = (Keyword)cDatetimeEnumLiteralDeclaration_5.eContents().get(0);
+		private final Keyword cDatetimeDateTimeKeyword_5_0 = (Keyword)cDatetimeEnumLiteralDeclaration_5.eContents().get(0);
 		private final EnumLiteralDeclaration cBinaryEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
 		private final Keyword cBinaryBinaryKeyword_6_0 = (Keyword)cBinaryEnumLiteralDeclaration_6.eContents().get(0);
 		private final EnumLiteralDeclaration cBooleanEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
 		private final Keyword cBooleanBooleanKeyword_7_0 = (Keyword)cBooleanEnumLiteralDeclaration_7.eContents().get(0);
 		
 		//enum DATATYPE:
-		//	string | integer | float | date | time | datetime | binary | boolean;
+		//	string | integer | float | date | time | datetime="dateTime" | binary | boolean;
 		public EnumRule getRule() { return rule; }
 
-		//string | integer | float | date | time | datetime | binary | boolean
+		//string | integer | float | date | time | datetime="dateTime" | binary | boolean
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//string
@@ -573,11 +573,11 @@ public class SDLGrammarAccess extends AbstractGrammarElementFinder {
 		//"time"
 		public Keyword getTimeTimeKeyword_4_0() { return cTimeTimeKeyword_4_0; }
 
-		//datetime
+		//datetime="dateTime"
 		public EnumLiteralDeclaration getDatetimeEnumLiteralDeclaration_5() { return cDatetimeEnumLiteralDeclaration_5; }
 
-		//"datetime"
-		public Keyword getDatetimeDatetimeKeyword_5_0() { return cDatetimeDatetimeKeyword_5_0; }
+		//"dateTime"
+		public Keyword getDatetimeDateTimeKeyword_5_0() { return cDatetimeDateTimeKeyword_5_0; }
 
 		//binary
 		public EnumLiteralDeclaration getBinaryEnumLiteralDeclaration_6() { return cBinaryEnumLiteralDeclaration_6; }
@@ -734,7 +734,7 @@ public class SDLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum DATATYPE:
-	//	string | integer | float | date | time | datetime | binary | boolean;
+	//	string | integer | float | date | time | datetime="dateTime" | binary | boolean;
 	public DATATYPEElements getDATATYPEAccess() {
 		return (unknownRuleDATATYPE != null) ? unknownRuleDATATYPE : (unknownRuleDATATYPE = new DATATYPEElements());
 	}

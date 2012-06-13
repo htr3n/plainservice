@@ -50,7 +50,7 @@
     <eLiterals name="float" value="2" literal="float"/>
     <eLiterals name="date" value="3" literal="date"/>
     <eLiterals name="time" value="4" literal="time"/>
-    <eLiterals name="datetime" value="5" literal="datetime"/>
+    <eLiterals name="datetime" value="5" literal="dateTime"/>
     <eLiterals name="binary" value="6" literal="binary"/>
     <eLiterals name="boolean" value="7" literal="boolean"/>
   </eClassifiers>

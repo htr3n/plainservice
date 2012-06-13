@@ -80,7 +80,7 @@ public enum DATATYPE implements Enumerator
    * @generated
    * @ordered
    */
-  DATETIME(5, "datetime", "datetime"),
+  DATETIME(5, "datetime", "dateTime"),
 
   /**
    * The '<em><b>Binary</b></em>' literal object.
@@ -186,7 +186,7 @@ public enum DATATYPE implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #DATETIME
-   * @model name="datetime"
+   * @model name="datetime" literal="dateTime"
    * @generated
    * @ordered
    */

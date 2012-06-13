@@ -11,8 +11,10 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 class SDLGenerator implements IGenerator2 {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		var dsl = resource.contents.head as SDL
-		toJavaCode(fsa, dsl)
+		if (resource.contents.head instanceof SDL){
+			val dsl = resource.contents.head as SDL
+			toJavaCode(fsa, dsl)
+		}
 	}
 	
 	def toJavaCode(IFileSystemAccess fsa, SDL dsl) {

@@ -9,20 +9,20 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 class SEIGenerator {
 	
 	def generateSEI(IFileSystemAccess fsa, SDL dsl){
-		var packagePath = dsl.name.toLowerCase.replace(".", File::separator)
-		var webServices = dsl.services.filter(typeof(Service))
+		val packagePath = dsl.name.toLowerCase.replace(".", File::separator)
+		val webServices = dsl.services.filter(typeof(Service))
 		 
 		if (webServices != null && !webServices.empty){
 			for (s : webServices){
-				var file = packagePath + File::separator + s.name + ".java"
+				val file = packagePath + File::separator + s.name + ".java"
 				fsa.generateFile(file, generate(s, dsl))
 			}			
 		}
 	}
 	
 	def protected generate(Service s, SDL dsl){			
-		var packageName = dsl.name.toLowerCase 
-		var nsURI = "urn:" + packageName.replace('.', ':')
+		val packageName = dsl.name.toLowerCase 
+		val nsURI = "urn:" + packageName.replace('.', ':')
 		'''
 package «packageName»;
 
@@ -39,12 +39,12 @@ public interface «s.name» {
 	}
 
 	def protected generateOperation(Operation operation, SDL dsl){
-		var hasInput = operation.inputType != null && operation.inputType.name != null && !operation.inputType.name.empty	
-		var hasOutput = operation.outputType != null && operation.outputType.name != null && !operation.outputType.name.empty
-		var inputQualifiedPath = if (operation.inputType != null) (operation.inputType.eContainer as SDL).name else null
-		var outputQualifiedPath = if (operation.outputType != null) (operation.outputType.eContainer as SDL).name else null
-		var inputNsURI = if (inputQualifiedPath != null) "urn:" + inputQualifiedPath.replace('.', ':') else null 
-		var outputNsURI = if (outputQualifiedPath != null) "urn:" + outputQualifiedPath.replace('.', ':') else null 
+		val hasInput = operation.inputType != null && operation.inputType.name != null && !operation.inputType.name.empty	
+		val hasOutput = operation.outputType != null && operation.outputType.name != null && !operation.outputType.name.empty
+		val inputQualifiedPath = if (operation.inputType != null) (operation.inputType.eContainer as SDL).name else null
+		val outputQualifiedPath = if (operation.outputType != null) (operation.outputType.eContainer as SDL).name else null
+		val inputNsURI = if (inputQualifiedPath != null) "urn:" + inputQualifiedPath.replace('.', ':') else null 
+		val outputNsURI = if (outputQualifiedPath != null) "urn:" + outputQualifiedPath.replace('.', ':') else null 
 		'''
 
 		«IF hasOutput»

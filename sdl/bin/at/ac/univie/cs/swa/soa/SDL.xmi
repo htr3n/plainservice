@@ -240,7 +240,7 @@
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://cs.univie.ac.at/swa/soa/sdl#//DATATYPE/datetime"/>
-          <literal value="datetime"/>
+          <literal value="dateTime"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://cs.univie.ac.at/swa/soa/sdl#//DATATYPE/binary"/>

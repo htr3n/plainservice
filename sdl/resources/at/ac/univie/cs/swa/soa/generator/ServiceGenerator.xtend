@@ -8,21 +8,21 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 class ServiceGenerator {
 	
 	def generateService(IFileSystemAccess fsa, SDL dsl){
-		var packagePath = dsl.name.toLowerCase.replace(".", File::separator)
-		var webServices = dsl.services.filter(typeof(Service))
+		val packagePath = dsl.name.toLowerCase.replace(".", File::separator)
+		val webServices = dsl.services.filter(typeof(Service))
 		 
 		if (webServices != null && !webServices.empty){
 			for (s : webServices){
-				var file = packagePath + File::separator + s.name + "Service.java"
+				val file = packagePath + File::separator + s.name + "Service.java"
 				fsa.generateFile(file, generate(dsl, s))
 			}			
 		}
 	}
 	def protected generate(SDL dsl, Service s){			
-		var packageName = dsl.name.toLowerCase
-		var className = s.name + "Service" 
-		var nsURI = "urn:" + packageName.replace(".", ":").toLowerCase
-		var portName = s.name + "Port"
+		val packageName = dsl.name.toLowerCase
+		val className = s.name + "Service" 
+		val nsURI = "urn:" + packageName.replace(".", ":").toLowerCase
+		val portName = s.name + "Port"
 		'''
 
 package «packageName»;
@@ -77,7 +77,7 @@ public class «className» extends javax.xml.ws.Service {
 				if (node.services != null && node.services.contains(s)){
 					var url = node.baseURI
 					if (url != null && !url.empty){
-						var endingSlash = url.substring(url.length - 1)
+						val endingSlash = url.substring(url.length - 1)
 						if (endingSlash != "/")
 							url = url + "/"; 
 						return url + s.name + "?wsdl";	

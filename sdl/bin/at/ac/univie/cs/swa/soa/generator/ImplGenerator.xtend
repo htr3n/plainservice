@@ -9,21 +9,21 @@ import at.ac.univie.cs.swa.soa.sdl.SDL
 class ImplGenerator {
 	
 	def generateImpl(IFileSystemAccess fsa, SDL dsl){
-		var packagePath = dsl.name.toLowerCase.replace(".", File::separator)
-		var webServices = dsl.services.filter(typeof(Service))
+		val packagePath = dsl.name.toLowerCase.replace(".", File::separator)
+		val webServices = dsl.services.filter(typeof(Service))
 		 
 		if (webServices != null && !webServices.empty){
 			for (s : webServices){
-				var file = packagePath + File::separator + s.name + "Impl.java"
+				val file = packagePath + File::separator + s.name + "Impl.java"
 				fsa.generateFile(file, s.generate(dsl))
 			}			
 		}
 	}
 	
 	def protected generate(Service s, SDL dsl){			
-		var packageName = dsl.name.toLowerCase
-		var className = s.name + "Impl" 
-		var nsURI = "urn:" + packageName.replace('.', ':')
+		val packageName = dsl.name.toLowerCase
+		val className = s.name + "Impl" 
+		val nsURI = "urn:" + packageName.replace('.', ':')
 		'''
 package «packageName»;
 
@@ -45,10 +45,10 @@ public class «className» implements «s.name» {
 	}
 	
 	def protected generateOperation(Operation o){
-		var hasInput = o.inputType != null && o.inputType.name != null && !o.inputType.name.empty	
-		var hasOutput = o.outputType != null && o.outputType.name != null && !o.outputType.name.empty	
-		var inputQualifiedPath = if (o.inputType != null) (o.inputType.eContainer as SDL).name else null
-		var outputQualifiedPath = if (o.outputType != null) (o.outputType.eContainer as SDL).name else null
+		val hasInput = o.inputType != null && o.inputType.name != null && !o.inputType.name.empty	
+		val hasOutput = o.outputType != null && o.outputType.name != null && !o.outputType.name.empty	
+		val inputQualifiedPath = if (o.inputType != null) (o.inputType.eContainer as SDL).name else null
+		val outputQualifiedPath = if (o.outputType != null) (o.outputType.eContainer as SDL).name else null
 	'''
 	@Override
 	public «IF hasOutput»«outputQualifiedPath».«o.outputType.name»«ELSE»void«ENDIF» «o.name»(«IF hasInput»«inputQualifiedPath».«o.inputType.name»«ENDIF» «o.inputName») {

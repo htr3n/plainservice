@@ -894,7 +894,7 @@ ruleDATATYPE returns [Enumerator current=null]
         newLeafNode(enumLiteral_4, grammarAccess.getDATATYPEAccess().getTimeEnumLiteralDeclaration_4()); 
     }
 )
-    |(	enumLiteral_5='datetime' 
+    |(	enumLiteral_5='dateTime' 
 	{
         $current = grammarAccess.getDATATYPEAccess().getDatetimeEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_5, grammarAccess.getDATATYPEAccess().getDatetimeEnumLiteralDeclaration_5()); 

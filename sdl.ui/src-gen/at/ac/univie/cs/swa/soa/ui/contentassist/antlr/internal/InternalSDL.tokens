@@ -41,10 +41,10 @@ RULE_WS=9
 'hosts'=33
 '.*'=37
 'Node'=30
-'datetime'=16
 'module'=22
 '='=32
 '+'=20
+'dateTime'=16
 '.'=36
 'operation'=26
 'import'=38

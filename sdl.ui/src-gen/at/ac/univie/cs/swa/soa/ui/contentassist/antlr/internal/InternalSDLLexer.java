@@ -172,10 +172,10 @@ public class InternalSDLLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:16:7: ( 'datetime' )
-            // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:16:9: 'datetime'
+            // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:16:7: ( 'dateTime' )
+            // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:16:9: 'dateTime'
             {
-            match("datetime"); 
+            match("dateTime"); 
 
 
             }
@@ -1552,7 +1552,7 @@ public class InternalSDLLexer extends Lexer {
             "\1\143",
             "\1\144",
             "\1\145",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\23\40\1\146\6\40",
+            "\12\40\7\uffff\23\40\1\146\6\40\4\uffff\1\40\1\uffff\32\40",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\151",
             "\1\152",

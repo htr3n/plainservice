@@ -489,7 +489,7 @@ rule__DATATYPE__Alternatives
 
     |(
 { before(grammarAccess.getDATATYPEAccess().getDatetimeEnumLiteralDeclaration_5()); }
-(	'datetime' 
+(	'dateTime' 
 )
 { after(grammarAccess.getDATATYPEAccess().getDatetimeEnumLiteralDeclaration_5()); }
 )

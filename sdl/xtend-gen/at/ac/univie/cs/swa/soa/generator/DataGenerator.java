@@ -37,10 +37,10 @@ public class DataGenerator {
         String _name = dsl.getName();
         String _lowerCase = _name.toLowerCase();
         String _replace = _lowerCase.replace(".", File.separator);
-        String packagePath = _replace;
+        final String packagePath = _replace;
         EList<DataElement> _data_2 = dsl.getData();
         Iterable<ComplexElement> _filter = IterableExtensions.<ComplexElement>filter(_data_2, at.ac.univie.cs.swa.soa.sdl.ComplexElement.class);
-        Iterable<ComplexElement> complexTypes = _filter;
+        final Iterable<ComplexElement> complexTypes = _filter;
         boolean _operator_and_1 = false;
         boolean _operator_notEquals_1 = ObjectExtensions.operator_notEquals(complexTypes, null);
         if (!_operator_notEquals_1) {
@@ -57,7 +57,7 @@ public class DataGenerator {
               String _name_1 = t.getName();
               String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, _name_1);
               String _operator_plus_2 = StringExtensions.operator_plus(_operator_plus_1, ".java");
-              String file = _operator_plus_2;
+              final String file = _operator_plus_2;
               CharSequence _generateElement = this.generateElement(t, dsl);
               fsa.generateFile(file, _generateElement);
             }
@@ -81,7 +81,7 @@ public class DataGenerator {
     {
       String _name = dsl.getName();
       String _lowerCase = _name.toLowerCase();
-      String packageName = _lowerCase;
+      final String packageName = _lowerCase;
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("package ");
       _builder.append(packageName, "");
@@ -144,10 +144,10 @@ public class DataGenerator {
       String _lowerCase = _name.toLowerCase();
       String _replace = _lowerCase.replace(".", ":");
       String _operator_plus = StringExtensions.operator_plus("urn:", _replace);
-      String nsURI = _operator_plus;
+      final String nsURI = _operator_plus;
       String _name_1 = dsl.getName();
       String _lowerCase_1 = _name_1.toLowerCase();
-      String packageName = _lowerCase_1;
+      final String packageName = _lowerCase_1;
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("@javax.xml.bind.annotation.XmlSchema(namespace = \"");
       _builder.append(nsURI, "");
@@ -167,9 +167,9 @@ public class DataGenerator {
     {
       String _name = dsl.getName();
       String _lowerCase = _name.toLowerCase();
-      String packageName = _lowerCase;
+      final String packageName = _lowerCase;
       String _name_1 = e.getName();
-      String className = _name_1;
+      final String className = _name_1;
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("package ");
       _builder.append(packageName, "");
@@ -354,7 +354,7 @@ public class DataGenerator {
         boolean _operator_equals_1 = ObjectExtensions.operator_equals(_multiplicity_1, MULTIPLICITY.STAR);
         _operator_or = BooleanExtensions.operator_or(_operator_equals, _operator_equals_1);
       }
-      boolean isMany = _operator_or;
+      final boolean isMany = _operator_or;
       ComplexElement _ref = e.getRef();
       boolean _operator_notEquals = ObjectExtensions.operator_notEquals(_ref, null);
       if (_operator_notEquals) {
@@ -362,12 +362,12 @@ public class DataGenerator {
           ComplexElement _ref_1 = e.getRef();
           EObject _eContainer = _ref_1.eContainer();
           String _name = ((SDL) _eContainer).getName();
-          String outputQualifiedPath = _name;
+          final String outputQualifiedPath = _name;
           String _operator_plus = StringExtensions.operator_plus(outputQualifiedPath, ".");
           ComplexElement _ref_2 = e.getRef();
           String _name_1 = _ref_2.getName();
           String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, _name_1);
-          String result = _operator_plus_1;
+          final String result = _operator_plus_1;
           if (isMany) {
             String _operator_plus_2 = StringExtensions.operator_plus("java.util.List<", result);
             String _operator_plus_3 = StringExtensions.operator_plus(_operator_plus_2, ">");
@@ -383,7 +383,7 @@ public class DataGenerator {
           {
             DATATYPE _type_1 = e.getType();
             String _javaType = this.toJavaType(_type_1);
-            String result_1 = _javaType;
+            final String result_1 = _javaType;
             if (isMany) {
               String _operator_plus_4 = StringExtensions.operator_plus("java.util.List<", result_1);
               String _operator_plus_5 = StringExtensions.operator_plus(_operator_plus_4, ">");

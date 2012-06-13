@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSDLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'string'", "'integer'", "'float'", "'date'", "'time'", "'datetime'", "'binary'", "'boolean'", "'?'", "'+'", "'*'", "'module'", "'Service'", "'{'", "'}'", "'operation'", "'input'", "':'", "'output'", "'Node'", "'uri'", "'='", "'hosts'", "','", "'complex-data'", "'.'", "'.*'", "'import'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'string'", "'integer'", "'float'", "'date'", "'time'", "'dateTime'", "'binary'", "'boolean'", "'?'", "'+'", "'*'", "'module'", "'Service'", "'{'", "'}'", "'operation'", "'input'", "':'", "'output'", "'Node'", "'uri'", "'='", "'hosts'", "','", "'complex-data'", "'.'", "'.*'", "'import'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -1259,13 +1259,13 @@ public class InternalSDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DATATYPE__Alternatives"
-    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:450:1: rule__DATATYPE__Alternatives : ( ( ( 'string' ) ) | ( ( 'integer' ) ) | ( ( 'float' ) ) | ( ( 'date' ) ) | ( ( 'time' ) ) | ( ( 'datetime' ) ) | ( ( 'binary' ) ) | ( ( 'boolean' ) ) );
+    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:450:1: rule__DATATYPE__Alternatives : ( ( ( 'string' ) ) | ( ( 'integer' ) ) | ( ( 'float' ) ) | ( ( 'date' ) ) | ( ( 'time' ) ) | ( ( 'dateTime' ) ) | ( ( 'binary' ) ) | ( ( 'boolean' ) ) );
     public final void rule__DATATYPE__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:454:1: ( ( ( 'string' ) ) | ( ( 'integer' ) ) | ( ( 'float' ) ) | ( ( 'date' ) ) | ( ( 'time' ) ) | ( ( 'datetime' ) ) | ( ( 'binary' ) ) | ( ( 'boolean' ) ) )
+            // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:454:1: ( ( ( 'string' ) ) | ( ( 'integer' ) ) | ( ( 'float' ) ) | ( ( 'date' ) ) | ( ( 'time' ) ) | ( ( 'dateTime' ) ) | ( ( 'binary' ) ) | ( ( 'boolean' ) ) )
             int alt4=8;
             switch ( input.LA(1) ) {
             case 11:
@@ -1422,14 +1422,14 @@ public class InternalSDLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:490:6: ( ( 'datetime' ) )
+                    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:490:6: ( ( 'dateTime' ) )
                     {
-                    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:490:6: ( ( 'datetime' ) )
-                    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:491:1: ( 'datetime' )
+                    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:490:6: ( ( 'dateTime' ) )
+                    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:491:1: ( 'dateTime' )
                     {
                      before(grammarAccess.getDATATYPEAccess().getDatetimeEnumLiteralDeclaration_5()); 
-                    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:492:1: ( 'datetime' )
-                    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:492:3: 'datetime'
+                    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:492:1: ( 'dateTime' )
+                    // ../sdl.ui/src-gen/at/ac/univie/cs/swa/soa/ui/contentassist/antlr/internal/InternalSDL.g:492:3: 'dateTime'
                     {
                     match(input,16,FOLLOW_16_in_rule__DATATYPE__Alternatives1017); 
 

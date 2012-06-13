@@ -8,13 +8,13 @@ import at.ac.univie.cs.swa.soa.sdl.SDL
 class ServerGenerator {
 	
 	def generateServer(IFileSystemAccess fsa, SDL dsl){
-		var packagePath = dsl.name.toLowerCase.replace(".", java::io::File::separator)
-		var nodes = dsl.nodes
+		val packagePath = dsl.name.toLowerCase.replace(".", java::io::File::separator)
+		val nodes = dsl.nodes
 		if (nodes != null && !nodes.empty){
 			for (node : nodes){
 				if (node.name != null && !node.name.empty){
-					var hostName = node.name.replace('^', '')  
-					var file = packagePath + File::separator + hostName.toFirstUpper + "Server.java"
+					val hostName = node.name.replace('^', '')  
+					val file = packagePath + File::separator + hostName.toFirstUpper + "Server.java"
 					fsa.generateFile(file, generate(dsl, node))
 				}
 			}			
@@ -22,11 +22,11 @@ class ServerGenerator {
 	}
 	
 	def protected generate(SDL dsl, Node node){			
-		var packageName = dsl.name.toLowerCase
-		var className = node.name.replace('^', '').toFirstUpper + "Server"
+		val packageName = dsl.name.toLowerCase
+		val className = node.name.replace('^', '').toFirstUpper + "Server"
 		var address = node.baseURI
 		if (address != null && !address.empty){
-			var endingSlash = address.substring(address.length - 1)
+			val endingSlash = address.substring(address.length - 1)
 			if (endingSlash != "/")
 				address = address + "/"; 
 		}

@@ -41,10 +41,10 @@ RULE_WS=9
 'time'=32
 'Node'=19
 '.*'=26
-'datetime'=33
 'module'=11
 '='=21
 '+'=37
+'dateTime'=33
 '.'=25
 'operation'=14
 'import'=27

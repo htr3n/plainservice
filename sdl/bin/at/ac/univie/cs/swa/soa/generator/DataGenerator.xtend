@@ -12,11 +12,11 @@ class DataGenerator {
 	
 	def generateData(IFileSystemAccess fsa, SDL dsl){
 		if (dsl.data != null && !dsl.data.empty){
-			var packagePath = dsl.name.toLowerCase.replace(".", java::io::File::separator)
-			var complexTypes = dsl.data.filter(typeof(ComplexElement))
+			val packagePath = dsl.name.toLowerCase.replace(".", java::io::File::separator)
+			val complexTypes = dsl.data.filter(typeof(ComplexElement))
 			if (complexTypes != null && !complexTypes.empty){
 				for (t : complexTypes){
-					var file = packagePath + File::separator + t.name + ".java"
+					val file = packagePath + File::separator + t.name + ".java"
 					fsa.generateFile(file, t.generateElement(dsl))					
 				}			
 			}
@@ -26,7 +26,7 @@ class DataGenerator {
 	}
 	
 	def protected generateObjectFactory(SDL dsl, Iterable<ComplexElement> complexTypes){
-		var packageName = dsl.name.toLowerCase
+		val packageName = dsl.name.toLowerCase
 		'''
 package «packageName»;
 
@@ -49,8 +49,8 @@ public class ObjectFactory
 	
 	
 	def protected generatePackageInfo(SDL dsl){
-		var nsURI = "urn:" + dsl.name.toLowerCase.replace(".", ":")
-		var packageName = dsl.name.toLowerCase
+		val nsURI = "urn:" + dsl.name.toLowerCase.replace(".", ":")
+		val packageName = dsl.name.toLowerCase
 		'''
 @javax.xml.bind.annotation.XmlSchema(namespace = "«nsURI»", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package «packageName»;
@@ -58,8 +58,8 @@ package «packageName»;
 	}
 		
 	def protected dispatch generateElement(ComplexElement e, SDL dsl){			
-		var packageName = dsl.name.toLowerCase
-		var className = e.name  
+		val packageName = dsl.name.toLowerCase
+		val className = e.name  
 		'''
 package «packageName»;
 
@@ -103,16 +103,16 @@ public class «className» {
 	}
 	
 	def protected String convertType(SimpleElement e){
-		var boolean isMany = (e.multiplicity == MULTIPLICITY::PLUS  || e.multiplicity == MULTIPLICITY::STAR) 
+		val boolean isMany = (e.multiplicity == MULTIPLICITY::PLUS  || e.multiplicity == MULTIPLICITY::STAR) 
 		if (e.ref != null){
-			var outputQualifiedPath = (e.ref.eContainer as SDL).name
-			var result = outputQualifiedPath + "." + e.ref.name 
+			val outputQualifiedPath = (e.ref.eContainer as SDL).name
+			val result = outputQualifiedPath + "." + e.ref.name 
 			if (isMany)
 				return "java.util.List<" + result + ">"
 			else 
 				return result
 		} else if (e.type != null) {
-			var result = e.type.toJavaType 
+			val result = e.type.toJavaType 
 			if (isMany)
 				return "java.util.List<" + result + ">"
 			else 

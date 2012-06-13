@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSDLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'module'", "'Service'", "'{'", "'operation'", "'}'", "'input'", "':'", "'output'", "'Node'", "'uri'", "'='", "'hosts'", "','", "'complex-data'", "'.'", "'.*'", "'import'", "'string'", "'integer'", "'float'", "'date'", "'time'", "'datetime'", "'binary'", "'boolean'", "'?'", "'+'", "'*'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'module'", "'Service'", "'{'", "'operation'", "'}'", "'input'", "':'", "'output'", "'Node'", "'uri'", "'='", "'hosts'", "','", "'complex-data'", "'.'", "'.*'", "'import'", "'string'", "'integer'", "'float'", "'date'", "'time'", "'dateTime'", "'binary'", "'boolean'", "'?'", "'+'", "'*'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -2026,7 +2026,7 @@ public class InternalSDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDATATYPE"
-    // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:864:1: ruleDATATYPE returns [Enumerator current=null] : ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) ) ;
+    // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:864:1: ruleDATATYPE returns [Enumerator current=null] : ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'dateTime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) ) ;
     public final Enumerator ruleDATATYPE() throws RecognitionException {
         Enumerator current = null;
 
@@ -2041,10 +2041,10 @@ public class InternalSDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:866:28: ( ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) ) )
-            // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:867:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) )
+            // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:866:28: ( ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'dateTime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) ) )
+            // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:867:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'dateTime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) )
             {
-            // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:867:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'datetime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) )
+            // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:867:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'integer' ) | (enumLiteral_2= 'float' ) | (enumLiteral_3= 'date' ) | (enumLiteral_4= 'time' ) | (enumLiteral_5= 'dateTime' ) | (enumLiteral_6= 'binary' ) | (enumLiteral_7= 'boolean' ) )
             int alt13=8;
             switch ( input.LA(1) ) {
             case 28:
@@ -2181,10 +2181,10 @@ public class InternalSDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:897:6: (enumLiteral_5= 'datetime' )
+                    // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:897:6: (enumLiteral_5= 'dateTime' )
                     {
-                    // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:897:6: (enumLiteral_5= 'datetime' )
-                    // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:897:8: enumLiteral_5= 'datetime'
+                    // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:897:6: (enumLiteral_5= 'dateTime' )
+                    // ../sdl/src-gen/at/ac/univie/cs/swa/soa/parser/antlr/internal/InternalSDL.g:897:8: enumLiteral_5= 'dateTime'
                     {
                     enumLiteral_5=(Token)match(input,33,FOLLOW_33_in_ruleDATATYPE1912); 
 
