@@ -4,7 +4,8 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/sdl/src-gen"
     editDirectory="/sdl.edit/src" editorDirectory="/sdl.editor/src" modelPluginID="sdl"
     forceOverwrite="true" modelName="SDL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    complianceLevel="5.0" copyrightFields="false" editPluginID="sdl.edit" editorPluginID="sdl.editor">
+    complianceLevel="5.0" copyrightFields="false" editPluginID="sdl.edit" editorPluginID="sdl.editor"
+    runtimeVersion="2.7">
   <genPackages prefix="Sdl" basePackage="at.ac.univie.cs.swa.soa" disposableProviderFactory="true"
       ecorePackage="SDL.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="SDL.ecore#//DATATYPE">

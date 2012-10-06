@@ -8,6 +8,8 @@ import org.osgi.framework.Bundle;
 
 import com.google.inject.Injector;
 
+import at.ac.univie.cs.swa.soa.ui.internal.SDLActivator;
+
 /**
  * This class was generated. Customizations should only happen in a newly
  * introduced subclass. 
@@ -16,12 +18,12 @@ public class SDLExecutableExtensionFactory extends AbstractGuiceAwareExecutableE
 
 	@Override
 	protected Bundle getBundle() {
-		return at.ac.univie.cs.swa.soa.ui.internal.SDLActivator.getInstance().getBundle();
+		return SDLActivator.getInstance().getBundle();
 	}
 	
 	@Override
 	protected Injector getInjector() {
-		return at.ac.univie.cs.swa.soa.ui.internal.SDLActivator.getInstance().getInjector("at.ac.univie.cs.swa.soa.SDL");
+		return SDLActivator.getInstance().getInjector(SDLActivator.AT_AC_UNIVIE_CS_SWA_SOA_SDL);
 	}
 	
 }

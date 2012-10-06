@@ -11,8 +11,8 @@ import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
-@SuppressWarnings("restriction")
-public class AbstractSDLSyntacticSequencer extends AbstractSyntacticSequencer {
+@SuppressWarnings("all")
+public class SDLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected SDLGrammarAccess grammarAccess;
 	

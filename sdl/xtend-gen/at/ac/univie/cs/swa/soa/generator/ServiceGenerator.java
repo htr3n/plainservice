@@ -3,72 +3,58 @@ package at.ac.univie.cs.swa.soa.generator;
 import at.ac.univie.cs.swa.soa.sdl.Node;
 import at.ac.univie.cs.swa.soa.sdl.SDL;
 import at.ac.univie.cs.swa.soa.sdl.Service;
+import com.google.common.base.Objects;
+import com.google.common.collect.Iterables;
 import java.io.File;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
-import org.eclipse.xtext.xbase.lib.BooleanExtensions;
-import org.eclipse.xtext.xbase.lib.IntegerExtensions;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @SuppressWarnings("all")
 public class ServiceGenerator {
-  public Object generateService(final IFileSystemAccess fsa, final SDL dsl) {
-    Object _xblockexpression = null;
-    {
-      String _name = dsl.getName();
-      String _lowerCase = _name.toLowerCase();
-      String _replace = _lowerCase.replace(".", File.separator);
-      final String packagePath = _replace;
-      EList<Service> _services = dsl.getServices();
-      Iterable<Service> _filter = IterableExtensions.<Service>filter(_services, at.ac.univie.cs.swa.soa.sdl.Service.class);
-      final Iterable<Service> webServices = _filter;
-      Object _xifexpression = null;
-      boolean _operator_and = false;
-      boolean _operator_notEquals = ObjectExtensions.operator_notEquals(webServices, null);
-      if (!_operator_notEquals) {
-        _operator_and = false;
-      } else {
-        boolean _isEmpty = IterableExtensions.isEmpty(webServices);
-        boolean _operator_not = BooleanExtensions.operator_not(_isEmpty);
-        _operator_and = BooleanExtensions.operator_and(_operator_notEquals, _operator_not);
-      }
-      if (_operator_and) {
-        for (final Service s : webServices) {
-          {
-            String _operator_plus = StringExtensions.operator_plus(packagePath, File.separator);
-            String _name_1 = s.getName();
-            String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, _name_1);
-            String _operator_plus_2 = StringExtensions.operator_plus(_operator_plus_1, "Service.java");
-            final String file = _operator_plus_2;
-            CharSequence _generate = this.generate(dsl, s);
-            fsa.generateFile(file, _generate);
-          }
+  public void generateService(final IFileSystemAccess fsa, final SDL dsl) {
+    String _name = dsl.getName();
+    String _lowerCase = _name.toLowerCase();
+    final String packagePath = _lowerCase.replace(".", File.separator);
+    EList<Service> _services = dsl.getServices();
+    final Iterable<Service> webServices = Iterables.<Service>filter(_services, Service.class);
+    boolean _and = false;
+    boolean _notEquals = (!Objects.equal(webServices, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      boolean _isEmpty = IterableExtensions.isEmpty(webServices);
+      boolean _not = (!_isEmpty);
+      _and = (_notEquals && _not);
+    }
+    if (_and) {
+      for (final Service s : webServices) {
+        {
+          String _plus = (packagePath + File.separator);
+          String _name_1 = s.getName();
+          String _plus_1 = (_plus + _name_1);
+          final String file = (_plus_1 + "Service.java");
+          CharSequence _generate = this.generate(dsl, s);
+          fsa.generateFile(file, _generate);
         }
       }
-      _xblockexpression = (_xifexpression);
     }
-    return _xblockexpression;
   }
   
   protected CharSequence generate(final SDL dsl, final Service s) {
     CharSequence _xblockexpression = null;
     {
       String _name = dsl.getName();
-      String _lowerCase = _name.toLowerCase();
-      final String packageName = _lowerCase;
+      final String packageName = _name.toLowerCase();
       String _name_1 = s.getName();
-      String _operator_plus = StringExtensions.operator_plus(_name_1, "Service");
-      final String className = _operator_plus;
+      final String className = (_name_1 + "Service");
       String _replace = packageName.replace(".", ":");
-      String _lowerCase_1 = _replace.toLowerCase();
-      String _operator_plus_1 = StringExtensions.operator_plus("urn:", _lowerCase_1);
-      final String nsURI = _operator_plus_1;
+      String _lowerCase = _replace.toLowerCase();
+      final String nsURI = ("urn:" + _lowerCase);
       String _name_2 = s.getName();
-      String _operator_plus_2 = StringExtensions.operator_plus(_name_2, "Port");
-      final String portName = _operator_plus_2;
+      final String portName = (_name_2 + "Port");
       StringConcatenation _builder = new StringConcatenation();
       _builder.newLine();
       _builder.append("package ");
@@ -239,65 +225,57 @@ public class ServiceGenerator {
   }
   
   protected String findURL(final SDL dsl, final Service s) {
-    String _xifexpression = null;
-    boolean _operator_and = false;
+    boolean _and = false;
     EList<Node> _nodes = dsl.getNodes();
-    boolean _operator_notEquals = ObjectExtensions.operator_notEquals(_nodes, null);
-    if (!_operator_notEquals) {
-      _operator_and = false;
+    boolean _notEquals = (!Objects.equal(_nodes, null));
+    if (!_notEquals) {
+      _and = false;
     } else {
       EList<Node> _nodes_1 = dsl.getNodes();
       boolean _isEmpty = _nodes_1.isEmpty();
-      boolean _operator_not = BooleanExtensions.operator_not(_isEmpty);
-      _operator_and = BooleanExtensions.operator_and(_operator_notEquals, _operator_not);
+      boolean _not = (!_isEmpty);
+      _and = (_notEquals && _not);
     }
-    if (_operator_and) {
+    if (_and) {
       EList<Node> _nodes_2 = dsl.getNodes();
       for (final Node node : _nodes_2) {
-        boolean _operator_and_1 = false;
+        boolean _and_1 = false;
         EList<Service> _services = node.getServices();
-        boolean _operator_notEquals_1 = ObjectExtensions.operator_notEquals(_services, null);
-        if (!_operator_notEquals_1) {
-          _operator_and_1 = false;
+        boolean _notEquals_1 = (!Objects.equal(_services, null));
+        if (!_notEquals_1) {
+          _and_1 = false;
         } else {
           EList<Service> _services_1 = node.getServices();
           boolean _contains = _services_1.contains(s);
-          _operator_and_1 = BooleanExtensions.operator_and(_operator_notEquals_1, _contains);
+          _and_1 = (_notEquals_1 && _contains);
         }
-        if (_operator_and_1) {
-          {
-            String _baseURI = node.getBaseURI();
-            String url = _baseURI;
-            boolean _operator_and_2 = false;
-            boolean _operator_notEquals_2 = ObjectExtensions.operator_notEquals(url, null);
-            if (!_operator_notEquals_2) {
-              _operator_and_2 = false;
-            } else {
-              boolean _isEmpty_1 = url.isEmpty();
-              boolean _operator_not_1 = BooleanExtensions.operator_not(_isEmpty_1);
-              _operator_and_2 = BooleanExtensions.operator_and(_operator_notEquals_2, _operator_not_1);
+        if (_and_1) {
+          String url = node.getBaseURI();
+          boolean _and_2 = false;
+          boolean _notEquals_2 = (!Objects.equal(url, null));
+          if (!_notEquals_2) {
+            _and_2 = false;
+          } else {
+            boolean _isEmpty_1 = url.isEmpty();
+            boolean _not_1 = (!_isEmpty_1);
+            _and_2 = (_notEquals_2 && _not_1);
+          }
+          if (_and_2) {
+            int _length = url.length();
+            int _minus = (_length - 1);
+            final String endingSlash = url.substring(_minus);
+            boolean _notEquals_3 = (!Objects.equal(endingSlash, "/"));
+            if (_notEquals_3) {
+              String _plus = (url + "/");
+              url = _plus;
             }
-            if (_operator_and_2) {
-              {
-                int _length = url.length();
-                int _operator_minus = IntegerExtensions.operator_minus(_length, 1);
-                String _substring = url.substring(_operator_minus);
-                final String endingSlash = _substring;
-                boolean _operator_notEquals_3 = ObjectExtensions.operator_notEquals(endingSlash, "/");
-                if (_operator_notEquals_3) {
-                  String _operator_plus = StringExtensions.operator_plus(url, "/");
-                  url = _operator_plus;
-                }
-                String _name = s.getName();
-                String _operator_plus_1 = StringExtensions.operator_plus(url, _name);
-                String _operator_plus_2 = StringExtensions.operator_plus(_operator_plus_1, "?wsdl");
-                return _operator_plus_2;
-              }
-            }
+            String _name = s.getName();
+            String _plus_1 = (url + _name);
+            return (_plus_1 + "?wsdl");
           }
         }
       }
     }
-    return _xifexpression;
+    return null;
   }
 }

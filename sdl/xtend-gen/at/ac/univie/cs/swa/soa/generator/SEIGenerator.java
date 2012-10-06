@@ -4,65 +4,53 @@ import at.ac.univie.cs.swa.soa.sdl.DataElement;
 import at.ac.univie.cs.swa.soa.sdl.Operation;
 import at.ac.univie.cs.swa.soa.sdl.SDL;
 import at.ac.univie.cs.swa.soa.sdl.Service;
+import com.google.common.base.Objects;
+import com.google.common.collect.Iterables;
 import java.io.File;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
-import org.eclipse.xtext.xbase.lib.BooleanExtensions;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.eclipse.xtext.xbase.lib.ObjectExtensions;
-import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @SuppressWarnings("all")
 public class SEIGenerator {
-  public Object generateSEI(final IFileSystemAccess fsa, final SDL dsl) {
-    Object _xblockexpression = null;
-    {
-      String _name = dsl.getName();
-      String _lowerCase = _name.toLowerCase();
-      String _replace = _lowerCase.replace(".", File.separator);
-      final String packagePath = _replace;
-      EList<Service> _services = dsl.getServices();
-      Iterable<Service> _filter = IterableExtensions.<Service>filter(_services, at.ac.univie.cs.swa.soa.sdl.Service.class);
-      final Iterable<Service> webServices = _filter;
-      Object _xifexpression = null;
-      boolean _operator_and = false;
-      boolean _operator_notEquals = ObjectExtensions.operator_notEquals(webServices, null);
-      if (!_operator_notEquals) {
-        _operator_and = false;
-      } else {
-        boolean _isEmpty = IterableExtensions.isEmpty(webServices);
-        boolean _operator_not = BooleanExtensions.operator_not(_isEmpty);
-        _operator_and = BooleanExtensions.operator_and(_operator_notEquals, _operator_not);
-      }
-      if (_operator_and) {
-        for (final Service s : webServices) {
-          {
-            String _operator_plus = StringExtensions.operator_plus(packagePath, File.separator);
-            String _name_1 = s.getName();
-            String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, _name_1);
-            String _operator_plus_2 = StringExtensions.operator_plus(_operator_plus_1, ".java");
-            final String file = _operator_plus_2;
-            CharSequence _generate = this.generate(s, dsl);
-            fsa.generateFile(file, _generate);
-          }
+  public void generateSEI(final IFileSystemAccess fsa, final SDL dsl) {
+    String _name = dsl.getName();
+    String _lowerCase = _name.toLowerCase();
+    final String packagePath = _lowerCase.replace(".", File.separator);
+    EList<Service> _services = dsl.getServices();
+    final Iterable<Service> webServices = Iterables.<Service>filter(_services, Service.class);
+    boolean _and = false;
+    boolean _notEquals = (!Objects.equal(webServices, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      boolean _isEmpty = IterableExtensions.isEmpty(webServices);
+      boolean _not = (!_isEmpty);
+      _and = (_notEquals && _not);
+    }
+    if (_and) {
+      for (final Service s : webServices) {
+        {
+          String _plus = (packagePath + File.separator);
+          String _name_1 = s.getName();
+          String _plus_1 = (_plus + _name_1);
+          final String file = (_plus_1 + ".java");
+          CharSequence _generate = this.generate(s, dsl);
+          fsa.generateFile(file, _generate);
         }
       }
-      _xblockexpression = (_xifexpression);
     }
-    return _xblockexpression;
   }
   
   protected CharSequence generate(final Service s, final SDL dsl) {
     CharSequence _xblockexpression = null;
     {
       String _name = dsl.getName();
-      String _lowerCase = _name.toLowerCase();
-      final String packageName = _lowerCase;
+      final String packageName = _name.toLowerCase();
       String _replace = packageName.replace(".", ":");
-      String _operator_plus = StringExtensions.operator_plus("urn:", _replace);
-      final String nsURI = _operator_plus;
+      final String nsURI = ("urn:" + _replace);
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("package ");
       _builder.append(packageName, "");
@@ -104,54 +92,54 @@ public class SEIGenerator {
   protected CharSequence generateOperation(final Operation operation, final SDL dsl) {
     CharSequence _xblockexpression = null;
     {
-      boolean _operator_and = false;
-      boolean _operator_and_1 = false;
+      boolean _and = false;
+      boolean _and_1 = false;
       DataElement _inputType = operation.getInputType();
-      boolean _operator_notEquals = ObjectExtensions.operator_notEquals(_inputType, null);
-      if (!_operator_notEquals) {
-        _operator_and_1 = false;
+      boolean _notEquals = (!Objects.equal(_inputType, null));
+      if (!_notEquals) {
+        _and_1 = false;
       } else {
         DataElement _inputType_1 = operation.getInputType();
         String _name = _inputType_1.getName();
-        boolean _operator_notEquals_1 = ObjectExtensions.operator_notEquals(_name, null);
-        _operator_and_1 = BooleanExtensions.operator_and(_operator_notEquals, _operator_notEquals_1);
+        boolean _notEquals_1 = (!Objects.equal(_name, null));
+        _and_1 = (_notEquals && _notEquals_1);
       }
-      if (!_operator_and_1) {
-        _operator_and = false;
+      if (!_and_1) {
+        _and = false;
       } else {
         DataElement _inputType_2 = operation.getInputType();
         String _name_1 = _inputType_2.getName();
         boolean _isEmpty = _name_1.isEmpty();
-        boolean _operator_not = BooleanExtensions.operator_not(_isEmpty);
-        _operator_and = BooleanExtensions.operator_and(_operator_and_1, _operator_not);
+        boolean _not = (!_isEmpty);
+        _and = (_and_1 && _not);
       }
-      final boolean hasInput = _operator_and;
-      boolean _operator_and_2 = false;
-      boolean _operator_and_3 = false;
+      final boolean hasInput = _and;
+      boolean _and_2 = false;
+      boolean _and_3 = false;
       DataElement _outputType = operation.getOutputType();
-      boolean _operator_notEquals_2 = ObjectExtensions.operator_notEquals(_outputType, null);
-      if (!_operator_notEquals_2) {
-        _operator_and_3 = false;
+      boolean _notEquals_2 = (!Objects.equal(_outputType, null));
+      if (!_notEquals_2) {
+        _and_3 = false;
       } else {
         DataElement _outputType_1 = operation.getOutputType();
         String _name_2 = _outputType_1.getName();
-        boolean _operator_notEquals_3 = ObjectExtensions.operator_notEquals(_name_2, null);
-        _operator_and_3 = BooleanExtensions.operator_and(_operator_notEquals_2, _operator_notEquals_3);
+        boolean _notEquals_3 = (!Objects.equal(_name_2, null));
+        _and_3 = (_notEquals_2 && _notEquals_3);
       }
-      if (!_operator_and_3) {
-        _operator_and_2 = false;
+      if (!_and_3) {
+        _and_2 = false;
       } else {
         DataElement _outputType_2 = operation.getOutputType();
         String _name_3 = _outputType_2.getName();
         boolean _isEmpty_1 = _name_3.isEmpty();
-        boolean _operator_not_1 = BooleanExtensions.operator_not(_isEmpty_1);
-        _operator_and_2 = BooleanExtensions.operator_and(_operator_and_3, _operator_not_1);
+        boolean _not_1 = (!_isEmpty_1);
+        _and_2 = (_and_3 && _not_1);
       }
-      final boolean hasOutput = _operator_and_2;
+      final boolean hasOutput = _and_2;
       String _xifexpression = null;
       DataElement _inputType_3 = operation.getInputType();
-      boolean _operator_notEquals_4 = ObjectExtensions.operator_notEquals(_inputType_3, null);
-      if (_operator_notEquals_4) {
+      boolean _notEquals_4 = (!Objects.equal(_inputType_3, null));
+      if (_notEquals_4) {
         DataElement _inputType_4 = operation.getInputType();
         EObject _eContainer = _inputType_4.eContainer();
         String _name_4 = ((SDL) _eContainer).getName();
@@ -162,8 +150,8 @@ public class SEIGenerator {
       final String inputQualifiedPath = _xifexpression;
       String _xifexpression_1 = null;
       DataElement _outputType_3 = operation.getOutputType();
-      boolean _operator_notEquals_5 = ObjectExtensions.operator_notEquals(_outputType_3, null);
-      if (_operator_notEquals_5) {
+      boolean _notEquals_5 = (!Objects.equal(_outputType_3, null));
+      if (_notEquals_5) {
         DataElement _outputType_4 = operation.getOutputType();
         EObject _eContainer_1 = _outputType_4.eContainer();
         String _name_5 = ((SDL) _eContainer_1).getName();
@@ -173,21 +161,21 @@ public class SEIGenerator {
       }
       final String outputQualifiedPath = _xifexpression_1;
       String _xifexpression_2 = null;
-      boolean _operator_notEquals_6 = ObjectExtensions.operator_notEquals(inputQualifiedPath, null);
-      if (_operator_notEquals_6) {
+      boolean _notEquals_6 = (!Objects.equal(inputQualifiedPath, null));
+      if (_notEquals_6) {
         String _replace = inputQualifiedPath.replace(".", ":");
-        String _operator_plus = StringExtensions.operator_plus("urn:", _replace);
-        _xifexpression_2 = _operator_plus;
+        String _plus = ("urn:" + _replace);
+        _xifexpression_2 = _plus;
       } else {
         _xifexpression_2 = null;
       }
       final String inputNsURI = _xifexpression_2;
       String _xifexpression_3 = null;
-      boolean _operator_notEquals_7 = ObjectExtensions.operator_notEquals(outputQualifiedPath, null);
-      if (_operator_notEquals_7) {
+      boolean _notEquals_7 = (!Objects.equal(outputQualifiedPath, null));
+      if (_notEquals_7) {
         String _replace_1 = outputQualifiedPath.replace(".", ":");
-        String _operator_plus_1 = StringExtensions.operator_plus("urn:", _replace_1);
-        _xifexpression_3 = _operator_plus_1;
+        String _plus_1 = ("urn:" + _replace_1);
+        _xifexpression_3 = _plus_1;
       } else {
         _xifexpression_3 = null;
       }

@@ -41,12 +41,12 @@ public abstract class AbstractSDLRuntimeModule extends DefaultRuntimeModule {
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
 	public Class<? extends org.eclipse.xtext.serializer.sequencer.ISemanticSequencer> bindISemanticSequencer() {
-		return at.ac.univie.cs.swa.soa.serializer.AbstractSDLSemanticSequencer.class;
+		return at.ac.univie.cs.swa.soa.serializer.SDLSemanticSequencer.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
 	public Class<? extends org.eclipse.xtext.serializer.sequencer.ISyntacticSequencer> bindISyntacticSequencer() {
-		return at.ac.univie.cs.swa.soa.serializer.AbstractSDLSyntacticSequencer.class;
+		return at.ac.univie.cs.swa.soa.serializer.SDLSyntacticSequencer.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment

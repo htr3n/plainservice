@@ -3,103 +3,83 @@ package at.ac.univie.cs.swa.soa.generator;
 import at.ac.univie.cs.swa.soa.sdl.Node;
 import at.ac.univie.cs.swa.soa.sdl.SDL;
 import at.ac.univie.cs.swa.soa.sdl.Service;
+import com.google.common.base.Objects;
 import java.io.File;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
-import org.eclipse.xtext.xbase.lib.BooleanExtensions;
-import org.eclipse.xtext.xbase.lib.IntegerExtensions;
-import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @SuppressWarnings("all")
 public class ServerGenerator {
-  public Object generateServer(final IFileSystemAccess fsa, final SDL dsl) {
-    Object _xblockexpression = null;
-    {
-      String _name = dsl.getName();
-      String _lowerCase = _name.toLowerCase();
-      String _replace = _lowerCase.replace(".", File.separator);
-      final String packagePath = _replace;
-      EList<Node> _nodes = dsl.getNodes();
-      final EList<Node> nodes = _nodes;
-      Object _xifexpression = null;
-      boolean _operator_and = false;
-      boolean _operator_notEquals = ObjectExtensions.operator_notEquals(nodes, null);
-      if (!_operator_notEquals) {
-        _operator_and = false;
-      } else {
-        boolean _isEmpty = nodes.isEmpty();
-        boolean _operator_not = BooleanExtensions.operator_not(_isEmpty);
-        _operator_and = BooleanExtensions.operator_and(_operator_notEquals, _operator_not);
-      }
-      if (_operator_and) {
-        for (final Node node : nodes) {
-          boolean _operator_and_1 = false;
-          String _name_1 = node.getName();
-          boolean _operator_notEquals_1 = ObjectExtensions.operator_notEquals(_name_1, null);
-          if (!_operator_notEquals_1) {
-            _operator_and_1 = false;
-          } else {
-            String _name_2 = node.getName();
-            boolean _isEmpty_1 = _name_2.isEmpty();
-            boolean _operator_not_1 = BooleanExtensions.operator_not(_isEmpty_1);
-            _operator_and_1 = BooleanExtensions.operator_and(_operator_notEquals_1, _operator_not_1);
-          }
-          if (_operator_and_1) {
-            {
-              String _name_3 = node.getName();
-              String _replace_1 = _name_3.replace("^", "");
-              final String hostName = _replace_1;
-              String _operator_plus = StringExtensions.operator_plus(packagePath, File.separator);
-              String _firstUpper = StringExtensions.toFirstUpper(hostName);
-              String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, _firstUpper);
-              String _operator_plus_2 = StringExtensions.operator_plus(_operator_plus_1, "Server.java");
-              final String file = _operator_plus_2;
-              CharSequence _generate = this.generate(dsl, node);
-              fsa.generateFile(file, _generate);
-            }
-          }
+  public void generateServer(final IFileSystemAccess fsa, final SDL dsl) {
+    String _name = dsl.getName();
+    String _lowerCase = _name.toLowerCase();
+    final String packagePath = _lowerCase.replace(".", File.separator);
+    final EList<Node> nodes = dsl.getNodes();
+    boolean _and = false;
+    boolean _notEquals = (!Objects.equal(nodes, null));
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      boolean _isEmpty = nodes.isEmpty();
+      boolean _not = (!_isEmpty);
+      _and = (_notEquals && _not);
+    }
+    if (_and) {
+      for (final Node node : nodes) {
+        boolean _and_1 = false;
+        String _name_1 = node.getName();
+        boolean _notEquals_1 = (!Objects.equal(_name_1, null));
+        if (!_notEquals_1) {
+          _and_1 = false;
+        } else {
+          String _name_2 = node.getName();
+          boolean _isEmpty_1 = _name_2.isEmpty();
+          boolean _not_1 = (!_isEmpty_1);
+          _and_1 = (_notEquals_1 && _not_1);
+        }
+        if (_and_1) {
+          String _name_3 = node.getName();
+          final String hostName = _name_3.replace("^", "");
+          String _plus = (packagePath + File.separator);
+          String _firstUpper = StringExtensions.toFirstUpper(hostName);
+          String _plus_1 = (_plus + _firstUpper);
+          final String file = (_plus_1 + "Server.java");
+          CharSequence _generate = this.generate(dsl, node);
+          fsa.generateFile(file, _generate);
         }
       }
-      _xblockexpression = (_xifexpression);
     }
-    return _xblockexpression;
   }
   
   protected CharSequence generate(final SDL dsl, final Node node) {
     CharSequence _xblockexpression = null;
     {
       String _name = dsl.getName();
-      String _lowerCase = _name.toLowerCase();
-      final String packageName = _lowerCase;
+      final String packageName = _name.toLowerCase();
       String _name_1 = node.getName();
       String _replace = _name_1.replace("^", "");
       String _firstUpper = StringExtensions.toFirstUpper(_replace);
-      String _operator_plus = StringExtensions.operator_plus(_firstUpper, "Server");
-      final String className = _operator_plus;
-      String _baseURI = node.getBaseURI();
-      String address = _baseURI;
-      boolean _operator_and = false;
-      boolean _operator_notEquals = ObjectExtensions.operator_notEquals(address, null);
-      if (!_operator_notEquals) {
-        _operator_and = false;
+      final String className = (_firstUpper + "Server");
+      String address = node.getBaseURI();
+      boolean _and = false;
+      boolean _notEquals = (!Objects.equal(address, null));
+      if (!_notEquals) {
+        _and = false;
       } else {
         boolean _isEmpty = address.isEmpty();
-        boolean _operator_not = BooleanExtensions.operator_not(_isEmpty);
-        _operator_and = BooleanExtensions.operator_and(_operator_notEquals, _operator_not);
+        boolean _not = (!_isEmpty);
+        _and = (_notEquals && _not);
       }
-      if (_operator_and) {
-        {
-          int _length = address.length();
-          int _operator_minus = IntegerExtensions.operator_minus(_length, 1);
-          String _substring = address.substring(_operator_minus);
-          final String endingSlash = _substring;
-          boolean _operator_notEquals_1 = ObjectExtensions.operator_notEquals(endingSlash, "/");
-          if (_operator_notEquals_1) {
-            String _operator_plus_1 = StringExtensions.operator_plus(address, "/");
-            address = _operator_plus_1;
-          }
+      if (_and) {
+        int _length = address.length();
+        int _minus = (_length - 1);
+        final String endingSlash = address.substring(_minus);
+        boolean _notEquals_1 = (!Objects.equal(endingSlash, "/"));
+        if (_notEquals_1) {
+          String _plus = (address + "/");
+          address = _plus;
         }
       }
       StringConcatenation _builder = new StringConcatenation();
