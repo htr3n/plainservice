@@ -5,7 +5,7 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "http://cs.univie.ac.at/swa/soa/sdl" 
+       uri = "http://cs.univie.ac.at/swa/plainservice/sdl" 
        class = "at.ac.univie.cs.swa.soa.sdl.SdlPackage"
        genModel = "at/ac/univie/cs/swa/soa/SDL.genmodel" /> 
 	

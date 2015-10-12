@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package at.ac.univie.cs.swa.soa.sdl;
 

@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package at.ac.univie.cs.swa.soa.sdl;
 
@@ -42,7 +39,7 @@ public interface SdlPackage extends EPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  String eNS_URI = "http://cs.univie.ac.at/swa/soa/sdl";
+  String eNS_URI = "http://cs.univie.ac.at/swa/plainservice/sdl";
 
   /**
    * The package namespace name.

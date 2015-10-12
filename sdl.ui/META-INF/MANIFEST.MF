@@ -21,5 +21,6 @@ Import-Package: org.apache.log4j,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: at.ac.univie.cs.swa.soa.ui.contentassist,
  at.ac.univie.cs.swa.soa.ui.contentassist.antlr,
- at.ac.univie.cs.swa.soa.ui.internal
+ at.ac.univie.cs.swa.soa.ui.internal,
+ at.ac.univie.cs.swa.soa.ui.quickfix
 Bundle-Activator: at.ac.univie.cs.swa.soa.ui.internal.SDLActivator

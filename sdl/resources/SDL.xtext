@@ -1,7 +1,7 @@
 grammar at.ac.univie.cs.swa.soa.SDL with org.eclipse.xtext.common.Terminals
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-generate sdl "http://cs.univie.ac.at/swa/soa/sdl"
+generate sdl "http://cs.univie.ac.at/swa/plainservice/sdl"
 
 SDL:
 	{SDL}

@@ -225,6 +225,7 @@ public class ServiceGenerator {
   }
   
   protected String findURL(final SDL dsl, final Service s) {
+    String _xifexpression = null;
     boolean _and = false;
     EList<Node> _nodes = dsl.getNodes();
     boolean _notEquals = (!Objects.equal(_nodes, null));
@@ -276,6 +277,6 @@ public class ServiceGenerator {
         }
       }
     }
-    return null;
+    return _xifexpression;
   }
 }

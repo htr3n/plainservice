@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package at.ac.univie.cs.swa.soa.sdl.impl;
 
@@ -34,7 +31,7 @@ public class SdlFactoryImpl extends EFactoryImpl implements SdlFactory
   {
     try
     {
-      SdlFactory theSdlFactory = (SdlFactory)EPackage.Registry.INSTANCE.getEFactory("http://cs.univie.ac.at/swa/soa/sdl"); 
+      SdlFactory theSdlFactory = (SdlFactory)EPackage.Registry.INSTANCE.getEFactory(SdlPackage.eNS_URI);
       if (theSdlFactory != null)
       {
         return theSdlFactory;
