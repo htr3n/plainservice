@@ -5,4 +5,4 @@ This is a set of Eclipse plugins that together provides a simple DSL for creatin
 
 All are three Eclipse projects that can be imported directly to Eclipse for development purpose. There is a simle Hellworld example included in the "sdl.examples" to get the first feeling.
 
-Any comments and suggesttions are greatly welcome.
+Any comments and suggesttions are greatly welcomed.
